@@ -1,0 +1,13 @@
+// A stop number is not a count of completed deliveries, and stamps are separate.
+const {chromium}=require('playwright'),assert=require('assert');
+(async()=>{const b=await chromium.launch({executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH||'/usr/bin/chromium',args:['--no-sandbox']});const p=await b.newPage({viewport:{width:915,height:412}});await p.addInitScript(()=>localStorage.setItem('delivery-adventure-v1',JSON.stringify({unlocked:24,seen:true,sound:false})));await p.goto('http://127.0.0.1:4187');
+ const results=await p.evaluate(()=>{let g=__ADV_TEST__,out=[];g.testMode(true);for(let i of [0,12,14,18,20,22]){g.start(i);g.input('right',true);let lastJump=-100,seen=new Set(),problem=null;for(let t=0;t<3600;t++){let s=g.get(),l=g.levels[i],p=s.p,mission=document.querySelector('#advMission').textContent,phase=document.querySelector('#advPhase').textContent,stamps=document.querySelector('#advStamps').textContent;
+ const expectedStamps=`STAMPS ${s.stamps.filter(x=>x.taken).length} / ${s.stamps.length}`;
+ if(stamps!==expectedStamps){problem={kind:'stamp',stamps,expectedStamps};break}
+ if(s.dialog==='win'){if(mission!=='Delivery complete'||phase!=='✓ DONE')problem={kind:'win',mission,phase};seen.add('win');break}
+ if(!l.stop){let exp=s.hasParcel?'Bring the parcel to the door':'Find the parcel';if(mission!==exp)problem={kind:'single',mission,expected:exp};seen.add(s.hasParcel?'carry':'find')}
+ else{let exp=s.midDelivered?(s.hasParcel?'Deliver to the final door':'Pick up the next parcel'):(s.hasParcel?'Deliver to the first neighbour':'Find the first parcel');let stage=s.midDelivered?'STOP 2 OF 2':'STOP 1 OF 2';if(mission!==exp||phase!==stage)problem={kind:'two-stop',mission,phase,expected:[exp,stage]};seen.add((s.midDelivered?'2':'1')+(s.hasParcel?'carry':'find'))}
+ if(problem)break;
+ let box=l.boxes.some(x=>x-(p.x+p.w)<60&&x-(p.x+p.w)>-6&&p.y+p.h>268),gap=l.ground.some((seg,j)=>j<l.ground.length-1&&seg[1]-(p.x+p.w)<26&&seg[1]-(p.x+p.w)>-5),dog=s.dogs.some(d=>d.x-(p.x+p.w)<60&&d.x-(p.x+p.w)>-8);if(p.ground&&t-lastJump>36&&(box||gap||dog)){g.input('jump',true);lastJump=t}if(t-lastJump===30)g.input('jump',false);g.step(2)}out.push({route:i+1,seen:[...seen],problem})}return out});
+ for(const r of results){assert.equal(r.problem,null,JSON.stringify(r));assert(r.seen.includes('win'),JSON.stringify(r));if(r.route!==1)assert.deepEqual(r.seen,['1find','1carry','2find','2carry','win'],JSON.stringify(r))}
+ console.log('PASS independent stamps, pickup/delivery wording, first/second stop and completed states:',JSON.stringify(results));await b.close()})().catch(e=>{console.error(e);process.exit(1)});

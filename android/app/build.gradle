@@ -1,0 +1,71 @@
+plugins { id 'com.android.application' }
+
+// Signing material stays outside this project. A partial configuration is a
+// hard error; without credentials Gradle still produces an UNSIGNED candidate.
+def releaseEnvNames = ['LPC_RELEASE_STORE_FILE', 'LPC_RELEASE_STORE_PASSWORD', 'LPC_RELEASE_KEY_ALIAS', 'LPC_RELEASE_KEY_PASSWORD']
+def releaseEnv = releaseEnvNames.collectEntries { [(it): System.getenv(it)] }
+def suppliedSigningValues = releaseEnv.values().count { it != null && !it.isEmpty() }
+if (suppliedSigningValues > 0 && suppliedSigningValues != releaseEnvNames.size()) {
+    throw new GradleException('Incomplete release signing configuration; see RELEASE_SIGNING.md')
+}
+def canSignRelease = suppliedSigningValues == releaseEnvNames.size()
+if (canSignRelease) {
+    def keyFile = file(releaseEnv['LPC_RELEASE_STORE_FILE']).canonicalFile
+    if (!keyFile.isFile()) throw new GradleException('Release keystore file does not exist')
+    def sourceRoot = rootProject.projectDir.parentFile.canonicalFile.toPath()
+    if (keyFile.toPath().startsWith(sourceRoot)) {
+        throw new GradleException('Release keystore must be outside the project tree')
+    }
+}
+android {
+    namespace 'com.onestepdelivery.game'
+    compileSdk 36
+    defaultConfig {
+        applicationId 'com.onestepdelivery.game'
+        minSdk 23
+        targetSdk 36
+        versionCode 20
+        versionName '0.19.0-rc.1'
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+    }
+    sourceSets { main { assets.srcDirs = ['../../dist/web'] } }
+    if (canSignRelease) {
+        signingConfigs {
+            release {
+                storeFile file(releaseEnv['LPC_RELEASE_STORE_FILE'])
+                storePassword releaseEnv['LPC_RELEASE_STORE_PASSWORD']
+                keyAlias releaseEnv['LPC_RELEASE_KEY_ALIAS']
+                keyPassword releaseEnv['LPC_RELEASE_KEY_PASSWORD']
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (canSignRelease) signingConfig signingConfigs.release
+        }
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.robolectric:robolectric:4.16'
+    androidTestImplementation 'androidx.test:runner:1.6.2'
+    androidTestImplementation 'androidx.test:core:1.6.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+}
+tasks.withType(Test).configureEach {
+    maxHeapSize = '256m'
+    maxParallelForks = 1
+    jvmArgs '-XX:MaxMetaspaceSize=192m', '-XX:ReservedCodeCacheSize=64m', '-XX:MaxDirectMemorySize=64m'
+    systemProperty 'robolectric.enabledSdks', (project.findProperty('testApi') ?: '29')
+    systemProperty 'robolectric.dependency.repo.url', 'https://repo.maven.apache.org/maven2'
+}
+
+// Package exactly the validated web RC, never the legacy asset workbench.
+tasks.register('prepareWebRelease', Exec) {
+    workingDir rootProject.projectDir.parentFile
+    commandLine 'python3', 'tools/build_release.py'
+}
+tasks.named('preBuild').configure { dependsOn 'prepareWebRelease' }

@@ -1,0 +1,25 @@
+/* Noticeboard based on SunGraphica's CC BY 4.0 Wood Theme Game UI.
+   Nine-slice preserves creator-drawn corners as the dialog changes size. */
+#advApp .adv-card{
+  border:44px solid transparent;
+  border-image: url('assets/phase42/ui/noticeboard.png') 105 120 95 120 fill / 44px 44px 40px 44px stretch;
+  border-radius:0;
+  padding:4px 8px;
+  background:transparent;
+  box-shadow:none;
+  color:#362d27;
+}
+#advApp .adv-card h2,#advApp .adv-card h3{color:#342a22}
+@media (max-height:450px){#advApp .adv-card{border-width:28px 36px;border-image-width:28px 36px 26px;padding:2px 6px;max-height:96vh}}
+/* Both primary and secondary actions use a crop of the same artist's timber.
+   The crop is a real piece of the noticeboard image; text remains accessible HTML. */
+#advApp .adv-main,#advApp .adv-secondary{
+  border:12px solid transparent!important;
+  border-image:url('assets/phase42/ui/wood-beam.png') 15 50 15 50 fill / 10px 12px 10px 12px stretch!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  color:#fff9eb!important;
+  text-shadow:0 1px 2px #23150c;
+}
+#advApp .adv-main:focus-visible,#advApp .adv-secondary:focus-visible{outline:3px solid #e2a34f;outline-offset:2px}

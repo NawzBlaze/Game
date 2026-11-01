@@ -1,0 +1,195 @@
+/* Functional interface layout, not illustrated artwork.
+   All scenery/character/prop images are downloaded Kenney originals (CC0). */
+@font-face{font-family:Nunito;src:url('assets/font/Nunito.ttf') format('truetype');font-display:swap;font-weight:200 1000}
+#advApp{--ink:#25382e;--muted:#617064;--paper:#f6f3e9;--line:#d9ddcc;--accent:#dae98b;background:var(--paper);color:var(--ink);font-family:Nunito,system-ui,sans-serif}
+#advApp button{font-family:inherit;transition:background-color .15s,color .15s;touch-action:manipulation}
+#advApp button:focus-visible{outline:3px solid #526c2c;outline-offset:4px}
+#advApp button:disabled{cursor:not-allowed}
+#advApp .adv-screen{width:min(100%,1200px)}
+#advApp .adv-top{padding:24px 32px;min-height:88px;border-bottom:1px solid var(--line);grid-area:top}
+#advApp .adv-logo{display:flex;align-items:center;gap:10px;color:var(--ink);font-size:11px;letter-spacing:.13em;font-weight:900}
+#advApp .adv-icon{border:1px solid var(--line);border-radius:6px!important;background:transparent;color:var(--ink);box-shadow:none;width:44px;min-width:44px;height:44px;font-size:18px!important}
+#advApp .adv-icon:hover{background:#e7eadb}
+#advApp .adv-top-credits{display:inline-block!important}
+#advApp .adv-eyebrow{color:#5d6b45;font-size:10px;font-weight:900;letter-spacing:.18em}
+#advApp .adv-home{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:88px auto auto 1fr;grid-template-areas:'top top' 'copy art' 'progress art' 'actions art';column-gap:56px;min-height:100dvh;background:var(--paper);box-shadow:none;padding:0 32px 32px;overflow:visible}
+#advApp .adv-home>.adv-top{margin:0 -32px}
+#advApp .adv-hero-copy{grid-area:copy;text-align:left;padding:56px 0 20px}
+#advApp .adv-hero-copy h1{font-size:clamp(48px,6.3vw,78px);font-weight:900;line-height:.98;letter-spacing:-.06em;margin:20px 0 24px;white-space:normal;color:var(--ink)}
+#advApp .adv-hero-copy h1 br{display:block}
+#advApp .adv-hero-copy h1 span{color:var(--ink)}
+#advApp .adv-hero-copy h1 span:before{content:none}
+#advApp .adv-tag{font-size:16px;line-height:1.6;color:var(--muted);font-weight:600}
+#advApp .adv-art{grid-area:art;align-self:stretch;position:relative;margin:32px 0 0;height:auto;min-height:410px;border:0;border-radius:8px;box-shadow:none;background:#cce8ed;overflow:hidden}
+#advApp .adv-art:before,#advApp .adv-art:after{display:none}
+#advApp .dispatch-background{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;object-position:center bottom}
+#advApp .adv-art .pip{position:absolute;left:29%;bottom:20%;width:160px;height:133px;filter:none;animation:none;object-fit:contain}
+#advApp .dispatch-parcel{left:57%;bottom:22%;width:54px;height:54px;object-fit:contain}
+#advApp .dispatch-flag{left:12%;bottom:22%;width:64px;height:80px;object-fit:contain}
+#advApp .dispatch-caption{position:absolute;left:24px;bottom:24px;right:24px;padding-top:16px;border-top:1px solid #365a3a44;color:#283e2a;font-weight:900;font-size:11px;letter-spacing:.14em}
+#advApp .dispatch-caption span{display:block;font-size:13px;font-weight:600;letter-spacing:0;margin-top:7px}
+#advApp .adv-home-progress{grid-area:progress;display:flex;justify-content:space-between;align-items:center;gap:16px;margin:0;padding:18px 0;background:transparent;border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:0;box-shadow:none}
+#advApp .adv-home-progress span{display:block;font-size:9px;letter-spacing:.15em;color:var(--muted);margin-bottom:5px}
+#advApp .adv-home-progress strong{font-size:14px;font-weight:800}
+#advApp .adv-home-stars{font-size:12px;color:var(--muted);white-space:nowrap}
+#advApp .adv-home-actions{grid-area:actions;display:grid;gap:12px;padding:24px 0 0;margin:0;align-self:start}
+#advApp .adv-main,#advApp .adv-secondary{border:1px solid var(--line)!important;border-radius:6px!important;box-shadow:none!important;min-height:52px;padding:13px 18px;font-size:13px!important;font-weight:800!important;text-shadow:none;color:var(--ink);background:transparent}
+#advApp .adv-main{background:var(--accent);border-color:#c5d578!important;font-size:15px!important}
+#advApp .adv-main:hover{background:#c9de70}
+#advApp .adv-secondary:hover{background:#e8ebdf}
+#advApp .adv-home-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+#advApp .adv-plain{color:var(--muted);font-size:12px!important;background:transparent;box-shadow:none;min-height:44px}
+#advApp .adv-foot{display:block!important;color:var(--muted);font-size:9px;letter-spacing:.12em}
+#advApp .adv-credit-link{color:var(--ink);min-height:44px;background:transparent}
+#advApp .adv-storage-warning{grid-column:1/-1;color:#8d3026;background:#f7ded4;padding:12px}
+#advApp .adv-map{background:var(--paper);padding:0 32px 48px}
+#advApp .adv-map>.adv-top{margin-bottom:32px;padding-left:0;padding-right:0}
+#advApp .adv-map h2{font-size:36px;font-weight:900;letter-spacing:-.04em;margin-bottom:8px}
+#advApp .adv-map p{font-size:14px;color:var(--muted);line-height:1.6}
+#advApp .adv-district{margin:32px 0 40px}
+#advApp .adv-district-head{border-bottom:1px solid var(--line);padding:0 0 16px;display:flex;gap:16px;align-items:center}
+#advApp .adv-district-head>span{background:transparent;color:#748359;border-radius:0;font-size:24px;font-weight:900}
+#advApp .adv-district-head b{font-size:16px}
+#advApp .adv-district-head small{display:block;color:var(--muted);font-size:12px;margin-top:4px}
+#advApp .adv-map-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:20px}
+#advApp .adv-level{border:1px solid var(--line);border-radius:6px!important;box-shadow:none;background:#fffdf6;min-height:180px;overflow:hidden;padding:108px 16px 16px!important;color:var(--ink)}
+#advApp .adv-route-postcard{inset:0 0 auto;height:94px;transform:none;border:0;border-radius:0;opacity:1;background-image:var(--postcard);background-position:center 65%;background-size:cover;filter:none}
+#advApp .adv-route-postcard:after{display:none}
+#advApp .adv-level:disabled{opacity:.6}
+#advApp .adv-level.current{outline:2px solid #718b3b;background:#f4f8e8}
+#advApp .adv-level b{font-size:13px}
+#advApp .adv-level span{font-size:13px;margin:6px 0}
+#advApp .adv-level small{font-size:10px;color:#627a37}
+#advApp .adv-courier-list{max-width:720px;margin:24px 0}
+#advApp .adv-courier,#advApp .extra-card,#advApp .story-card{background:#fffdf6;border:1px solid var(--line);border-radius:6px;box-shadow:none;color:var(--ink);margin-bottom:12px;padding:18px}
+#advApp .adv-courier.selected{outline:2px solid #718b3b;background:#f0f5df}
+#advApp .adv-courier-art{background:transparent;border:0;border-radius:0}
+#advApp .adv-courier-copy small,#advApp .extra-card small,#advApp .story-card small{color:var(--muted);line-height:1.5}
+#advApp .adv-courier-copy em,#advApp .extra-card em{color:#566e2f}
+#advApp .courier-note{border-top:1px solid var(--line);padding-top:20px;font-size:12px}
+#advApp .extra-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+#advApp .extra-icon{background:transparent;color:#5e7740;border-radius:0}
+#advApp .story-picture{border-radius:4px;background:#cce8ed}
+#advApp .adv-game{width:100%;max-width:none;background:var(--paper);position:relative}
+#advApp .adv-game-top{padding:8px 20px;border-bottom:1px solid var(--line);background:var(--paper);color:var(--ink)}
+#advApp .adv-game-title small{font-size:9px;color:var(--muted);letter-spacing:.13em}
+#advApp .adv-game-title b{font-size:15px;color:var(--ink)}
+#advApp .adv-stat{border:0;background:transparent;border-radius:0;color:var(--ink);box-shadow:none;font-size:11px}
+#advApp .adv-progress{height:3px;background:#e1e5d8;margin:0;border-radius:0}
+#advApp .adv-progress span{background:#7b9549}
+#advApp .adv-mission{padding:7px 20px;color:var(--muted);background:var(--paper);border:0;font-size:11px;min-height:30px}
+#advApp .adv-mission em{background:transparent;color:#5d7535;font-size:9px}
+#advApp .adv-viewport{border:0;border-radius:0;box-shadow:none;background:#cce8ed;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#advApp .adv-canvas{border-radius:0;object-fit:contain;max-height:100%;max-width:100%;height:auto;width:100%;background:transparent}
+#advApp .adv-controls{background:var(--paper);padding:12px 20px;gap:12px;border-top:1px solid var(--line)}
+#advApp .adv-control{background:#e6ebd9;color:var(--ink);border:1px solid #d1d9be;border-radius:6px;box-shadow:none;min-height:52px;min-width:64px}
+#advApp .adv-control:active{background:#cedcb5;transform:none}
+#advApp .adv-control.jump{background:var(--accent);color:var(--ink);border-color:#c5d578;width:116px}
+#advApp .adv-control small{color:#587036}
+#advApp .adv-greet{border-radius:6px;box-shadow:none;background:#f3edcd;color:#66562b;min-height:44px}
+#advApp .adv-hintline{display:none}
+#advApp .adv-message{background:#25382e;color:#fffdf6;border:0;border-radius:4px;box-shadow:none;font-size:12px;max-width:80%;white-space:normal;text-align:center}
+#advApp .adv-tutorial{border-radius:4px;box-shadow:none;background:#fffdf6;color:var(--ink);border:1px solid var(--line)}
+#advApp .adv-tutorial button{min-width:44px;min-height:44px;background:transparent;color:var(--ink)}
+#advApp .adv-result{border-radius:6px;background:#f6f3e9;color:var(--ink);border:1px solid var(--line);box-shadow:none;padding:16px;gap:12px}
+#advApp .adv-result button{background:var(--accent);color:var(--ink);border:1px solid #c5d578;border-radius:4px;min-height:44px;padding:10px 16px}
+#advApp .adv-dialog{background:#182a20b8;padding:20px}
+#advApp .adv-card{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:28px;color:var(--ink);box-shadow:none;width:min(100%,440px);max-height:90dvh;overflow:auto}
+#advApp .adv-card h3{font-size:28px;letter-spacing:-.04em;margin:12px 0 20px}
+#advApp .adv-card p{font-size:13px;line-height:1.7;color:var(--muted)}
+#advApp .adv-card .adv-main,#advApp .adv-card .adv-secondary,#advApp .adv-card .adv-plain,#advApp .adv-option{width:100%;margin-top:10px;min-height:44px}
+#advApp .adv-option{background:#e7ecdb;border:1px solid var(--line);border-radius:4px;color:var(--ink);padding:10px}
+#advApp .adv-helptext{font-size:13px;line-height:1.9;color:var(--muted)}
+@media(min-width:1500px){#advApp .adv-home{min-height:min(100dvh,960px);margin-top:max(0px,calc((100dvh - 960px)/2))}}
+@media(max-width:760px) and (orientation:portrait){
+ #advApp .adv-home{display:flex;flex-direction:column;padding:0 22px 24px;gap:0;min-height:100dvh}
+ #advApp .adv-home>.adv-top{margin:0 -22px;padding:14px 22px;min-height:72px}
+ #advApp .adv-logo{font-size:9px;letter-spacing:.08em;gap:6px}
+ #advApp .adv-top-actions{gap:4px}
+ #advApp .adv-hero-copy{padding:28px 0 18px}
+ #advApp .adv-hero-copy h1{font-size:50px;margin:12px 0 16px}
+ #advApp .adv-tag{font-size:13px}
+ #advApp .adv-art{width:100%;min-height:210px;height:26dvh;max-height:290px;margin:0 0 20px;flex:none}
+ #advApp .adv-art .pip{width:108px;height:90px;bottom:22%;left:32%}
+ #advApp .dispatch-parcel{width:36px;height:36px;bottom:23%;left:59%}
+ #advApp .dispatch-flag{width:40px;height:52px;left:15%;bottom:23%}
+ #advApp .dispatch-caption{left:14px;right:14px;bottom:12px;font-size:8px;padding-top:8px}
+ #advApp .dispatch-caption span{font-size:10px;margin-top:3px}
+ #advApp .adv-home-progress{padding:14px 0}
+ #advApp .adv-home-actions{padding-top:18px}
+ #advApp .adv-map{padding:0 22px 32px}
+ #advApp .adv-map-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ #advApp .adv-map h2{font-size:30px}
+ #advApp .extra-list{grid-template-columns:1fr}
+}
+@media(orientation:landscape) and (max-height:600px){
+ #advApp .adv-home{grid-template-rows:60px auto auto 1fr;column-gap:28px;padding:0 24px 18px}
+ #advApp .adv-home>.adv-top{margin:0 -24px;padding:8px 24px;min-height:60px}
+ #advApp .adv-hero-copy{padding:18px 0 12px}
+ #advApp .adv-hero-copy h1{font-size:38px;margin:9px 0 10px;line-height:.95}
+ #advApp .adv-hero-copy h1 br{display:none}
+ #advApp .adv-hero-copy h1 span:before{content:' '}
+ #advApp .adv-tag{font-size:12px}
+ #advApp .adv-art{margin-top:20px;min-height:230px}
+ #advApp .adv-home-progress{padding:10px 0}
+ #advApp .adv-home-progress strong{font-size:11px}
+ #advApp .adv-home-stars{font-size:10px}
+ #advApp .adv-home-actions{padding-top:12px;gap:6px}
+ #advApp .adv-main,#advApp .adv-secondary{min-height:44px;padding:9px 12px;font-size:11px!important}
+ #advApp .adv-home-pair{gap:6px}
+ #advApp .adv-home-actions .adv-plain{min-height:44px;font-size:10px!important}
+ #advApp .adv-foot{display:none!important}
+ #advApp .adv-art .pip{width:125px;height:104px;left:24%}
+ #advApp .adv-game-top{padding:4px 14px;min-height:48px}
+ #advApp .adv-game-title b{font-size:12px}
+ #advApp .adv-mission{padding:3px 14px;min-height:24px}
+ #advApp .adv-controls{padding:6px 14px;min-height:60px}
+ #advApp .adv-control{min-height:44px;height:44px}
+}
+@media(prefers-reduced-motion:reduce){#advApp *{animation:none!important;transition:none!important}}
+@supports(padding:max(0px)){#advApp .adv-controls{padding-bottom:max(8px,env(safe-area-inset-bottom))}#advApp .adv-top{padding-top:max(12px,env(safe-area-inset-top))}}
+/* Explicitly neutralize remaining legacy illustration-era treatments. */
+#advApp .adv-control,#advApp .adv-control.jump{border-radius:6px!important;opacity:1!important;box-shadow:none!important}
+#advApp .adv-game-title{background:transparent!important;box-shadow:none!important;border:0!important;border-radius:0!important}
+#advApp .adv-mission{box-shadow:none!important;border-radius:0!important}
+#advApp .adv-home-stars{background:transparent!important;border-radius:0!important}
+#advApp .adv-viewport{margin:0!important}
+#advApp .adv-home .pip{width:190px;height:158px}
+@media(max-width:760px) and (orientation:portrait){#advApp .adv-home .pip{width:110px;height:92px}}
+@media(orientation:landscape) and (max-height:600px){#advApp .adv-home .pip{width:130px;height:108px}}
+#advApp .adv-game{display:flex;flex-direction:column;height:100dvh;isolation:isolate}
+#advApp .adv-game-top{position:relative;inset:auto;flex:0 0 auto;z-index:2}
+#advApp .adv-mission{position:relative;inset:auto;margin:0;width:auto;flex:0 0 auto;z-index:2}
+#advApp .adv-progress{display:block;position:relative;inset:auto;flex:0 0 3px}
+#advApp .adv-viewport{position:relative!important;inset:auto!important;width:100%;height:auto!important;flex:1 1 0;min-height:0}
+#advApp .adv-canvas{position:relative!important;inset:auto!important;width:100%!important;height:100%!important;object-fit:contain}
+#advApp .adv-controls{position:relative!important;inset:auto!important;flex:0 0 auto;z-index:2}
+#advApp .adv-viewport{padding:0!important;border:0!important}
+#advApp .adv-home .pip{max-width:none!important;max-height:none!important;object-fit:contain}
+
+#advApp .hat-title{font-size:10px;letter-spacing:.12em;font-weight:900;margin:24px 0 10px}
+#advApp .hat-row{display:flex;flex-wrap:wrap;gap:8px}
+#advApp .hat-option{min-height:44px;padding:10px 14px;background:transparent;border:1px solid var(--line);border-radius:4px;color:var(--ink)}
+#advApp .hat-option.selected{background:var(--accent);border-color:#718b3b}
+/* Readable mechanics and genuine, read-only route layout previews. */
+#advApp .adv-route-rule{margin:0;padding:5px 16px;background:#eef1df;color:#283629;font-size:12px;line-height:1.4;flex:0 0 auto;border-bottom:1px solid var(--line)}
+#advApp .adv-route-rule[hidden]{display:none}
+#advApp canvas.adv-route-postcard{position:absolute;display:block;width:100%;height:100px;object-fit:cover;object-position:center 65%;background:none}
+#advApp .adv-level{padding-top:112px!important;min-height:210px}
+#advApp .adv-route-facts{display:block;font-size:11px;line-height:1.4;font-style:normal;color:#52604a;margin:6px 0}
+#advApp .story-picture{background:#eef1df;display:flex;align-items:center;justify-content:center}
+#advApp .story-picture img{object-fit:contain;width:70%;height:70%}
+#advApp .adv-result{display:flex;flex-direction:column;align-items:stretch;max-height:calc(100% - 16px);overflow:auto;box-sizing:border-box;width:min(440px,calc(100% - 24px));gap:12px}
+#advApp .adv-result.adv-hidden{display:none}
+#advApp .adv-result-copy{text-align:center}
+#advApp .adv-result-copy strong{display:block;font-size:15px;line-height:1.4}
+#advApp .adv-result-copy small{font-size:11px;letter-spacing:.08em}
+#advApp .adv-result-copy p{margin:6px 0 0;font-size:13px;line-height:1.4}
+#advApp .adv-result-rating{display:flex;justify-content:center;gap:8px;margin:8px 0}
+#advApp .adv-result-rating .unearned{opacity:.25}
+#advApp .adv-result-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+#advApp .adv-result-actions button{font-size:12px;flex:1 0 auto}
+@media(orientation:landscape) and (max-height:600px){#advApp .adv-route-rule{font-size:11px;padding:2px 14px}#advApp .adv-result{padding:10px;gap:6px}#advApp .adv-result-rating{margin:4px 0}}
+#advApp .adv-result>.adv-result-copy,#advApp .adv-result>.adv-result-actions{flex:0 0 auto}
+/* Completion belongs to the screen, not the sometimes very short playfield. */
+#advApp .adv-result{position:fixed;flex-wrap:nowrap;max-height:calc(100dvh - 24px);z-index:20}

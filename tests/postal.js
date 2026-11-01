@@ -1,0 +1,14 @@
+const {chromium}=require('playwright'),assert=require('assert');
+(async()=>{const b=await chromium.launch({executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH||undefined,args:['--no-sandbox']});const p=await b.newPage({viewport:{width:390,height:844}});let errors=[];p.on('pageerror',e=>errors.push(String(e)));await p.goto('http://127.0.0.1:4187');await p.click('#advHome [data-action=classic]');await p.click('#playBtn');await p.click('[data-modal-action=close]');
+await p.click('#lookBtn');assert.equal(await p.getAttribute('#lookBtn','aria-pressed'),'true');
+let cases=await p.evaluate(async()=>{const g=__GAME_TEST__,dirs={up:[0,-1],right:[1,0],down:[0,1],left:[-1,0]},out={safe:0,danger:0,blocked:0};
+ for(let i=0;i<48;i++){g.startLevel(i);document.querySelector('[data-modal-action=close]')?.click();for(let step=0;step<5;step++){
+ let s=g.getState(),l=g.levels[i];for(let [dir,[dx,dy]] of Object.entries(dirs)){let r=g.transition(l,s,dir,true),el=document.querySelector(`.tile[data-x="${s.p[0]+dx}"][data-y="${s.p[1]+dy}"]`);if(r.invalid){if(el&&(el.classList.contains('preview-safe')||el.classList.contains('preview-danger')))throw Error('preview on wall');out.blocked++;continue}if(!el)throw Error('missing tile');if(r.dead){if(!el.classList.contains('preview-danger'))throw Error('missing danger '+i+' '+dir);out.danger++}else{if(!el.classList.contains('preview-safe'))throw Error('missing safe '+i+' '+dir);out.safe++}}
+ let hint=g.findHint();if(!hint)break;let r=g.transition(l,s,hint,true);if(r.won)break;g.move(hint);
+ }}return out});assert.ok(cases.safe>100&&cases.danger>0&&cases.blocked>0,JSON.stringify(cases));
+await p.reload();await p.click('#advHome [data-action=classic]');assert.equal((await p.evaluate(()=>__GAME_TEST__.getProgress())).lookAhead,true);await p.click('#playBtn');assert.equal(await p.getAttribute('#lookBtn','aria-pressed'),'true');
+// A rapid second move begins where the animated sprite is actually displayed, not at the prior grid cell.
+await p.evaluate(()=>{__GAME_TEST__.startLevel(0);document.querySelector('[data-modal-action=close]')?.click();__GAME_TEST__.move('right')});await p.waitForTimeout(80);
+let {x,y}=await p.evaluate(()=>{let x=document.querySelector('.courier-sprite').getBoundingClientRect().left;__GAME_TEST__.move('right');let y=document.querySelector('.courier-sprite').getBoundingClientRect().left;return {x,y}});assert.ok(Math.abs(y-x)<8,`jumped during rapid input: ${x} to ${y}`);
+await p.emulateMedia({reducedMotion:'reduce'});await p.evaluate(()=>__GAME_TEST__.move('right'));assert.equal(await p.locator('.courier-sprite').evaluate(el=>el.getAnimations().length),0);
+assert.deepEqual(errors,[]);console.log('Look-ahead matches turn rules across 48 levels and persists:',cases,'rapid input continuity and reduced motion OK');await b.close();})().catch(e=>{console.error(e);process.exit(1)});

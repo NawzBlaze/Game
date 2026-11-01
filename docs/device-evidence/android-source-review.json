@@ -1,0 +1,20 @@
+{
+  "scope": "Static candidate-source review only; no original installed binary or phone evidence available",
+  "environment": {
+    "javaAvailable": false,
+    "adbAvailable": false,
+    "androidSdkConfigured": false,
+    "physicalDeviceTested": false,
+    "nativeBuildExecuted": false
+  },
+  "files": {
+    "android/app/src/main/java/com/onestepdelivery/game/MainActivity.java": "d82d1c838d8d12aebd3d9a13b9b993e1f2efa863b606fb1616ee2573528f5752",
+    "android/app/src/main/AndroidManifest.xml": "4fdaec2e283bade4db744e6476a1a6adcd51e524fd8ee38ff5a7698cd76dfbe0",
+    "android/app/build.gradle": "1426e352ad614643d368a068690735b90624f042d8a1b5ca7f1c4f7462aef112",
+    "android/app/src/main/res/drawable/ic_launcher.png": "e07ea6d74612243e25904f8407ec3d7857cf7ea91ff9635653211f96e1b77d4c"
+  },
+  "launcherSource": "web/assets/kenney/character_green_front.png",
+  "launcherUnmodifiedSourceMatch": true,
+  "crashCause": "unknown",
+  "crashFixVerified": false
+}

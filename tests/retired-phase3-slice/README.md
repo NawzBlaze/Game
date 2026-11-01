@@ -1,0 +1,1 @@
+These are retained historical tests for the disabled Phase 3 harbour-only renderer and its removed, AI-assisted artwork. Their production filenames now contain replacement tests for the currently active shared renderer. Historical assertions about those removed files are not treated as current tests. Original tests are kept verbatim for audit, not included in the active suite.
