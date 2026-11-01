@@ -66,7 +66,7 @@ def main():
         adb('logcat', '-c')  # Only this disposable emulator's logs.
         adb('install', '-t', str(args.candidates / 'app-debug.apk'))
         adb('install', '-t', str(args.candidates / 'app-debug-androidTest.apk'))
-        result = adb('shell', 'am', 'instrument', '-w', '-e', 'class',
+        result = adb('shell', 'am', 'instrument', '-w', '-r', '-e', 'class',
                      'com.onestepdelivery.game.WebGameSmokeDeviceTest,com.onestepdelivery.game.RendererRecoveryDeviceTest',
                      package + '.test/androidx.test.runner.AndroidJUnitRunner', timeout=360, check=False)
         text = result.stdout + '\n' + result.stderr
