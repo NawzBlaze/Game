@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [arena/fcb06d04-game]
-    paths: ['android/**', 'web/**', 'tools/build_release.py', 'docs/release-assets.json', 'package.json', '.github/workflows/android-build-device.yml']
+    paths: ['android/**', 'web/**', 'tools/build_release.py', 'tools/run_android_emulator_tests.py', 'tests/test_android_emulator_runner.py', 'docs/release-assets.json', 'package.json', '.github/workflows/android-build-device.yml']
 permissions:
   contents: read
 concurrency:

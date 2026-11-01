@@ -74,10 +74,15 @@ def main():
         print(text)
         report['passed'] = result.returncode == 0 and tests_passed(text)
         if not report['passed']:
+            diagnostic=text[-10000:].replace('%','%25').replace('\r','%0D').replace('\n','%0A')
+            print('::error title=Emulator instrumentation::'+diagnostic)
+        if not report['passed']:
             raise RuntimeError('Instrumentation did not confirm both tests passed')
     except (RuntimeError, OSError, ValueError, subprocess.TimeoutExpired) as error:
         report['error'] = str(error)
         print(str(error), file=sys.stderr)
+        diagnostic=str(error)[-4000:].replace('%','%25').replace('\r','%0D').replace('\n','%0A')
+        print('::error title=Emulator test runner::'+diagnostic)
     finally:
         if serial:
             try:
