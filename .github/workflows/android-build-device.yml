@@ -25,7 +25,16 @@ jobs:
       - name: Install SDK using the runner's provisioned tools
         run: |
           set -o pipefail
-          sdkmanager 'platforms;android-36' 'build-tools;36.0.0' 2>&1 | tee sdk-setup.log
+          SDK="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          if [ -f "$SDK/platforms/android-36/android.jar" ] && [ -x "$SDK/build-tools/36.0.0/apksigner" ]; then
+            echo 'Using preinstalled SDK 36 and build-tools 36.0.0' | tee sdk-setup.log
+          else
+            MANAGER=$(find "$SDK/cmdline-tools" -type f -name sdkmanager | sort -V | tail -1)
+            test -n "$MANAGER"
+            "$MANAGER" --sdk_root="$SDK" 'platforms;android-36' 'build-tools;36.0.0' 2>&1 | tee sdk-setup.log
+          fi
+          echo "ANDROID_HOME=$SDK" >> "$GITHUB_ENV"
+          echo "ANDROID_SDK_ROOT=$SDK" >> "$GITHUB_ENV"
 
       - name: Compile, lint and simulate native framework APIs
         working-directory: android
