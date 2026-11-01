@@ -1,6 +1,6 @@
 # Android release: owner-controlled steps still required
 
-No native build, original-crash verification or signed output was produced in this environment. Do not install this candidate over the affected app until compatibility is established. Do not uninstall the existing game or clear its data for diagnostics.
+GitHub Actions has built debug and unsigned release candidates and passed two instrumentation tests on each of API 33 and API 36 emulators. See [the build handoff](ANDROID_BUILD_HANDOFF.md) and [recorded CI evidence](device-evidence/android-ci-run.json). No physical-phone, original-crash or production-signing verification has been completed. Do not install this candidate over the affected app until compatibility is established. Do not uninstall the existing game or clear its data for diagnostics.
 
 ## 1. Diagnose safely
 

@@ -57,11 +57,11 @@ npm run diagnostics:package
 
 The kit is `dist/LPC-Android-ReadOnly-Diagnostics.zip`. Follow [the quick start](docs/device-evidence/QUICK_START.md) on your own computer with the original affected phone. Do not reinstall the game, clear its data or upload full logs. The Python collector has six mocked host tests; it has not been verified on a real phone or Windows. Current [triage status](docs/device-evidence/ANDROID_TRIAGE_STATUS.md) records the limits.
 
-A manual Android CI workflow is provided for future configured build/test runs; it has not executed here and does not install or distribute an APK.
+Android CI has now built debug and unsigned release candidates and passed instrumentation on disposable Android 13/API 33 and Android 16/API 36 emulators. See [the recorded run and artifact identities](docs/device-evidence/android-ci-run.json) and [Android handoff](docs/ANDROID_BUILD_HANDOFF.md). No physical phone or production signing was used.
 
 ## Android
 
-`android/` is the reconstructed native WebView wrapper, not Capacitor. The original Android 13 crash is not diagnosed here. Java, Android SDK and a physical phone are unavailable in this environment, so no fresh native build or signed APK/AAB is claimed.
+`android/` is the reconstructed native WebView wrapper, not Capacitor. The original Android 13 crash is not diagnosed here. Java, Android SDK and a physical phone are unavailable locally; the native build and emulator checks ran on GitHub Actions instead. Release APK/AAB outputs are unsigned and not store-ready.
 
 On a configured Linux build machine, the Gradle pre-build runs the allowlisted web builder and packages **dist/web**, with test hooks disabled. App ID stays `com.onestepdelivery.game`; candidate version code is 20. Release signing uses owner-controlled environment variables, with the keystore outside the repository. Verify installed certificate/version compatibility before any update. Do not send signing secrets in chat.
 

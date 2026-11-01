@@ -1,4 +1,6 @@
-# Android validation step — started, not device-verified
+# Android validation — emulator verified, original phone pending
+
+**Update, 2026-11-01:** Native build/lint/simulated tests and two real-WebView instrumentation tests on each of API 33/36 disposable emulators now pass. See [CI evidence](android-ci-run.json) and [build handoff](../ANDROID_BUILD_HANDOFF.md). No physical phone was tested; the original crash is still undiagnosed. Earlier diagnostic-only observations below are historical.
 
 ## Completed in this step
 

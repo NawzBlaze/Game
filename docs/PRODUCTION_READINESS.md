@@ -2,7 +2,7 @@
 
 ## Decision
 
-**Web release candidate is implemented and automated checks pass. Overall production gate is BLOCKED pending independent human/owner and Android-device evidence.** No signed APK/AAB, app-store submission or public deployment was created. No monetary-quality/perfection claim is made.
+**Web release candidate is implemented and automated checks pass. Overall production gate is BLOCKED pending independent human/owner and Android-device evidence.** No production-signed release APK/AAB or app-store submission was created. Debug/unsigned Android candidates and emulator results are recorded in [the Android handoff](ANDROID_BUILD_HANDOFF.md). No monetary-quality/perfection claim is made.
 
 This document supersedes unfinished Classic/customization/source-provenance items in the earlier `OVERHAUL_STATUS.md`, while preserving that report as historical evidence.
 
@@ -16,7 +16,7 @@ This document supersedes unfinished Classic/customization/source-provenance item
 - Added a source-only test-hook configuration; the built RC sets test hooks false. Browser checks verify `__GAME_TEST__` and `__ADV_TEST__` are absent in the actual built candidate.
 - Added restrictive CSP, no network connections from the game, nosniff/referrer/permissions headers, and preview-host-safe serving. The CSP permits inline *styles* for existing dynamic functional layout, not inline scripts or eval. Arena framing remains allowed.
 - Added a fail-closed release builder: exact code allowlist, asset licence/hash checks, static dependency checks, legacy-path exclusion, safe file checks, deterministic ZIP timestamps, readback verification and per-file manifests. The previous catch-all ZIP tool now delegates to this builder.
-- Updated the Android Gradle source set to package the validated `dist/web` tree rather than all inherited assets. The pre-build invokes the web builder. Candidate app version is 0.19.0-rc.1/code 20; app ID is unchanged. **Native configuration changes are not built/device-tested here.**
+- Updated the Android Gradle source set to package the validated `dist/web` tree rather than all inherited assets. The pre-build invokes the web builder. Candidate app version is 0.19.0-rc.1/code 20; app ID is unchanged. **Subsequent CI build/lint/simulated tests and API 33/36 emulator instrumentation now pass; physical-device validation and production signing remain outstanding.**
 - Added a serial verification runner, CI workflow, machine-readable QA output, and an approval gate that requires artifact-bound human/device evidence. No approvals were fabricated.
 
 ## Fresh automated coverage
