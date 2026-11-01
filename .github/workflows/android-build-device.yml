@@ -11,23 +11,39 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '21'
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
-      - uses: android-actions/setup-android@v3
-      - run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - name: Install SDK using the runner's provisioned tools
+        run: |
+          set -o pipefail
+          sdkmanager 'platforms;android-36' 'build-tools;36.0.0' 2>&1 | tee sdk-setup.log
+
       - name: Compile, lint and simulate native framework APIs
         working-directory: android
         run: |
-          ./gradlew --no-daemon -PtestApi=29,33,36 testDebugUnitTest lintDebug assembleDebug assembleDebugAndroidTest assembleRelease bundleRelease
+          set -o pipefail
+          ./gradlew --no-daemon -PtestApi=29,33,36 testDebugUnitTest lintDebug assembleDebug assembleDebugAndroidTest assembleRelease bundleRelease 2>&1 | tee ../android-build.log
+      - name: Expose bounded build failure diagnostics
+        if: failure()
+        run: |
+          python3 - <<'PYCODE'
+          from pathlib import Path
+          for name in ['sdk-setup.log','android-build.log']:
+              p=Path(name)
+              if p.exists():
+                  text=p.read_text(errors='replace')[-12000:]
+                  text=text.replace('%','%25').replace('\r','%0D').replace('\n','%0A')
+                  print('::error title='+name+'::'+text)
+          PYCODE
       - name: Record candidate identities
         run: |
           mkdir -p dist/android-candidates
@@ -50,19 +66,21 @@ jobs:
         with:
           name: android-build-reports
           path: |
+            sdk-setup.log
+            android-build.log
             android/app/build/reports/
             android/app/build/test-results/
           retention-days: 14
   emulator:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     strategy:
       fail-fast: false
       matrix:
         api: [33, 36]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: actions/download-artifact@v4
         with:
           name: android-unsigned-and-debug-candidates
