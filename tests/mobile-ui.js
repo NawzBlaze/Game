@@ -33,5 +33,13 @@ const crypto=require('node:crypto');
       for(const r of controls)assert(r.x>=44&&r.right<=viewport.width-24+1,'controls ignore native cutout insets');
       assert.deepEqual(errors,[]);console.log('PASS mobile APK UI',viewport.width+'x'+viewport.height,': sourced skins, reachable menus, native back stack, thumb clearance, cutouts');await page.close();
     }
+    for(const viewport of [{width:320,height:590},{width:390,height:844}]){
+      const page=await browser.newPage({viewport,hasTouch:true});await page.addInitScript(()=>{window.NativeOrientation={setMode(){}}});
+      await page.goto('http://127.0.0.1:4187');await page.click('#advHome [data-action=classic]');await page.click('#playBtn');
+      if(await page.locator('[data-modal-action=close]').count())await page.click('[data-modal-action=close]');
+      const buttons=await page.locator('#gameScreen button:visible').evaluateAll(nodes=>nodes.map(e=>{const r=e.getBoundingClientRect();return{x:r.x,y:r.y,right:r.right,bottom:r.bottom,w:r.width,h:r.height}}));
+      for(const r of buttons)assert(r.x>=0&&r.y>=0&&r.right<=viewport.width+1&&r.bottom<=viewport.height+1&&r.w>=44&&r.h>=44,'Puzzle controls must fit phone '+JSON.stringify({viewport,r}));
+      console.log('PASS mobile puzzle UI',viewport.width+'x'+viewport.height,': all controls fit without scrolling');await page.close();
+    }
   }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1});

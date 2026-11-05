@@ -219,3 +219,31 @@ html,body{background:#edf7fb;color:var(--ink);overscroll-behavior:none}
 .modal-layer{background:#102c42c9}
 .modal-card{background:#edf7fb;color:#203e53;border:3px solid #fff;border-radius:0;box-shadow:none}
 .modal-card h2,.modal-card h3{color:#203e53}
+/* Puzzle mode must fit a phone too: no movement controls below the screen. */
+@media(orientation:portrait){
+ .app-shell .game-top{height:56px;min-height:56px;margin-bottom:10px;flex-wrap:nowrap}
+ .app-shell #gameBackBtn{white-space:nowrap;font-size:11px;min-width:80px;padding:2px}
+ .app-shell .game-layout{display:block}
+ .app-shell .game-intro .eyebrow,.app-shell .game-intro>p{display:none}
+ .app-shell .game-intro h2{font-size:22px;margin:4px 0 8px}
+ .app-shell .mission-card{padding:5px 8px;margin:0 0 10px;min-height:40px;gap:8px}
+ .app-shell .mission-card small{display:none}
+ .app-shell .mission-icon{width:26px;height:26px}
+ .app-shell .board-wrap{width:min(100%,calc(100vh - 330px));width:min(100%,calc(100dvh - 330px));min-width:min(264px,100%)}
+ .app-shell .board-key{margin:6px 0;font-size:9px;gap:4px}
+ .app-shell .board-key img{width:18px;height:18px}
+ .app-shell .board-bottom{padding-top:0}
+ .app-shell .swipe-note{font-size:8px;margin:4px 0}
+ .app-shell .dpad{display:flex;justify-content:center;gap:8px;margin:8px 0 0}
+ .app-shell .dpad [data-direction=left]{order:0}
+ .app-shell .dpad [data-direction=up]{order:1}
+ .app-shell .dpad [data-direction=down]{order:2}
+ .app-shell .dpad [data-direction=right]{order:3}
+}
+@media(orientation:portrait){
+ .app-shell .game-screen{padding-top:var(--native-safe-top,0px)}
+ .app-shell .board-bottom{margin-top:4px}
+ .app-shell .tool-btn{height:48px;min-height:48px;padding:0;font-size:11px}
+ .app-shell .swipe-note{display:none}
+ .app-shell .dpad>div{display:contents}
+}
