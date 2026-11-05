@@ -1,0 +1,3 @@
+/* Creator-authored typeface, packaged locally for offline use. */
+@font-face{font-family:'LPC Nunito';src:url('assets/visual-rebuild/font/Nunito.ttf') format('truetype');font-style:normal;font-weight:200 1000;font-display:swap}
+body,#advApp{font-family:'LPC Nunito',system-ui,sans-serif}

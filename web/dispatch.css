@@ -1,0 +1,249 @@
+/* Mobile game interface. Button faces/icons: original Kenney CC0 PNGs.
+   No generated illustration, CSS-drawn icons, gradients or decorative shadows. */
+@font-face{font-family:Nunito;src:url('assets/font/Nunito.ttf') format('truetype');font-display:swap;font-weight:200 1000}
+:root{--ink:#203e53;--muted:#526d7c;--paper:#edf7fb;--line:#c8dee8;--accent:#14b982}
+html,body{background:#edf7fb;color:var(--ink);overscroll-behavior:none}
+#advApp{--ink:#203e53;--muted:#526d7c;--paper:#edf7fb;--line:#c8dee8;--accent:#14b982;font-family:Nunito,system-ui,sans-serif;background:var(--paper);color:var(--ink);scrollbar-width:thin}
+#advApp button,.app-shell button,.modal-layer button,button.primary-btn,button.secondary-btn,.icon-btn,.modal-card button,#progressPanel button{border:10px solid transparent;border-image:url('assets/mobile-ui/grey-button_rectangle_depth_flat.png') 12 fill stretch;background:transparent;box-shadow:none;border-radius:0;color:#203e53;font:800 14px/1.2 Nunito,system-ui,sans-serif;min-height:48px;padding:4px 8px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+#advApp button:hover:not(:disabled){background:transparent}
+#advApp button:active:not(:disabled),#advApp button.pressed{transform:translateY(2px)}
+#advApp button:focus-visible{outline:3px solid #1d6590;outline-offset:2px}
+#advApp button:disabled{opacity:.5;cursor:not-allowed}
+#advApp .adv-screen{width:100%;min-height:100vh;min-height:100dvh;margin:0}
+#advApp .adv-top{height:60px;min-height:60px;padding:6px max(16px,env(safe-area-inset-right),var(--native-safe-right,0px)) 6px max(16px,env(safe-area-inset-left),var(--native-safe-left,0px));background:#fff;border-bottom:2px solid #d4e7ef;gap:10px}
+#advApp .adv-logo{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:1000;letter-spacing:0;color:#203e53}
+#advApp .adv-logo img{width:28px;height:28px;object-fit:contain}
+#advApp .adv-top-actions{gap:6px}
+#advApp .adv-icon{display:flex;align-items:center;justify-content:center;min-width:48px;width:48px;height:48px;min-height:48px;padding:2px;border-image-source:url('assets/mobile-ui/blue-button_square_depth_flat.png');font-size:15px;color:#fff}
+#advApp .adv-icon img{width:24px;height:24px;object-fit:contain;pointer-events:none}
+#advApp .adv-eyebrow{color:#526d7c;font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+#advApp .adv-home{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,38%);grid-template-rows:60px minmax(0,1fr);height:100vh;height:100dvh;overflow:hidden}
+#advApp .adv-home>.adv-top{grid-column:1/-1}
+#advApp .adv-home-stage{display:flex;flex-direction:column;min-height:0;position:relative;background:#e4f6ff}
+#advApp .adv-hero-copy{padding:14px 24px 0;text-align:center;position:absolute;top:0;left:0;right:0;z-index:1;pointer-events:none}
+#advApp .adv-hero-copy h1{font-size:clamp(30px,4.4vw,52px);font-weight:1000;line-height:1.02;letter-spacing:-.035em;margin:5px 0 8px;color:#203e53}
+#advApp .adv-hero-copy h1 br{display:none}
+#advApp .adv-hero-copy h1 span:before{content:none}
+#advApp .adv-tag{font-size:13px;line-height:1.4;margin:0;color:#3c6477;font-weight:700}
+#advApp .adv-art{position:relative;flex:1;min-height:0;width:100%;overflow:hidden;background:#e4f6ff}
+#advApp .dispatch-background{position:absolute;width:100%;height:100%;inset:0;object-fit:cover;object-position:center bottom}
+#advApp .adv-art .pip{position:absolute;left:30%;bottom:16%;width:150px;height:125px;max-width:none;max-height:none;object-fit:contain}
+#advApp .dispatch-parcel{position:absolute;left:61%;bottom:19%;width:46px;height:46px;object-fit:contain}
+#advApp .dispatch-flag{position:absolute;left:12%;bottom:18%;width:40px;height:55px;object-fit:contain}
+#advApp .dispatch-caption{display:none}
+#advApp .adv-home-progress{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#fff;padding:10px 20px;min-height:60px;border-top:2px solid #d4e7ef;flex:none}
+#advApp .adv-home-progress span{font-size:10px;color:#526d7c;font-weight:900;letter-spacing:.06em}
+#advApp .adv-home-progress strong{font-size:14px;display:block}
+#advApp .adv-home-stars{font-size:12px;white-space:nowrap;color:#526d7c;font-weight:800}
+#advApp .adv-home-actions{display:flex;flex-direction:column;justify-content:center;gap:10px;padding:16px max(16px,env(safe-area-inset-right),var(--native-safe-right,0px)) 12px 16px;min-height:0;background:#edf7fb;overflow:auto}
+#advApp .adv-main,button.primary-btn{border-image-source:url('assets/mobile-ui/green-button_rectangle_depth_flat.png');font-size:17px;min-height:58px;font-weight:1000}
+#advApp .adv-main{display:flex;align-items:center;justify-content:space-between;gap:12px}
+#advApp .adv-main img{width:24px;height:24px;object-fit:contain}
+#advApp .adv-home-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+#advApp .adv-home-pair .adv-secondary{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:76px;font-size:12px}
+#advApp .adv-home-pair img{width:30px;height:30px;object-fit:contain}
+#advApp .adv-plain{font-size:12px;min-height:44px}
+#advApp .adv-foot{display:none}
+#advApp .adv-storage-warning{position:absolute;left:12px;right:12px;top:62px;z-index:5;padding:10px;background:#fff0c9;color:#744912;border:1px solid #c8a75a;font-size:12px}
+#advApp .adv-storage-warning[hidden]{display:none}
+#advApp .adv-map{padding:0 max(20px,env(safe-area-inset-right),var(--native-safe-right,0px)) 28px max(20px,env(safe-area-inset-left),var(--native-safe-left,0px));background:#edf7fb}
+#advApp .adv-map>.adv-top{position:sticky;top:0;z-index:4;margin:0 -20px 18px;padding-left:20px!important;padding-right:20px!important}
+#advApp .adv-map h2{font-size:26px;line-height:1.15;letter-spacing:-.025em;margin:14px 0 6px;font-weight:1000}
+#advApp .adv-map>p{font-size:13px;line-height:1.5;margin:0;color:#526d7c}
+#advApp .adv-district{margin:24px 0 28px}
+#advApp .adv-district-head{display:flex;gap:10px;align-items:center;margin-bottom:12px}
+#advApp .adv-district-head>span{font-size:22px;font-weight:1000;color:#1e8371}
+#advApp .adv-district-head b{font-size:16px}
+#advApp .adv-district-head small{font-size:12px;color:#526d7c;margin-top:2px}
+#advApp .adv-map-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+#advApp .adv-level{border:2px solid #c8dee8;border-image:none;background:#fff!important;position:relative;overflow:hidden;padding:94px 10px 10px;text-align:left;min-height:172px;font-size:13px}
+#advApp .adv-level.current{border-color:#129979;outline:2px solid #129979;outline-offset:1px}
+#advApp .adv-level:disabled{opacity:.6}
+#advApp .adv-level b{font-size:12px;color:#24765e;font-weight:1000}
+#advApp .adv-level span{font-size:14px;line-height:1.3;margin:3px 0;font-weight:900}
+#advApp .adv-level small{color:#526d7c;font-size:11px}
+#advApp canvas.adv-route-postcard{position:absolute;inset:0 0 auto;width:100%;height:84px;object-fit:cover;object-position:center 65%;background:#d9f4ff}
+#advApp .adv-route-facts{display:block;font-style:normal;font-size:10px;line-height:1.4;color:#526d7c;margin:4px 0}
+#advApp .adv-courier-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}
+#advApp .adv-courier{border:2px solid #c8dee8;border-image:none;background:#fff!important;padding:14px 10px;display:flex;flex-direction:column;text-align:center;gap:6px;min-width:0}
+#advApp .adv-courier.selected{border-color:#129979;outline:2px solid #129979;outline-offset:1px}
+#advApp .adv-courier-art,#advApp .adv-courier-art canvas{width:96px;height:80px}
+#advApp .adv-courier-copy b{font-size:18px;font-weight:1000}
+#advApp .adv-courier-copy small{font-size:12px;line-height:1.4;color:#526d7c}
+#advApp .adv-courier-copy em{font-size:10px;font-style:normal;margin-top:10px;color:#24765e}
+#advApp .adv-courier-chevron{display:none}
+#advApp .hat-title,#advApp .hat-row,#advApp .courier-note{grid-column:1/-1}
+#advApp .hat-title{font-size:11px;font-weight:1000;letter-spacing:.06em;margin-top:12px}
+#advApp .hat-row{display:flex;gap:8px;flex-wrap:wrap}
+#advApp .hat-option.selected{border-image-source:url('assets/mobile-ui/green-button_rectangle_depth_flat.png')}
+#advApp .courier-note{font-size:12px;line-height:1.5;color:#526d7c}
+#advApp .extra-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+#advApp .extra-card,#advApp .story-card{border:2px solid #c8dee8;border-image:none;background:#fff!important;display:flex;align-items:center;gap:14px;padding:14px;min-height:106px;text-align:left;color:#203e53}
+#advApp .extra-card b,#advApp .story-card b{font-size:15px;font-weight:1000}
+#advApp .extra-card small,#advApp .story-card small{font-size:12px;line-height:1.5;color:#526d7c;margin:4px 0}
+#advApp .extra-card em{font-size:10px;font-style:normal;color:#24765e}
+#advApp .extra-icon img{width:40px;height:40px;object-fit:contain}
+#advApp .story-picture{display:flex;align-items:center;justify-content:center;background:#edf7fb;width:72px;height:72px;flex:none}
+#advApp .story-picture img{width:70%;height:70%;object-fit:contain}
+#advApp .adv-game{height:100vh;height:100dvh;width:100%;max-width:none;display:flex;flex-direction:column;position:relative;overflow:hidden;isolation:isolate;padding:0}
+#advApp .adv-game-top{position:relative;flex:0 0 54px;min-height:54px;z-index:5;display:flex;gap:12px;padding:3px max(12px,env(safe-area-inset-right),var(--native-safe-right,0px)) 3px max(12px,env(safe-area-inset-left),var(--native-safe-left,0px));background:#203e53;color:#fff;border:0}
+#advApp .adv-game-title{flex:1;min-width:0}
+#advApp .adv-game-title small{font-size:9px;letter-spacing:.06em;color:#bfe0eb}
+#advApp .adv-game-title b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fff}
+#advApp .adv-stat{font-size:12px;font-weight:900;background:transparent;border:0;border-radius:0;color:inherit;white-space:nowrap}
+#advApp #advStamps{display:flex;align-items:center;gap:6px;min-width:70px}
+#advApp #advStamps:before{content:'';display:block;width:23px;height:23px;background:url('assets/kenney/star.png') center/contain no-repeat}
+#advApp .adv-progress{flex:0 0 3px;height:3px;background:#c8dee8;position:relative;z-index:5;margin:0}
+#advApp .adv-progress span{background:#12a975}
+#advApp .adv-mission{position:absolute;top:64px;left:50%;transform:translateX(-50%);z-index:3;max-width:calc(100% - 32px);min-width:250px;display:flex;align-items:center;gap:16px;padding:6px 12px;margin:0;font-size:11px;line-height:1.4;background:#fff;color:#203e53;border:1px solid #c8dee8}
+#advApp .adv-mission em{font-size:9px;font-style:normal;font-weight:1000;color:#24765e;white-space:nowrap}
+#advApp .adv-route-rule{position:absolute;top:102px;left:50%;transform:translateX(-50%);z-index:3;background:#fff7dc;color:#644719;font-size:11px;line-height:1.3;margin:0;padding:5px 10px;max-width:min(560px,calc(100% - 40px));width:max-content;border:1px solid #ddc78f;pointer-events:none}
+#advApp .adv-route-rule[hidden]{display:none}
+#advApp .adv-viewport{position:relative;flex:1;min-height:0;width:100%;padding:0;margin:0;border:0;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#e4f6ff}
+#advApp .adv-canvas{position:relative;display:block;width:100%!important;height:100%!important;max-width:100%;max-height:100%;object-fit:contain;border:0;border-radius:0}
+#advApp .adv-controls{position:absolute;left:0;right:0;bottom:0;z-index:4;display:flex;align-items:end;justify-content:space-between;gap:10px;padding:0 max(20px,env(safe-area-inset-right),var(--native-safe-right,0px)) max(12px,env(safe-area-inset-bottom),var(--native-safe-bottom,0px)) max(20px,env(safe-area-inset-left),var(--native-safe-left,0px));background:transparent;pointer-events:none}
+#advApp .adv-controls button{pointer-events:auto;touch-action:none;user-select:none;-webkit-user-select:none}
+#advApp .adv-direction{display:flex;gap:12px}
+#advApp .adv-control{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border-image-source:url('assets/mobile-ui/blue-button_square_depth_flat.png');width:68px;min-width:68px;height:68px;min-height:68px;padding:4px;font-size:14px!important;color:#fff}
+#advApp .adv-control img{width:28px;height:28px;object-fit:contain;pointer-events:none}
+#advApp .adv-control.jump{border-image-source:url('assets/mobile-ui/blue-button_square_depth_flat.png');width:88px;height:76px;min-height:76px;font-size:11px!important}
+#advApp .adv-control.jump img{width:24px;height:24px}
+#advApp .adv-control small{font-size:8px;color:#fff;letter-spacing:.03em}
+#advApp .adv-greet{min-height:50px;font-size:12px;max-width:100px}
+#advApp .adv-hintline{display:none}
+#advApp .adv-message{position:absolute;top:88px;left:50%;transform:translateX(-50%);max-width:min(400px,85%);padding:9px 14px;background:#203e53;color:#fff;border-radius:0;border:0;font-size:12px;text-align:center;z-index:3;pointer-events:none}
+#advApp .adv-tutorial{position:absolute;bottom:100px;left:50%;transform:translateX(-50%);max-width:min(460px,90%);background:#fff;color:#203e53;border:2px solid #c8dee8;padding:6px 10px;gap:10px;z-index:4;font-size:12px}
+#advApp .adv-tutorial button{min-height:44px;min-width:52px;font-size:11px}
+#advApp .adv-dialog{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:max(12px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right),var(--native-safe-right,0px)) max(12px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left),var(--native-safe-left,0px));background:#102c42c9}
+#advApp .adv-card{width:min(100%,440px);max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px);overflow:auto;padding:20px;background:#edf7fb;color:#203e53;border:3px solid #fff;border-radius:0;box-shadow:none;scrollbar-width:thin}
+#advApp .adv-card h3{font-size:25px;font-weight:1000;line-height:1.2;margin:6px 0 14px;letter-spacing:-.02em}
+#advApp .adv-card p,#advApp .adv-helptext{font-size:13px;line-height:1.7;color:#526d7c}
+#advApp .adv-card button{width:100%;margin-top:8px;min-height:48px}
+#advApp .adv-card .adv-main{justify-content:center;min-height:52px}
+#advApp .adv-card .adv-eyebrow{font-size:10px}
+#advApp .adv-result{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:20;display:flex;flex-direction:column;flex-wrap:nowrap;align-items:stretch;gap:12px;width:min(440px,calc(100% - 32px));max-width:none;max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px);overflow:auto;padding:20px;background:#edf7fb;border:3px solid #fff;border-radius:0;box-shadow:none}
+#advApp .adv-result>div{flex:0 0 auto;text-align:center}
+#advApp .adv-result-copy small{font-size:11px;font-weight:1000;letter-spacing:.07em}
+#advApp .adv-result-copy strong{font-size:15px;line-height:1.4;margin:8px 0;display:block}
+#advApp .adv-result-copy p{font-size:12px;line-height:1.5;margin:0;color:#526d7c}
+#advApp .adv-result-rating{display:flex;justify-content:center;gap:10px;margin:12px 0}
+#advApp .adv-result-rating img{width:30px;height:30px}
+#advApp .adv-result-rating .unearned{opacity:.25}
+#advApp .adv-result-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#advApp .adv-result-actions button:first-child{grid-column:1/-1;border-image-source:url('assets/mobile-ui/green-button_rectangle_depth_flat.png');font-size:15px}
+#advApp .adv-result-actions button{min-height:48px;font-size:12px}
+#advApp .adv-finished .adv-controls{visibility:hidden}
+#progressPanel{background:#edf7fb;color:#203e53;border:3px solid #fff;max-height:90dvh;overflow:auto}
+.app-shell .primary-btn{border-image-source:url('assets/mobile-ui/green-button_rectangle_depth_flat.png')}
+.app-shell .secondary-btn,.app-shell .icon-btn{border-image-source:url('assets/mobile-ui/grey-button_rectangle_depth_flat.png')}
+.app-shell .title-scene,.app-shell .map-screen,.app-shell .modal-card{background:#edf7fb}
+@media(orientation:portrait){
+ #advApp .adv-home{display:flex;flex-direction:column;height:auto;min-height:100vh;min-height:100dvh;overflow:visible}
+ #advApp .adv-home-stage{height:clamp(260px,43vh,390px);height:clamp(260px,43dvh,390px);flex:none}
+ #advApp .adv-hero-copy{padding-top:18px}
+ #advApp .adv-hero-copy h1{font-size:38px}
+ #advApp .adv-art .pip{width:135px;height:112px;bottom:17%;left:29%}
+ #advApp .dispatch-parcel{width:36px;height:36px;bottom:20%;left:64%}
+ #advApp .adv-home-progress{min-height:56px;padding:8px 16px}
+ #advApp .adv-home-actions{overflow:visible;padding:16px;gap:10px}
+ #advApp .adv-home-pair .adv-secondary{min-height:72px}
+ #advApp .adv-map-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #advApp .adv-courier-list{grid-template-columns:1fr}
+ #advApp .adv-courier{flex-direction:row;text-align:left;padding:12px;gap:14px}
+ #advApp .extra-list{grid-template-columns:1fr}
+ #advApp .adv-game-title b{font-size:13px}
+ #advApp .adv-controls{padding-left:12px;padding-right:12px}
+ #advApp .adv-direction{gap:8px}
+ #advApp .adv-control{width:60px;min-width:60px;height:64px;min-height:64px}
+ #advApp .adv-control.jump{width:76px}
+ #advApp .adv-greet{font-size:10px!important;max-width:72px;padding:2px}
+}
+@media(orientation:landscape) and (max-height:420px){
+ #advApp .adv-home{grid-template-rows:54px minmax(0,1fr);grid-template-columns:minmax(0,1fr) minmax(238px,37%)}
+ #advApp .adv-top{height:54px;min-height:54px;padding-top:3px;padding-bottom:3px}
+ #advApp .adv-hero-copy{padding:12px 12px 0}
+ #advApp .adv-hero-copy h1{font-size:30px;margin:4px 0}
+ #advApp .adv-tag{font-size:11px}
+ #advApp .adv-hero-copy .adv-eyebrow{font-size:9px}
+ #advApp .adv-art .pip{width:126px;height:105px;bottom:12%}
+ #advApp .dispatch-parcel{width:35px;height:35px;bottom:17%}
+ #advApp .dispatch-flag{width:32px;height:42px;bottom:16%}
+ #advApp .adv-home-progress{min-height:48px;padding:5px 12px}
+ #advApp .adv-home-progress strong{font-size:12px}
+ #advApp .adv-home-stars{font-size:10px}
+ #advApp .adv-home-actions{gap:7px;padding:10px 14px;justify-content:flex-start}
+ #advApp .adv-home-pair{gap:7px}
+ #advApp .adv-home-pair .adv-secondary{min-height:64px;gap:2px;font-size:11px}
+ #advApp .adv-home-pair img{width:25px;height:25px}
+ #advApp .adv-main{min-height:52px;font-size:15px}
+ #advApp .adv-home-actions>.adv-plain{min-height:44px;font-size:11px}
+ #advApp .adv-result{padding:12px;gap:8px;max-width:500px;width:calc(100% - 40px)}
+ #advApp .adv-result-rating{margin:6px 0}
+ #advApp .adv-result-rating img{width:24px;height:24px}
+ #advApp .adv-result-actions{display:flex;flex-wrap:nowrap}
+ #advApp .adv-result-actions button{flex:1;min-width:0;font-size:11px;padding:2px;min-height:48px}
+ #advApp .adv-result-actions button:first-child{font-size:12px}
+ #advApp .adv-card{padding:14px 18px}
+ #advApp .adv-card h3{font-size:22px;margin:4px 0 8px}
+}
+@media(prefers-reduced-motion:reduce){#advApp *{animation:none!important;transition:none!important}}
+#advApp .move-left,#advApp .back-arrow{transform:rotate(180deg)}
+#advApp .adv-map>.adv-top{margin:0 0 18px;padding-left:0!important;padding-right:0!important}
+#advApp .adv-card[data-dialog=pause]{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+#advApp .adv-card[data-dialog=pause]>.adv-eyebrow,#advApp .adv-card[data-dialog=pause]>h3,#advApp .adv-card[data-dialog=pause]>[data-action=resume]{grid-column:1/-1}
+#advApp .adv-card[data-dialog=pause] button{margin:0}
+#advApp .adv-card[data-dialog=pause] h3{margin:0 0 6px}
+/* The retained puzzle mode uses the same mobile skin, not a second visual theme. */
+.app-shell .game-top{background:#203e53;color:#fff;min-height:56px;margin:0 -16px 16px;padding:4px 12px;border:0}
+.app-shell .game-screen{padding:0 16px 20px}
+.app-shell .game-top .level-indicator{color:#d2e8f3}
+.app-shell .game-intro h2{font-size:26px;color:#203e53;margin:8px 0}
+.app-shell .game-intro>p{font-size:13px;color:#526d7c}
+.app-shell .mission-card{background:#fff;border:2px solid #c8dee8;border-radius:0;margin-top:14px;padding:12px}
+.app-shell .board-frame{border:2px solid #99c7da;border-radius:0;background:#fff}
+.app-shell .board{background:#e3f1e9}
+.app-shell .tile{background-color:#e3f1e9;border-color:#b4d4c8}
+.app-shell .tile.wall{background-color:#c5e1d5}
+.app-shell .tile.exit{background-color:#b5e7b6}
+.app-shell .tile.reachable{outline-color:#43876f}
+.app-shell .tool-row{gap:6px}
+.app-shell .tool-btn{font-size:12px;padding:2px;min-height:48px}
+.app-shell .dpad button{border-image-source:url('assets/mobile-ui/blue-button_square_depth_flat.png');color:#fff;min-width:52px;min-height:52px;padding:4px}
+.app-shell .puzzle-arrow{width:24px;height:24px;object-fit:contain;pointer-events:none}
+.app-shell .puzzle-up{transform:rotate(-90deg)}
+.app-shell .puzzle-down{transform:rotate(90deg)}
+.app-shell .puzzle-left{transform:rotate(180deg)}
+.app-shell .title-content h1{color:#203e53}
+.app-shell .chapter,.app-shell .classic-result{background:#fff;border:2px solid #c8dee8;border-radius:0}
+.app-shell .level-cell.current{border-image-source:url('assets/mobile-ui/green-button_rectangle_depth_flat.png')}
+.modal-layer{background:#102c42c9}
+.modal-card{background:#edf7fb;color:#203e53;border:3px solid #fff;border-radius:0;box-shadow:none}
+.modal-card h2,.modal-card h3{color:#203e53}
+/* Puzzle mode must fit a phone too: no movement controls below the screen. */
+@media(orientation:portrait){
+ .app-shell .game-top{height:56px;min-height:56px;margin-bottom:10px;flex-wrap:nowrap}
+ .app-shell #gameBackBtn{white-space:nowrap;font-size:11px;min-width:80px;padding:2px}
+ .app-shell .game-layout{display:block}
+ .app-shell .game-intro .eyebrow,.app-shell .game-intro>p{display:none}
+ .app-shell .game-intro h2{font-size:22px;margin:4px 0 8px}
+ .app-shell .mission-card{padding:5px 8px;margin:0 0 10px;min-height:40px;gap:8px}
+ .app-shell .mission-card small{display:none}
+ .app-shell .mission-icon{width:26px;height:26px}
+ .app-shell .board-wrap{width:min(100%,calc(100vh - 330px));width:min(100%,calc(100dvh - 330px));min-width:min(264px,100%)}
+ .app-shell .board-key{margin:6px 0;font-size:9px;gap:4px}
+ .app-shell .board-key img{width:18px;height:18px}
+ .app-shell .board-bottom{padding-top:0}
+ .app-shell .swipe-note{font-size:8px;margin:4px 0}
+ .app-shell .dpad{display:flex;justify-content:center;gap:8px;margin:8px 0 0}
+ .app-shell .dpad [data-direction=left]{order:0}
+ .app-shell .dpad [data-direction=up]{order:1}
+ .app-shell .dpad [data-direction=down]{order:2}
+ .app-shell .dpad [data-direction=right]{order:3}
+}
+@media(orientation:portrait){
+ .app-shell .game-screen{padding-top:var(--native-safe-top,0px)}
+ .app-shell .board-bottom{margin-top:4px}
+ .app-shell .tool-btn{height:48px;min-height:48px;padding:0;font-size:11px}
+ .app-shell .swipe-note{display:none}
+ .app-shell .dpad>div{display:contents}
+}

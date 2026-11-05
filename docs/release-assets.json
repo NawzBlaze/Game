@@ -1,0 +1,1162 @@
+{
+  "assets": [
+    {
+      "file": "assets/kenney/License.txt",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/License.txt",
+      "sha256": "eaad49f1a554c0ba5a697f46aa5e7b5bf13d4268d9ce5813e11847bc36efda7c"
+    },
+    {
+      "file": "assets/kenney/background_clouds.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Backgrounds/Double/background_clouds.png",
+      "sha256": "c3edc09ffe6a2883fb2bdb3984e34d1d69ddcdc7f5253711b20c1ac4630551c3"
+    },
+    {
+      "file": "assets/kenney/background_color_desert.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Backgrounds/Double/background_color_desert.png",
+      "sha256": "7e7b562512a21d2fc843c64ad33e85c175f024fa8e49cb2499dab12e8c93954d"
+    },
+    {
+      "file": "assets/kenney/background_color_hills.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Backgrounds/Double/background_color_hills.png",
+      "sha256": "edeabb1090639058b60c8b109cfe6f5eb0866447fc7235d44ef930ea6f1927fe"
+    },
+    {
+      "file": "assets/kenney/background_color_mushrooms.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Backgrounds/Double/background_color_mushrooms.png",
+      "sha256": "447e3f342b805c26b43772eb477c81437e26fea990b9187395e3f2fa7b1366cb"
+    },
+    {
+      "file": "assets/kenney/background_color_trees.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Backgrounds/Double/background_color_trees.png",
+      "sha256": "9465a1120291304303790629ed6adbf042987c23e36a3fc65f8f179b9eb9ccc8"
+    },
+    {
+      "file": "assets/kenney/background_solid_sky.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Backgrounds/Double/background_solid_sky.png",
+      "sha256": "55ccb7de46809cdc96ea4453884c4fff29beaf21f8283e11339e406c88d3f5db"
+    },
+    {
+      "file": "assets/kenney/character_green_front.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_green_front.png",
+      "sha256": "e07ea6d74612243e25904f8407ec3d7857cf7ea91ff9635653211f96e1b77d4c"
+    },
+    {
+      "file": "assets/kenney/character_green_idle.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_green_idle.png",
+      "sha256": "bef7ccb39184d5273cd9219eb301ea93af297c8a65c6cb4d7aec720e30ab808a"
+    },
+    {
+      "file": "assets/kenney/character_green_jump.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_green_jump.png",
+      "sha256": "9503a9572f23efeb20f2d499a9dc695d64ac7f123a8ab9705f18dea6c79fa91a"
+    },
+    {
+      "file": "assets/kenney/character_green_walk_a.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_green_walk_a.png",
+      "sha256": "4d6921cbd5396909e47cef6938089aca6921f9e94041363ce14074bb9fe54d9b"
+    },
+    {
+      "file": "assets/kenney/character_green_walk_b.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_green_walk_b.png",
+      "sha256": "1aeb86940527f16ffe2cc1af2a20a3f51c3f51d487730b1e0aaeb2b3325606a2"
+    },
+    {
+      "file": "assets/kenney/character_pink_front.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_pink_front.png",
+      "sha256": "f1e17ac43ea65e906808eba792915f1a3dddb841bf3dd03fd05f814d04b2f83e"
+    },
+    {
+      "file": "assets/kenney/character_pink_idle.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_pink_idle.png",
+      "sha256": "336c30d7370584e97eabcde0440ff5a49f4aeb3144045e2abcc689bf0ac51713"
+    },
+    {
+      "file": "assets/kenney/character_pink_jump.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_pink_jump.png",
+      "sha256": "6487a43bd7c0903735e0475c185c1db0b9d0b3d6156b223b0a543a5a9dc082fd"
+    },
+    {
+      "file": "assets/kenney/character_pink_walk_a.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_pink_walk_a.png",
+      "sha256": "1d157e59249045c2521f1c8b9e0e0ec843dff9e9f0bb34888a73b51ee38d6e9f"
+    },
+    {
+      "file": "assets/kenney/character_pink_walk_b.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_pink_walk_b.png",
+      "sha256": "05c088583620abdbf3f6d419d48b124c63bed30f0b7ad3da95e70f8b381fddfe"
+    },
+    {
+      "file": "assets/kenney/character_purple_front.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_purple_front.png",
+      "sha256": "b3f2ae5b5452f2b3ff770303b0f5821df697e76d67461b4bb1256733dfc6f59e"
+    },
+    {
+      "file": "assets/kenney/character_purple_idle.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_purple_idle.png",
+      "sha256": "c9480c9b77ef59154b247eefd1bc461a259ccf5a0be49ff5f50fc968657cd9e4"
+    },
+    {
+      "file": "assets/kenney/character_purple_jump.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_purple_jump.png",
+      "sha256": "7ddfd979269dc5814504932cfc17ca878cb1e9b058441acb8c1afd29ff3f25ce"
+    },
+    {
+      "file": "assets/kenney/character_purple_walk_a.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_purple_walk_a.png",
+      "sha256": "ba997985e3de83252c386d9df471f28ba78723fc38a09447abefd7b6b6b00671"
+    },
+    {
+      "file": "assets/kenney/character_purple_walk_b.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_purple_walk_b.png",
+      "sha256": "1e5ec7884fb5c5fa22cdcd692297abdd6ba79239094d019e12a093755bcc851b"
+    },
+    {
+      "file": "assets/kenney/mouse_rest.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Enemies/Double/mouse_rest.png",
+      "sha256": "83bc9d054177e84de2d53024d9f8214928c954bfea498b1f31c561c9874e18fc"
+    },
+    {
+      "file": "assets/kenney/mouse_walk_a.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Enemies/Double/mouse_walk_a.png",
+      "sha256": "dac6a405f815e39ced70f632a71eefa8402438a6f6d30313e6bd5693b14e0422"
+    },
+    {
+      "file": "assets/kenney/mouse_walk_b.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Enemies/Double/mouse_walk_b.png",
+      "sha256": "124d3fb741d9dc502df4a34ab4c974d54fe3a9bc1893dbabc27ee055a663d45b"
+    },
+    {
+      "file": "assets/kenney/block_plank.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/block_plank.png",
+      "sha256": "a85add8d408c913552356b91ba35c6e25189bee8534d273296c764208bc6aa99"
+    },
+    {
+      "file": "assets/kenney/block_planks.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/block_planks.png",
+      "sha256": "6c7f719da2ad385f1f552f1e3a052be289951dd0fdb9429f2a07c2c335bbb148"
+    },
+    {
+      "file": "assets/kenney/bridge.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/bridge.png",
+      "sha256": "be1ead5f09f19611d3707367592d7a87df131f19f27d50f755be8c3a26a1eff0"
+    },
+    {
+      "file": "assets/kenney/bridge_logs.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/bridge_logs.png",
+      "sha256": "494bfd437e5b7d2f596a2da7e6c959f56a1c3ca58a6143cf1355062357e659a0"
+    },
+    {
+      "file": "assets/kenney/bush.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/bush.png",
+      "sha256": "db6409462946d9289ac2f3663cee9d5429ff3e0ef2f1ec86d709729925683065"
+    },
+    {
+      "file": "assets/kenney/cactus.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/cactus.png",
+      "sha256": "65a0dd9ce926bf19565e5309fc460108e824adf8fd824f7174e34dddf6923ca3"
+    },
+    {
+      "file": "assets/kenney/coin_gold.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/coin_gold.png",
+      "sha256": "d47ad8bc9957a1301ce2b649176652330a31e3ff5728f891d2408f295a1de615"
+    },
+    {
+      "file": "assets/kenney/conveyor.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/conveyor.png",
+      "sha256": "76e159caff67a5548ae018c0d683e94c08ad6fd4c8b44144cd1d7c5c65d27889"
+    },
+    {
+      "file": "assets/kenney/door_closed.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/door_closed.png",
+      "sha256": "a6ff91862f81635286e53c4f18e85ec8078b8f9568dde4f25114129591d7bed3"
+    },
+    {
+      "file": "assets/kenney/door_closed_top.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/door_closed_top.png",
+      "sha256": "f17e10ddc065e7850ea4fc63c59c79780e98a83bb1bc34ec98037adf130a0901"
+    },
+    {
+      "file": "assets/kenney/door_open.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/door_open.png",
+      "sha256": "8629011d09a4df7f0ed03490c63bda4769ed0ca315ee1c517208322b49450b97"
+    },
+    {
+      "file": "assets/kenney/door_open_top.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/door_open_top.png",
+      "sha256": "289027f5de6c8c464a82e7a7aafd06d9af009da184a94a8c0d3deae97c1c7d93"
+    },
+    {
+      "file": "assets/kenney/fence.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/fence.png",
+      "sha256": "82f59c74c07622cbf230e7c5f9e88598a8c1e3aed1508475b13fb44ed2e5d4cc"
+    },
+    {
+      "file": "assets/kenney/flag_green_a.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/flag_green_a.png",
+      "sha256": "0b3839116da5d1778559f7749ddbe223e618d29d763c555f3e258f773f759054"
+    },
+    {
+      "file": "assets/kenney/flag_green_b.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/flag_green_b.png",
+      "sha256": "c353b61237fb44d08bfc7002de079aaec704922c4d2c4bdf511cc3fc6385bf49"
+    },
+    {
+      "file": "assets/kenney/flag_off.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/flag_off.png",
+      "sha256": "90fb4ec7bcf4d514902053d24ac0d95065dfdc8e97756d1045b930b276258871"
+    },
+    {
+      "file": "assets/kenney/flag_yellow_a.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/flag_yellow_a.png",
+      "sha256": "b947d6b2166c211f5663416ad50d6e897206e9113dbb70e6a6f82211aff9f91a"
+    },
+    {
+      "file": "assets/kenney/grass.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/grass.png",
+      "sha256": "43010738253232dc2905d9759a2291a27e10abeac0ce2cbafa6048008ef44359"
+    },
+    {
+      "file": "assets/kenney/grass_purple.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/grass_purple.png",
+      "sha256": "86b0106ea209d5e5880454e78da4597f89967c5d7c8690f8fbd4016e63b88e61"
+    },
+    {
+      "file": "assets/kenney/heart.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/heart.png",
+      "sha256": "f38914b5ec0e26e9ad33bed26eec07250293bfd0a1ffa9589eaeb5f0d6678d22"
+    },
+    {
+      "file": "assets/kenney/key_yellow.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/key_yellow.png",
+      "sha256": "e9bd3e67d704657280ce1cc7dcfdac318e45f460f54e211498f94e470a347974"
+    },
+    {
+      "file": "assets/kenney/lever_left.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/lever_left.png",
+      "sha256": "7a8bf4d526cc06e7539503660e6a22f20034aa98e0ad4f0a7bad7f3314288a80"
+    },
+    {
+      "file": "assets/kenney/lever_right.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/lever_right.png",
+      "sha256": "7dfb328322a3247785f4db69e064de7a537747daf9548ebec50c641896baeec4"
+    },
+    {
+      "file": "assets/kenney/lock_yellow.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/lock_yellow.png",
+      "sha256": "f74626a373b6f50b360c2c9526005a00a88999e1fc39bbd9c71193ca6919a636"
+    },
+    {
+      "file": "assets/kenney/mushroom_brown.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/mushroom_brown.png",
+      "sha256": "49353f92f384df82f0e9cdcafecd08b203933ba0d07088be2933ef0f1cb05e43"
+    },
+    {
+      "file": "assets/kenney/mushroom_red.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/mushroom_red.png",
+      "sha256": "c2159a3ae5f1f1eea81571d9c0b9f39144cf8e6754a24a865c1aa80080662baa"
+    },
+    {
+      "file": "assets/kenney/rock.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/rock.png",
+      "sha256": "ea755e50c2298d1e9bbdd76c72bea811d93a3062f2fe77893b16eac5fa3d3162"
+    },
+    {
+      "file": "assets/kenney/sign.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/sign.png",
+      "sha256": "558ed2bac2fdab9d39876e85ddf39f3fe313b9c5fc8ed9ca4ad8c16fb9c2a7e5"
+    },
+    {
+      "file": "assets/kenney/sign_exit.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/sign_exit.png",
+      "sha256": "5791b7ffff2ea0b660b5b6f285fd594fe3d2bf335704848e17b25238b7e67959"
+    },
+    {
+      "file": "assets/kenney/sign_right.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/sign_right.png",
+      "sha256": "e2f2def483048b4940901d407f88fa0c6fb7712f8511b52bda2b49e4cd253b30"
+    },
+    {
+      "file": "assets/kenney/spring.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/spring.png",
+      "sha256": "9468c4dd80a50a1b2c29f210dd01d6cf258ff321a0fe23ce5795743ccdf2256d"
+    },
+    {
+      "file": "assets/kenney/spring_out.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/spring_out.png",
+      "sha256": "2df823e40193770c9ea5b32df8fe07a0722637dd44430246600be340ef2e5a0e"
+    },
+    {
+      "file": "assets/kenney/star.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/star.png",
+      "sha256": "f7d0a92a4d3eaa97a40823e267f093b5e6d581546aee6dfd3c108c507328a039"
+    },
+    {
+      "file": "assets/kenney/terrain_dirt_block_center.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_dirt_block_center.png",
+      "sha256": "cd395805fa9af5fbf23a37f91986ed29bb65f850a832cfd2bf43bb21a6479112"
+    },
+    {
+      "file": "assets/kenney/terrain_dirt_block_top.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_dirt_block_top.png",
+      "sha256": "46b0c283a37f1eb60675d7bc3f73ad1ecf9e7847df88085e001feb1178a66a44"
+    },
+    {
+      "file": "assets/kenney/terrain_dirt_block_top_left.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_dirt_block_top_left.png",
+      "sha256": "7fb762d11390e2ce3dd7a6bf18f709a546c8cc7768cd3c085be94a152435588f"
+    },
+    {
+      "file": "assets/kenney/terrain_dirt_block_top_right.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_dirt_block_top_right.png",
+      "sha256": "c7ecfb03dfe6d44d6ed192dbfbbcc7697351e372191f34008ea0b2d73f9f25dc"
+    },
+    {
+      "file": "assets/kenney/terrain_dirt_horizontal_left.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_dirt_horizontal_left.png",
+      "sha256": "dfcd64e039cfb1be9bf1dcf9e083d5c6e0679b64f66d8d4d984b56cfe1f28cd3"
+    },
+    {
+      "file": "assets/kenney/terrain_dirt_horizontal_middle.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_dirt_horizontal_middle.png",
+      "sha256": "e54ea0b084653153192b90572de247fc12cf8af8e6d6e42cdcd07a90ace1c230"
+    },
+    {
+      "file": "assets/kenney/terrain_dirt_horizontal_right.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_dirt_horizontal_right.png",
+      "sha256": "6c153dbeca4ab4f3a3469327cc69d78c360088bc252b91b112b466d41e0c41ab"
+    },
+    {
+      "file": "assets/kenney/terrain_grass_block_center.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_grass_block_center.png",
+      "sha256": "3902d4ddd2a2653b678bf71885527657d42eab8e08c082ae64f2eb3f95c837e7"
+    },
+    {
+      "file": "assets/kenney/terrain_grass_block_top.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_grass_block_top.png",
+      "sha256": "4f3966fb8449e75ae284fdd78befb23fb9e1c7e15a27b6a0b88c6bea412fc864"
+    },
+    {
+      "file": "assets/kenney/terrain_grass_block_top_left.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_grass_block_top_left.png",
+      "sha256": "dceed014bf0b9de663815f4bd2c11a3ebe090c869e7175ea0bf0f7cc4db3e5d2"
+    },
+    {
+      "file": "assets/kenney/terrain_grass_block_top_right.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_grass_block_top_right.png",
+      "sha256": "7379f44e2265cabc090a1177ee7023954a2c34860e0200445c4f86b2b453ae8d"
+    },
+    {
+      "file": "assets/kenney/terrain_grass_horizontal_left.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_grass_horizontal_left.png",
+      "sha256": "950210f26e62c23e406c47db95d80616113548c0059ab2d0782a8d645c4186f0"
+    },
+    {
+      "file": "assets/kenney/terrain_grass_horizontal_middle.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_grass_horizontal_middle.png",
+      "sha256": "597a504b48f0851fd59f2bc76d01582776b111971682275e768c13cb42e64e6c"
+    },
+    {
+      "file": "assets/kenney/terrain_grass_horizontal_right.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_grass_horizontal_right.png",
+      "sha256": "4af87652ffe518e2c6abc12576fe6f921589bb9344f4da26b56015e42c8a0476"
+    },
+    {
+      "file": "assets/kenney/terrain_purple_block_center.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_purple_block_center.png",
+      "sha256": "1ec5d7a83091f8b321404c1285565dcdad72cee1758ef1cba37f190605facbb0"
+    },
+    {
+      "file": "assets/kenney/terrain_purple_block_top.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_purple_block_top.png",
+      "sha256": "247944d1cf7f5d373a63f9c983ed62570b85789e86059831e07e9bf8dc960c44"
+    },
+    {
+      "file": "assets/kenney/terrain_purple_block_top_left.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_purple_block_top_left.png",
+      "sha256": "403a88c9bc7bd18d6bfa60de99e3830521298cd7105f34363e5faaca94022aa5"
+    },
+    {
+      "file": "assets/kenney/terrain_purple_block_top_right.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_purple_block_top_right.png",
+      "sha256": "365b85aa94fca41430a052d8b05987d10c1e5fd2ae912a505ef2f8d94e4904fb"
+    },
+    {
+      "file": "assets/kenney/terrain_purple_horizontal_left.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_purple_horizontal_left.png",
+      "sha256": "7034b6752bdce5312b0f00ecb1e9770c64e036905b5ce4c7c1236ef08bb92a86"
+    },
+    {
+      "file": "assets/kenney/terrain_purple_horizontal_middle.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_purple_horizontal_middle.png",
+      "sha256": "62f8a0eb50368ac97fc0bdaf0ddaa2eb3de811f0da7e2798597fa07dfa40f325"
+    },
+    {
+      "file": "assets/kenney/terrain_purple_horizontal_right.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_purple_horizontal_right.png",
+      "sha256": "8b5e2b19981cdd56e24384aac99691bf6a8946b4a7b1a8656f7cf9267d34c089"
+    },
+    {
+      "file": "assets/kenney/terrain_sand_block_center.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_sand_block_center.png",
+      "sha256": "da8fe4ec0a805723108e237f729c304832fc26122d2dc914c2040697d04a560d"
+    },
+    {
+      "file": "assets/kenney/terrain_sand_block_top.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_sand_block_top.png",
+      "sha256": "67adda5b271dd1273f3d8aeb6169f096272b1cca1741e08a0c2d82a1af9697e8"
+    },
+    {
+      "file": "assets/kenney/terrain_sand_block_top_left.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_sand_block_top_left.png",
+      "sha256": "c733b69e0e8c5b4c73ae63e82d5ed1a91370f36e247facea62a5ffe700c60ead"
+    },
+    {
+      "file": "assets/kenney/terrain_sand_block_top_right.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_sand_block_top_right.png",
+      "sha256": "48e568addb942effe1fcba8e2f9d7ded5b342fa3c11c6bfeec8bdbb47d3f2742"
+    },
+    {
+      "file": "assets/kenney/terrain_sand_horizontal_left.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_sand_horizontal_left.png",
+      "sha256": "003b111b53e5426120b03e81d183ccc42132deac82515a9941c79e2d76e219c2"
+    },
+    {
+      "file": "assets/kenney/terrain_sand_horizontal_middle.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_sand_horizontal_middle.png",
+      "sha256": "678cde466242897f990c546de57debc7f1a63ad755d1ad8d290f462730818847"
+    },
+    {
+      "file": "assets/kenney/terrain_sand_horizontal_right.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_sand_horizontal_right.png",
+      "sha256": "323161d6ac708eed29a94606d9e429e03116b6113ea483b0ee8d222316c70e2b"
+    },
+    {
+      "file": "assets/kenney/terrain_stone_block_center.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_stone_block_center.png",
+      "sha256": "df193bc836acba7577de2157d5c6411e57ace2a2285ac626b2e1b79d476219eb"
+    },
+    {
+      "file": "assets/kenney/terrain_stone_block_top.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_stone_block_top.png",
+      "sha256": "a40a0b4c50947b126ac9230a5fa1411ad469675d75a00a99e8edc56672c80adb"
+    },
+    {
+      "file": "assets/kenney/terrain_stone_block_top_left.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_stone_block_top_left.png",
+      "sha256": "5dfb2ed524140138979f0d4b4ccffad6219f69b06f9a70e1838e090973903367"
+    },
+    {
+      "file": "assets/kenney/terrain_stone_block_top_right.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_stone_block_top_right.png",
+      "sha256": "bb98bceb6549a5daedfe8d0dc97d3c80c0cb86700554e942b77d8793fce6d83c"
+    },
+    {
+      "file": "assets/kenney/terrain_stone_horizontal_left.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_stone_horizontal_left.png",
+      "sha256": "171e2b6f390e0b649a9027b2cb9757790f539c7bea519b51fa4d05065a63bc96"
+    },
+    {
+      "file": "assets/kenney/terrain_stone_horizontal_middle.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_stone_horizontal_middle.png",
+      "sha256": "f39d173774dd2c3efc774652e6eff1248722dbe6d92873b965bd44f41542bff6"
+    },
+    {
+      "file": "assets/kenney/terrain_stone_horizontal_right.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/terrain_stone_horizontal_right.png",
+      "sha256": "4c77c73526fe86d3ca5595dcf1f161de9ea4931789be1a2a9b7c66f114a5983d"
+    },
+    {
+      "file": "assets/kenney/water.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/water.png",
+      "sha256": "53c1ea699bc2e8bd45e083a70736c658ac71efde43e616f4748e3b351602c2fa"
+    },
+    {
+      "file": "assets/kenney/water_top.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/water_top.png",
+      "sha256": "e2f84f13cdfe5a58f6c01bddccacbf28cc1f5217f81d091666a2c6d18a4f2e82"
+    },
+    {
+      "file": "assets/kenney/character_beige_front.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_beige_front.png",
+      "sha256": "e9a62137dfab382680aad6395c5cb3b1da6ee0baea832338362189cc23f316f1"
+    },
+    {
+      "file": "assets/kenney/character_beige_idle.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_beige_idle.png",
+      "sha256": "bebb5cb0133d123e9f1511580a097607a92dd874239e656ca3e63843b8bedfbe"
+    },
+    {
+      "file": "assets/kenney/character_beige_jump.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_beige_jump.png",
+      "sha256": "2193dc5d528ba5ab486a2568a4ad01edb777d50e52c7b82579ba35520f83b7fa"
+    },
+    {
+      "file": "assets/kenney/character_beige_walk_a.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_beige_walk_a.png",
+      "sha256": "fdd93400636dec45343ad482bbfd9dcc1f5f7ff62fab5e168b7d214a8f73947c"
+    },
+    {
+      "file": "assets/kenney/character_beige_walk_b.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_beige_walk_b.png",
+      "sha256": "b386016d646f3f5eb75499a426baeab1a9579e348ea7ae014d94a6cd7154e913"
+    },
+    {
+      "file": "assets/kenney/character_yellow_front.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_yellow_front.png",
+      "sha256": "a6cb04950c9e56eb45098bfeb43d8e6f49c3235a0f2c6ee559726cc7b99684de"
+    },
+    {
+      "file": "assets/kenney/character_yellow_idle.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_yellow_idle.png",
+      "sha256": "8f108ffc12f296bdaae1887ea91c1cfa8a6d4c68e880135f3be3f5ac1171446e"
+    },
+    {
+      "file": "assets/kenney/character_yellow_jump.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_yellow_jump.png",
+      "sha256": "67757b0593d5276c3be5322832f6c5c32302fc4686330f6cf510512f89f4c880"
+    },
+    {
+      "file": "assets/kenney/character_yellow_walk_a.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_yellow_walk_a.png",
+      "sha256": "c847eeb10aded4c1541b037acd387b55e62c7c8129a5dd947ede2d3f761198a0"
+    },
+    {
+      "file": "assets/kenney/character_yellow_walk_b.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Characters/Double/character_yellow_walk_b.png",
+      "sha256": "48cb4cb56bdf103ac5a522e6c6a8872f72f9e8339b47baba9e89ab9c9f5fc304"
+    },
+    {
+      "file": "assets/kenney/block_blue.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/block_blue.png",
+      "sha256": "69506c50a419d7acad150bf9b98ce3f96035b6da3bb3227e1c195fa80dd2886b"
+    },
+    {
+      "file": "assets/kenney/block_red.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/block_red.png",
+      "sha256": "4f7f574ca1202ed0974205d724ac1fd235e7a9fcbcff254bffc95a23397b2a65"
+    },
+    {
+      "file": "assets/kenney/block_yellow.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/block_yellow.png",
+      "sha256": "e2486fc1515506d1605fd58784e86149e9bcdaebf67e73671b20b0886beb1eb9"
+    },
+    {
+      "file": "assets/kenney/gem_blue.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/gem_blue.png",
+      "sha256": "a31d49f2cc177317e8de07139a0b0099662bcb1ee4e67abe18661b19a64a7990"
+    },
+    {
+      "file": "assets/kenney/gem_green.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/gem_green.png",
+      "sha256": "5245ce430d636eab5033d15104744bd7481dcd4d7c9b6b5a1588a758784653c6"
+    },
+    {
+      "file": "assets/kenney/gem_red.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Tiles/Double/gem_red.png",
+      "sha256": "bd141c2ea6df17d6ac9fb24dbcbc7123671d6a214941975d80cbf5616000fd2c"
+    },
+    {
+      "file": "assets/release-audio/click.ogg",
+      "license": "CC0-1.0",
+      "creator": "Kenney",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Interface Sounds/Audio/click_001.ogg",
+      "sha256": "ca2ceb907e5515b5f8439ca03b025f64ab9e7c6696350f9489a6900a6464c9ec"
+    },
+    {
+      "file": "assets/release-audio/pickup.ogg",
+      "license": "CC0-1.0",
+      "creator": "Kenney",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Interface Sounds/Audio/confirmation_001.ogg",
+      "sha256": "1d59821014076adf376ae092a556ff7ee4816f5532a8ae0719b6d44d244bfbc1"
+    },
+    {
+      "file": "assets/release-audio/win.ogg",
+      "license": "CC0-1.0",
+      "creator": "Kenney",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Interface Sounds/Audio/confirmation_002.ogg",
+      "sha256": "9f3a15ffd9d8e031e2afa17539baa4ef3655b2ad06fcf9d44e5d3bd0d0ec64e2"
+    },
+    {
+      "file": "assets/release-audio/jump.ogg",
+      "license": "CC0-1.0",
+      "creator": "Kenney",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Interface Sounds/Audio/drop_001.ogg",
+      "sha256": "633eb319da16f7ee6d884e3547d93d082f8b3249fd37f9681c305c4209e9d0b3"
+    },
+    {
+      "file": "assets/release-audio/error.ogg",
+      "license": "CC0-1.0",
+      "creator": "Kenney",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Interface Sounds/Audio/error_001.ogg",
+      "sha256": "350f02aab97813254a8701a0a4f5735a4ae43c27366c374f4837bd07c777c426"
+    },
+    {
+      "file": "assets/release-audio/INTERFACE-LICENSE.txt",
+      "license": "CC0-1.0",
+      "creator": "Kenney",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Interface Sounds/License.txt",
+      "sha256": "f7966c773bbed0eca6a9c75081c44a178b38eae112724dbb5fdfbd4192d118a9"
+    },
+    {
+      "file": "assets/release-audio/MUSIC-LICENSE.txt",
+      "license": "CC0-1.0",
+      "creator": "Kenney",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Music Loops/License.txt",
+      "sha256": "ff194834cdd5a72fcf4febd65210bb48a15117abd23f5745029a4a81ce30db0a"
+    },
+    {
+      "file": "assets/release-audio/music.ogg",
+      "license": "CC0-1.0",
+      "creator": "Kenney",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Music Loops/Loops/Mishief Stroll.ogg",
+      "sha256": "83774bba960b6d2192d45e7b1c6c4b07d1b73061672230734dde195972a88a95"
+    },
+    {
+      "file": "assets/font/Nunito.ttf",
+      "license": "OFL-1.1",
+      "creator": "The Nunito Project Authors",
+      "mirror": "https://github.com/google/fonts/blob/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/nunito/Nunito[wght].ttf",
+      "sha256": "bb55a5ca5c2042335b3991af27c4d0705d0ef41cac6164ac737fd8f2a1e85207"
+    },
+    {
+      "file": "assets/font/OFL.txt",
+      "license": "OFL-1.1",
+      "creator": "The Nunito Project Authors",
+      "mirror": "https://github.com/google/fonts/blob/6c1dbe27dcf7d817d4b62cec033ba77fa8e2a5ec/ofl/nunito/OFL.txt",
+      "sha256": "580df76c95a1ec5ab878ceb25bb3d85c6a076804e9c970c8c6972aea775fdf65"
+    },
+    {
+      "file": "assets/mobile-ui/green-button_rectangle_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Green/Default/button_rectangle_depth_flat.png",
+      "sha256": "f356ba76050319e08ff7a68458f28f068dd57b1facf156a0da4348de8c5fffe1"
+    },
+    {
+      "file": "assets/mobile-ui/green-button_square_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Green/Default/button_square_depth_flat.png",
+      "sha256": "3410e98c8b1c9bbc5941724e3b5db41a745c64e44c1178273a5d54302cdab891"
+    },
+    {
+      "file": "assets/mobile-ui/green-button_round_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Green/Default/button_round_depth_flat.png",
+      "sha256": "f711bf0042ae7fd24734c845493d27528f6fdf6cb453d42aab381dc8b4daed49"
+    },
+    {
+      "file": "assets/mobile-ui/blue-button_rectangle_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Blue/Default/button_rectangle_depth_flat.png",
+      "sha256": "6c709a45aae0330ffff5b060d9f14cc2297839f664e0a4c9e516d90ad085ec0b"
+    },
+    {
+      "file": "assets/mobile-ui/blue-button_square_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Blue/Default/button_square_depth_flat.png",
+      "sha256": "7f113aa488dee62009fe7b7043b51672c9845d5d0dd0c856d8aa179c91a9c688"
+    },
+    {
+      "file": "assets/mobile-ui/blue-button_round_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Blue/Default/button_round_depth_flat.png",
+      "sha256": "49bdaa6172e3670fa6c1cfb347fd7fdc7fb8bdd2c5e75b0429c41e4309c85541"
+    },
+    {
+      "file": "assets/mobile-ui/grey-button_rectangle_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Grey/Default/button_rectangle_depth_flat.png",
+      "sha256": "7de9ba1d4bca313fd2c02e3595f3d699c1201d84d70a3c69828e56782d585ce7"
+    },
+    {
+      "file": "assets/mobile-ui/grey-button_square_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Grey/Default/button_square_depth_flat.png",
+      "sha256": "381aa4900b97e21422460bdb7003d321846c2ae430c10661d4d97618bbbb9df6"
+    },
+    {
+      "file": "assets/mobile-ui/grey-button_round_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Grey/Default/button_round_depth_flat.png",
+      "sha256": "b05e6488e5b67f8b30e9ad28217320c3c97ef4ebd458ab627ae6200987fa2095"
+    },
+    {
+      "file": "assets/mobile-ui/arrow.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_arrow.png",
+      "sha256": "f338bd8f3a0f37781dc81463dae1acda89a34a46ac258de5d3ff03b5eb279c67"
+    },
+    {
+      "file": "assets/mobile-ui/cog.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_cog.png",
+      "sha256": "7a12354ab61d51c55f3c1bb78ebd2bc20876d68d3dc44b2ffa5219e624846144"
+    },
+    {
+      "file": "assets/mobile-ui/cross.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_cross.png",
+      "sha256": "33dbb5f0895fc60c0fee8e21009e02e6d58947a24dc929e14c45f502c9590537"
+    },
+    {
+      "file": "assets/mobile-ui/jump.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_jump.png",
+      "sha256": "e63b25805434fee6913296811f903f6c2fa1722d627af6ad03d0d5e1d50ee157"
+    },
+    {
+      "file": "assets/mobile-ui/lock.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_lock.png",
+      "sha256": "db9cdbb8b63cc4cd1b9091a93d1f9fc4f07cac3050fe441ca507b5b86a1cab2a"
+    },
+    {
+      "file": "assets/mobile-ui/music.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_music.png",
+      "sha256": "ef5c23e52c0c636dbcce20b624b8637f141b463a95308296fd74a17baba1f844"
+    },
+    {
+      "file": "assets/mobile-ui/music_disabled.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_music_disabled.png",
+      "sha256": "2e7395e3d2cdc5644c957b307dc24d07265a9d28dd3c08143bd397380f46e0aa"
+    },
+    {
+      "file": "assets/mobile-ui/pause.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_pause.png",
+      "sha256": "8a2f4999746234cb16e49c798b27a3aa890965446e6bdc0c9112e01286940469"
+    },
+    {
+      "file": "assets/mobile-ui/play.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_play.png",
+      "sha256": "2fcc2650c7dab11236b70ba32023629da82200c3680e87db74af4cf1fb90d038"
+    },
+    {
+      "file": "assets/mobile-ui/save.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_save.png",
+      "sha256": "5bcec03ba272bb3d80f2c664372fbc50902f305c25fd287b3af1283a852eff1f"
+    },
+    {
+      "file": "assets/mobile-ui/sound.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_sound.png",
+      "sha256": "79580b08a529ad03b03449bd703692e959f88b402e215c4e190925d1b860f818"
+    },
+    {
+      "file": "assets/mobile-ui/sound_disabled.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_sound_disabled.png",
+      "sha256": "2ab1ac07dd6a7fed0b0da838c90e8931d4c0c4f2f4c95a8c598d19cd14ca7510"
+    },
+    {
+      "file": "assets/mobile-ui/star.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_star.png",
+      "sha256": "5bf5adf47f0fd0deb43a76c98cb8d256ab590a2ca914fd0e8838ffcdbcab16cf"
+    },
+    {
+      "file": "assets/mobile-ui/talk.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_talk.png",
+      "sha256": "814cb9764c28cfc1cafa50584e7dbc1f51f6c8169642992d0f59d131c61e92df"
+    },
+    {
+      "file": "assets/mobile-ui/UI-LICENSE.txt",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/License.txt",
+      "sha256": "69f7eaa5e05913b4d09cf5848f75390b5c3c9a409ef8555777803d9ca0c171fb"
+    },
+    {
+      "file": "assets/mobile-ui/CONTROLS-LICENSE.txt",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/License.txt",
+      "sha256": "0522777b2550f959ba5c504d97042bb17f2cd895d0562f5a4a13fc579f69bdaf"
+    }
+  ]
+}

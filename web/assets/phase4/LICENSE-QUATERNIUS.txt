@@ -1,0 +1,4 @@
+Quaternius, Lowpoly Animated Animals (Farm Animals), Pig and Pug models and animation.
+Source: https://quaternius.itch.io/lowpoly-animated-animals
+License: CC0 1.0 Universal. https://creativecommons.org/publicdomain/zero/1.0/
+This project renders the original supplied models and animations offline; the pig body material was lightened. Original source .blend files and rendering scripts are preserved in the project source.

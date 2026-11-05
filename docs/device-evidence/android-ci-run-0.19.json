@@ -1,0 +1,277 @@
+{
+  "recordedDate": "2026-11-01",
+  "scope": "CI build, simulated framework tests and disposable-emulator instrumentation only; NOT physical-phone, historical-crash, signing or store approval",
+  "run": {
+    "conclusion": "success",
+    "databaseId": 41323056033,
+    "headSha": "2b125bfb90f83287abb8289f6575b99116a84957",
+    "jobs": [
+      {
+        "completedAt": "2026-11-01T15:52:12Z",
+        "conclusion": "success",
+        "databaseId": 124897160677,
+        "name": "build",
+        "startedAt": "2026-11-01T15:48:14Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v5",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-java@v5",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v6",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Install SDK using the runner's provisioned tools",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Compile, lint and simulate native framework APIs",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "skipped",
+            "name": "Expose bounded build failure diagnostics",
+            "number": 7,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Record candidate identities",
+            "number": 8,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 9,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 10,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v6",
+            "number": 18,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/setup-java@v5",
+            "number": 19,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v5",
+            "number": 20,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 21,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/NawzBlaze/Game/actions/runs/41323056033/job/124897160677"
+      },
+      {
+        "completedAt": "2026-11-01T15:52:12Z",
+        "conclusion": "success",
+        "databaseId": 124897537803,
+        "name": "emulator (33)",
+        "startedAt": "2026-11-01T15:49:45Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v5",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/download-artifact@v4",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Enable emulator hardware acceleration",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Test exact debug candidate in disposable offline emulator",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v5",
+            "number": 12,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 13,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/NawzBlaze/Game/actions/runs/41323056033/job/124897537803"
+      },
+      {
+        "completedAt": "2026-11-01T15:52:12Z",
+        "conclusion": "success",
+        "databaseId": 124897537823,
+        "name": "emulator (36)",
+        "startedAt": "2026-11-01T15:49:45Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v5",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/download-artifact@v4",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Enable emulator hardware acceleration",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Test exact debug candidate in disposable offline emulator",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v5",
+            "number": 12,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 13,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/NawzBlaze/Game/actions/runs/41323056033/job/124897537823"
+      }
+    ],
+    "status": "completed",
+    "url": "https://github.com/NawzBlaze/Game/actions/runs/41323056033"
+  },
+  "artifacts": [
+    {
+      "id": 13090072250,
+      "name": "android-emulator-api-33-evidence",
+      "sizeBytes": 295839,
+      "archiveDigest": "sha256:339055dd9802ce6b01a6865156a6259fb50d3b57bbc5156591fa3092edb3652a",
+      "expired": false,
+      "expiresAt": "2026-11-15T15:52:20Z"
+    },
+    {
+      "id": 13090007112,
+      "name": "android-build-reports",
+      "sizeBytes": 38800,
+      "archiveDigest": "sha256:8fe7e2d102485893162d4903bebb29da6d3b1a61f56f40250f4ba9a9861ad645",
+      "expired": false,
+      "expiresAt": "2026-11-15T15:49:39Z"
+    },
+    {
+      "id": 13089922717,
+      "name": "android-emulator-api-36-evidence",
+      "sizeBytes": 479540,
+      "archiveDigest": "sha256:199e0b6c025cd83e448d7344b21b19a3769cffbcb0b94efe5a38d578f5d0aeb3",
+      "expired": false,
+      "expiresAt": "2026-11-15T15:52:08Z"
+    },
+    {
+      "id": 13089558899,
+      "name": "android-unsigned-and-debug-candidates",
+      "sizeBytes": 4491482,
+      "archiveDigest": "sha256:e2c16b45f0ec754d34efc718148423f5a4a4701fcea089ffb4513d17352dd750",
+      "expired": false,
+      "expiresAt": "2026-11-15T15:49:37Z"
+    }
+  ],
+  "verification": {
+    "buildLintAndSimulatedTests": true,
+    "emulatorApis": [
+      33,
+      36
+    ],
+    "instrumentationTestsPerEmulator": 2,
+    "tests": [
+      "Offline WebView startup, pause/resume, progress persistence through Activity recreation",
+      "Deliberate WebView renderer crash, explicit retry and retained storage origin"
+    ],
+    "candidateChecksums": "SHA256SUMS.txt inside candidate artifact; exact debug/test APKs hash-checked before emulator installation",
+    "releaseSigning": "Not configured; release APK and AAB unsigned. Debug APK uses test-only signing.",
+    "physicalDeviceTested": false,
+    "originalAndroid13CrashDiagnosed": false,
+    "localArtifactDownload": "Blocked by sandbox access to GitHub artifact blob host; download via run page. No local APK copy claimed."
+  }
+}

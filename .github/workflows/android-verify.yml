@@ -1,0 +1,42 @@
+name: Android candidate verification (no installation)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native-candidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        api: [29, 33, 36]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: android-actions/setup-android@v3
+      - name: Install SDK components
+        run: sdkmanager 'platforms;android-36' 'build-tools;36.0.0'
+      - name: Collector host-only safety tests
+        run: python3 -m unittest discover -s tests -p test_android_evidence.py -v
+      - name: Build wrapper and run simulated native tests
+        working-directory: android
+        run: ./gradlew --no-daemon -PtestApi=${{ matrix.api }} testDebugUnitTest lintDebug assembleDebug assembleDebugAndroidTest
+      - name: Preserve reports, not installable artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-simulated-api-${{ matrix.api }}-reports
+          path: |
+            android/app/build/reports/
+            android/app/build/test-results/
+          retention-days: 14
+# Manual, unsigned/debug build verification only. No phone is attached, no APK is
+# installed, no signing secrets are accessed and no APK/AAB is distributed here.
+# A green job does not diagnose the original Android 13 crash.

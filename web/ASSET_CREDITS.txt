@@ -1,0 +1,32 @@
+Little Parcel Crew — art and audio credits
+
+This workbench uses and adapts third-party art. Assets have been cropped, resized, flipped, recoloured and composited. This notice does not grant trademark rights. The title and publisher names have not been cleared.
+
+Adventure and Classic characters, homes, parcel and backdrop: Tiny Speck, Glitch (CC0 1.0); house SVG conversions by Bart and remixes/refactoring by Anarres. https://opengameart.org/content/glitch-sprite-assets-huge-collection ; https://opengameart.org/content/house-exteriors-from-glitch ; https://opengameart.org/content/hd-multi-layer-parallex-background-samples-of-glitch-game-assets
+Dog: styloo, Dog 2D (CC0 1.0), cropped and packed as animation sheets. https://styloo.itch.io/dog2d
+Ground, trees, shrubs and flower pin: Franco Giachetti / LudicArts, Handpainted Platform Tileset (CC BY 3.0), cropped, resized and colour-adjusted. https://opengameart.org/content/handpainted-platform-tileset ; http://ludicarts.com ; https://creativecommons.org/licenses/by/3.0/ . The full licence text is bundled as assets/painterly/CC-BY-3.0.txt. No endorsement is implied.
+Village props and mountain backdrop: Kalponic Studio, Side Scroller Village Tileset, cropped and resized, used under the creator's licence: https://kalponic-studio.itch.io/side-scroller-village-tileset . The licence permits use and modification in games, but prohibits reselling the assets (original or modified) and use in a logo, trademark or service mark; review the original terms before distribution.
+Harbour sea: tigitalart, Background Seaview Parallax (CC0), cropped, resized and colour-adjusted. https://opengameart.org/content/background-seaview-parallax
+Additional props, backgrounds, interfaces and effects: Kenney (CC0). Some legacy assets and licence notices remain bundled. https://opengameart.org/users/kenney
+Classic music: MintoDog, Cozy Puzzle In-Game 3 (CC0). https://opengameart.org/content/cozy-puzzle-in-game-3
+Adventure music: MintoDog, Cozy Puzzle In-Game 2 (CC0). https://opengameart.org/content/cozy-puzzle-in-game-2
+Sound effects: qubodup, BMacZero, MentalSanityOff, Bobjt and Kenney (CC0). Detailed sources: assets/audio-refresh/CREDITS.txt.
+CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/
+
+See assets/painterly/ATTRIBUTION.txt for detailed source and adaptation notes. Individual third-party production methods were not independently verified. UI, code, levels and visual compositions were AI-assisted.
+Street scenery and terrain: Tiny Speck, Glitch Groddle assets, CC0 1.0, resized; https://opengameart.org/content/glitch-groddle-assets-png .
+Street key: Tiny Speck Glitch Misc Assets (CC0); rasterised, cropped and recoloured; https://opengameart.org/content/glitch-misc-assets-svg .
+Harbour boat and hill bonsai: Tiny Speck Glitch Firebog and Alpine assets, CC0 1.0, resized; https://opengameart.org/content/glitch-background-assets .
+Route bridge switch: Tiny Speck Glitch Sprite Assets, CC0 1.0, resized; https://opengameart.org/content/glitch-sprite-assets-huge-collection .
+Hill camp tent: Tiny Speck Glitch Alpine assets, CC0 1.0, resized; https://opengameart.org/content/glitch-background-assets .
+Storybook platform ledges and shrubs: Tiny Speck, Glitch Groddle/Alpine environment sprites (CC0 1.0), resized; https://opengameart.org/content/glitch-background-assets .
+Route book postcards: cropped images captured from the playable Little Parcel Crew routes. The depicted third-party art and its licences are credited above; no separate artwork or AI-generated substitute was used.
+Phase 3 harbour slice: custom vector drawings and sprites authored specifically for this project with AI assistance, rasterized from the included vector/code sources. They are intended for free use and modification in Little Parcel Crew; no third-party art pack is used for these new assets. Existing third-party credits above still apply to other routes and the rest of the game. Authorship, copyright and final distribution terms should receive legal review.
+
+Visual rebuild work in progress — Nunito variable font (Version 3.602): Copyright 2014 The Nunito Project Authors, https://github.com/googlefonts/nunito ; SIL Open Font License 1.1. Original unmodified file assets/visual-rebuild/font/Nunito.ttf and complete copyright/licence notice assets/visual-rebuild/font/OFL.txt. Source https://github.com/google/fonts/tree/main/ofl/nunito .
+
+The Phase 3 harbour slice described above is archived outside the packaged web assets and is disabled in the current WIP renderer; route 13 now uses the previously credited shared creator-authored world renderer. Its route-book postcard was recaptured from the real route. Other legacy AI-assisted compositing, code-drawn visual elements and style inconsistencies remain, and have not been claimed compliant or approved.
+
+Phase 4 work in progress: houses and trees from Kay Lousberg / KayKit Medieval Builder Pack, CC0 1.0. https://kaylousberg.itch.io/kaykit-medieval-builder-pack ; original pack notice: assets/phase4/LICENSE-KAYKIT.txt. Pig and pug in Adventure are offline renders of Pig.blend and Pug.blend with original idle and walk animation by Quaternius, Lowpoly Animated Animals (Farm Animals), CC0 1.0. https://quaternius.itch.io/lowpoly-animated-animals ; https://creativecommons.org/publicdomain/zero/1.0/ . Pig material has been lightened. Original blend files and render scripts are kept in the project source. These replacements are incomplete: legacy art remains, including the crocodile couriers, and their provenance requirements have not all been resolved.
+
+Phase 4.2 WIP: forest vegetation is rendered, cropped and resized from Kay Lousberg's KayKit Forest Nature Pack, CC0 1.0, https://kaylousberg.itch.io/kaykit-forest ; https://creativecommons.org/publicdomain/zero/1.0/ . The wooden noticeboard and cropped button texture are adapted from SunGraphica's Wood Theme Game UI Free Version, CC BY 4.0, https://sungraphica.itch.io/wood-theme-game-ui-free-version ; https://creativecommons.org/licenses/by/4.0/ . Both creators state no generative AI was used. Modifications are crops, resizing and runtime nine-slicing. No endorsement is implied. The whole visual rebuild and asset audit remain incomplete.

@@ -1,0 +1,33 @@
+LITTLE PARCEL CREW — 0.19.0 release candidate
+
+Artwork: Kenney, New Platformer Pack 1.1 — CC0 1.0
+https://kenney.nl/assets/new-platformer-pack
+Original licence: assets/kenney/License.txt
+
+Music: Kenney, Music Loops — “Mishief Stroll” — CC0 1.0
+Effects: Kenney, Interface Sounds — CC0 1.0
+Original licences: assets/release-audio/MUSIC-LICENSE.txt,
+assets/release-audio/INTERFACE-LICENSE.txt
+
+Font: The Nunito Project Authors — SIL Open Font License 1.1
+https://github.com/google/fonts/tree/main/ofl/nunito
+Original licence: assets/font/OFL.txt
+
+All source images, audio and fonts are downloaded originals, unchanged.
+Runtime uses sprite cropping, mirroring, scaling and composition.
+No endorsement by any creator is implied.
+
+Source URLs and SHA-256 hashes: asset-manifest.json in built packages;
+docs/release-assets.json in source.
+Code, functional layout and level development were AI-assisted.
+No replacement illustrated artwork was AI-generated or hand-drawn.
+
+No online account, analytics, advertising or game-server requests.
+Game progress is stored locally. A static host may process normal access logs.
+This notice is not a final jurisdiction-specific privacy policy or store approval.
+
+Mobile interface additions: Kenney UI Pack 2.0 and Mobile Controls 1.0, CC0.
+https://kenney.nl/assets/ui-pack
+https://kenney.nl/assets/mobile-controls
+Original unmodified PNG files and notices in assets/mobile-ui/.
+Pinned mirror commit fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa; source hashes in asset-manifest.json.

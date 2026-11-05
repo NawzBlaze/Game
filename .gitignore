@@ -1,0 +1,14 @@
+node_modules/
+.cache/
+android/.gradle/
+android/local.properties
+android/**/build/
+*.keystore
+*.jks
+playwright-report/
+test-results/
+
+dist/
+
+__pycache__/
+*.pyc

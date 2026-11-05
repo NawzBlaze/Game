@@ -1,0 +1,7 @@
+{
+  "artifact": "LPC-Android-ReadOnly-Diagnostics.zip",
+  "sha256": "af0ab3138b8aca5ba7a0d83d0bb396391882c5f1c863b2730525081106e41335",
+  "bytes": 13918,
+  "scope": "public read-only scripts/instructions, no device output",
+  "tests": "6 mocked host tests passed; no real device/Windows validation"
+}

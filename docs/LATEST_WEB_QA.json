@@ -1,0 +1,134 @@
+{
+  "version": "0.20.0-rc.1",
+  "scope": "Automated web checks only; no device/signing/human approval",
+  "artifactSha256": "cc68151fa7a4fad8562c0c079db5e4bd4a7d17ac71eabbe4955903906a7024af",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Lint",
+      "passed": true,
+      "durationMs": 1037,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "Build allowlisted RC",
+      "passed": true,
+      "durationMs": 132,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "save-store",
+      "passed": true,
+      "durationMs": 42,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "test",
+      "passed": true,
+      "durationMs": 2634,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "full_campaign",
+      "passed": true,
+      "durationMs": 18091,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "startup",
+      "passed": true,
+      "durationMs": 1151,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "adventure",
+      "passed": true,
+      "durationMs": 4972,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "all-stars",
+      "passed": true,
+      "durationMs": 4362,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "special-deliveries",
+      "passed": true,
+      "durationMs": 2574,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "parcel-mechanics",
+      "passed": true,
+      "durationMs": 790,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "multitouch",
+      "passed": true,
+      "durationMs": 1625,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "offline-storage",
+      "passed": true,
+      "durationMs": 2852,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "audio-lifecycle",
+      "passed": true,
+      "durationMs": 1456,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "audio-decode",
+      "passed": true,
+      "durationMs": 949,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "landscape",
+      "passed": true,
+      "durationMs": 3731,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "presentation",
+      "passed": true,
+      "durationMs": 4383,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "mobile-ui",
+      "passed": true,
+      "durationMs": 3569,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "release",
+      "passed": true,
+      "durationMs": 29816,
+      "exitCode": 0,
+      "error": null
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+LITTLE PARCEL CREW — PAINTERLY WORKBENCH ART (EXPERIMENTAL)
+
+Glitch sprite assets and backgrounds by Tiny Speck, CC0 1.0:
+https://opengameart.org/content/glitch-sprite-assets-huge-collection
+https://opengameart.org/content/hd-multi-layer-parallex-background-samples-of-glitch-game-assets
+The houses were remixed/refactored by Anarres from Bart's SVG conversions of Tiny Speck art; CC0:
+https://opengameart.org/content/house-exteriors-from-glitch
+The assets have been resized, rasterized, composited or cropped for use.
+CC0: https://creativecommons.org/publicdomain/zero/1.0/
+
+Handpainted Platform Tileset by Franco Giachetti, LudicArts (ludicarts.com), CC BY 3.0:
+https://opengameart.org/content/handpainted-platform-tileset
+https://creativecommons.org/licenses/by/3.0/
+Changes: the tile images were cropped, resized, and their saturation and brightness modified.
+This attribution does not imply endorsement by the artist. License legal text: CC-BY-3.0.txt.
+
+Side Scroller Village Tileset by Kalponic Studio:
+https://kalponic-studio.itch.io/side-scroller-village-tileset
+Terms on the creator's page permit commercial use and modification in games and prohibit reselling the asset (original or modified) and using it in a logo, trademark or service mark. The sprites here are cropped, resized and incorporated into an actual game; no trademark/logo use is intended.
+
+Dog 2D by styloo, CC0 1.0:
+https://styloo.itch.io/dog2d
+The animation frames were cropped and packed into sprite sheets.
+
+This is not the full game credit list. See the other existing asset credits included in the project.
+
+Cosmetic adaptations: bags and cap are cropped/recoloured from Tiny Speck's CC0 Glitch explorer-pig walking sprites listed above. The flower pin is cropped from Franco Giachetti / LudicArts Handpainted Platform Tileset Object_1; CC BY 3.0, linked and credited above. Colours of the pig's clothing have also been modified. Original Glitch character sprites and all animations remain based on the attributed source.
+
+Classic mode also includes cropped and colour-adjusted LudicArts bushes and trees (Object_13, Object_14, Object_20, Object_21), the Glitch cottage door crop, and separated animation frames from the credited Glitch pig and styloo dog sheets. Modifications include cropping, colour adjustment, resize and horizontal flipping.
+
+Harbour sea: tigitalart, Background Seaview Parallax, CC0 1.0. https://opengameart.org/content/background-seaview-parallax . The sea layer is cropped, resized and colour-adjusted. Hilltop mountain uses a cropped and resized background from the credited Kalponic pack. The autumn trees and hills are recoloured from the credited Glitch backgrounds.
+
+Review build: ground-garden/market/autumn/harbour/hill and platform equivalents are derived from Franco Giachetti / LudicArts ground and platform artwork (CC BY 3.0): selectively colour-adjusted. Original attribution and licence remain above and in CC-BY-3.0.txt; no endorsement is implied.
+Street trees, wildflowers, rose bush, grass, earth and platform: Tiny Speck's Glitch Groddle PNGs, CC0 1.0, resized; source https://opengameart.org/content/glitch-groddle-assets-png .
+Street key: Tiny Speck Glitch Misc Assets, CC0; door_key_3 SVG rasterised, cropped and recoloured. https://opengameart.org/content/glitch-misc-assets-svg
+Harbour boat and hill bonsai: Tiny Speck, Glitch Firebog and Alpine PNG environment assets, CC0 1.0; resized; https://opengameart.org/content/glitch-background-assets .
+Route bridge switch: Tiny Speck, Glitch esquibeth_button sprites, CC0 1.0; https://opengameart.org/content/glitch-sprite-assets-huge-collection .
+Hill camp tent: Tiny Speck, Glitch Alpine PNG environment assets, CC0 1.0; resized; https://opengameart.org/content/glitch-background-assets .
+Phase 2 platform ledges and shrubs: Tiny Speck, Glitch Groddle/Alpine PNG environments (CC0 1.0), resized from floating_platform_grass_02, floating_platform_trunk_01, platform_horizontal_ledge_mountaineering_01a and mountain_flora_01c/01g. Source: https://opengameart.org/content/glitch-background-assets . No endorsement is implied.

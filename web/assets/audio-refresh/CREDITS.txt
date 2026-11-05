@@ -1,0 +1,9 @@
+Adventure audio sources (CC0 1.0)
+Music: MintoDog, Cozy Puzzle In-Game 2 — https://opengameart.org/content/cozy-puzzle-in-game-2
+UI tap: qubodup, Click — https://opengameart.org/content/click
+Contact sounds: Brian MacIntosh / BMacZero, Playing Card Sounds — https://opengameart.org/content/playing-card-sounds
+Jump: MentalSanityOff, Jump/Landing Sound — https://opengameart.org/content/jump-landing-sound
+Stamp: Bobjt, Gem collect SFX — https://opengameart.org/content/gem-collect-sfx
+Original CC0 effects from Kenney remain for error/win; see web/ASSET_CREDITS.txt.
+All audio files are included for offline playback. Runtime volume adjusted for balancing.
+CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/
