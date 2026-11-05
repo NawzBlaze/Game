@@ -66,3 +66,7 @@ Android CI has now built debug and unsigned release candidates and passed instru
 On a configured Linux build machine, the Gradle pre-build runs the allowlisted web builder and packages **dist/web**, with test hooks disabled. App ID stays `com.onestepdelivery.game`; candidate version code is 20. Release signing uses owner-controlled environment variables, with the keystore outside the repository. Verify installed certificate/version compatibility before any update. Do not send signing secrets in chat.
 
 Historical notes: [initial overhaul](docs/OVERHAUL_STATUS.md), superseded where noted by [current readiness](docs/PRODUCTION_READINESS.md).
+
+## Android release size and signing
+
+Maximum finished APK/AAB size: **100,000,000 bytes (100 MB)**, enforced by Gradle `verifyDebugSize` / `verifyReleaseSize` and candidate CI. There is no minimum size and no padding. See [owner-controlled production signing](docs/RELEASE_SIGNING.md). An explicit `-PrequireReleaseSigning=true` production build fails if the owner has not securely configured the legitimate signing identity. Debug previews and unsigned candidates are not store-ready releases.

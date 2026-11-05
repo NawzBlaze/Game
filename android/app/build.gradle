@@ -6,9 +6,12 @@ def releaseEnvNames = ['LPC_RELEASE_STORE_FILE', 'LPC_RELEASE_STORE_PASSWORD', '
 def releaseEnv = releaseEnvNames.collectEntries { [(it): System.getenv(it)] }
 def suppliedSigningValues = releaseEnv.values().count { it != null && !it.isEmpty() }
 if (suppliedSigningValues > 0 && suppliedSigningValues != releaseEnvNames.size()) {
-    throw new GradleException('Incomplete release signing configuration; see RELEASE_SIGNING.md')
+    throw new GradleException('Incomplete release signing configuration; see docs/RELEASE_SIGNING.md')
 }
 def canSignRelease = suppliedSigningValues == releaseEnvNames.size()
+if (project.findProperty('requireReleaseSigning') == 'true' && !canSignRelease) {
+    throw new GradleException('Production release requires owner-controlled signing; see docs/RELEASE_SIGNING.md')
+}
 if (canSignRelease) {
     def keyFile = file(releaseEnv['LPC_RELEASE_STORE_FILE']).canonicalFile
     if (!keyFile.isFile()) throw new GradleException('Release keystore file does not exist')
@@ -69,3 +72,15 @@ tasks.register('prepareWebRelease', Exec) {
     commandLine 'python3', 'tools/build_release.py'
 }
 tasks.named('preBuild').configure { dependsOn 'prepareWebRelease' }
+
+// Check completed, signed-or-unsigned outputs, not the compressed web payload.
+tasks.register('verifyDebugSize', Exec) {
+    dependsOn 'assembleDebug'
+    workingDir rootProject.projectDir.parentFile
+    commandLine 'python3', 'tools/check_android_size.py', 'android/app/build/outputs/apk/debug'
+}
+tasks.register('verifyReleaseSize', Exec) {
+    dependsOn 'assembleRelease', 'bundleRelease'
+    workingDir rootProject.projectDir.parentFile
+    commandLine 'python3', 'tools/check_android_size.py', 'android/app/build/outputs/apk/release', 'android/app/build/outputs/bundle/release'
+}

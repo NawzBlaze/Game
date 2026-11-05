@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   push:
     branches: [arena/fcb06d04-game]
-    paths: ['android/**', 'web/**', 'tools/build_release.py', 'tools/run_android_emulator_tests.py', 'tests/test_android_emulator_runner.py', 'docs/release-assets.json', 'package.json', '.github/workflows/android-build-device.yml']
+    paths: ['android/**', 'web/**', 'tools/build_release.py', 'tools/check_android_size.py', 'tests/test_android_size.py', 'tools/run_android_emulator_tests.py', 'tests/test_android_emulator_runner.py', 'docs/release-assets.json', 'package.json', '.github/workflows/android-build-device.yml']
 permissions:
   contents: read
 concurrency:
@@ -36,11 +36,13 @@ jobs:
           echo "ANDROID_HOME=$SDK" >> "$GITHUB_ENV"
           echo "ANDROID_SDK_ROOT=$SDK" >> "$GITHUB_ENV"
 
+      - name: Check Android safety and size-gate tooling
+        run: python3 -m unittest discover -s tests -p 'test_android_*.py' -v
       - name: Compile, lint and simulate native framework APIs
         working-directory: android
         run: |
           set -o pipefail
-          ./gradlew --no-daemon -PtestApi=29,33,36 testDebugUnitTest lintDebug assembleDebug assembleDebugAndroidTest assembleRelease bundleRelease 2>&1 | tee ../android-build.log
+          ./gradlew --no-daemon -PtestApi=29,33,36 testDebugUnitTest lintDebug verifyDebugSize assembleDebugAndroidTest verifyReleaseSize 2>&1 | tee ../android-build.log
       - name: Expose bounded build failure diagnostics
         if: failure()
         run: |
@@ -80,6 +82,7 @@ jobs:
           cd dist/mobile-apk
           sha256sum *.apk > SHA256SUMS.txt
           echo "::notice title=Mobile preview APK SHA256::$(cat SHA256SUMS.txt)"
+          echo "::notice title=Mobile preview APK bytes::$(stat -c '%s' little-parcel-crew-*-preview.apk)"
       - uses: actions/upload-artifact@v4
         with:
           name: mobile-apk-preview
