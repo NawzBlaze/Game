@@ -26,14 +26,14 @@ async function ready(port){
    servers.push(spawn('python3',['tools/serve.py','--directory','dist/web','--port','4188'],{stdio:'ignore'}));
   }
   await ready(4187);await ready(4188);
-  const tests=['save-store','test','full_campaign','startup','adventure','all-stars','special-deliveries','parcel-mechanics','multitouch','offline-storage','audio-lifecycle','audio-decode','landscape','presentation','release'];
+  const tests=['save-store','test','full_campaign','startup','adventure','all-stars','special-deliveries','parcel-mechanics','multitouch','offline-storage','audio-lifecycle','audio-decode','landscape','presentation','mobile-ui','release'];
   for(const test of tests)run(test,'node',['tests/'+test+'.js']);
   if(results.some(r=>!r.passed))process.exitCode=1;
  }catch(e){console.error(e.message);process.exitCode=1;}
  finally{
   for(const child of servers)child.kill('SIGTERM');
   fs.mkdirSync('dist',{recursive:true});
-  fs.writeFileSync('dist/qa-report.json',JSON.stringify({version:require('../package.json').version,scope:'Automated web checks only; no device/signing/human approval',artifactSha256:fs.existsSync('dist/SHA256SUMS.txt')?fs.readFileSync('dist/SHA256SUMS.txt','utf8').split(/\s+/)[0]:null,passed:results.length===17&&results.every(r=>r.passed),checks:results},null,2)+'\n');
+  fs.writeFileSync('dist/qa-report.json',JSON.stringify({version:require('../package.json').version,scope:'Automated web checks only; no device/signing/human approval',artifactSha256:fs.existsSync('dist/SHA256SUMS.txt')?fs.readFileSync('dist/SHA256SUMS.txt','utf8').split(/\s+/)[0]:null,passed:results.length===18&&results.every(r=>r.passed),checks:results},null,2)+'\n');
   console.log('\n'+results.filter(r=>r.passed).length+'/'+results.length+' checks passed. Report: dist/qa-report.json');
  }
 })();

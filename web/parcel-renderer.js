@@ -54,22 +54,24 @@
     // Repeat complete authored panoramas; scenery scrolls slower than collision plane.
     const pan = (camera * .18) % 800;
     for (let x = -pan; x < W; x += 800) sprite(ctx, backdrop, x, 0, 800, G + 18);
-    ctx.save(); ctx.translate(-camera, 0);
+    // Leave a ground strip for the mobile thumb controls; collision coordinates stay unchanged.
+    const floorOffset=s.floorOffset||0;
+    ctx.save(); ctx.translate(-camera, -floorOffset);
     const terrain = ['grass', 'dirt', 'purple', 'sand', 'grass'][level.theme];
     const visible = (x, w = 80) => x + w > camera - 64 && x < camera + W + 64;
     if (level.theme === 3) {
-      tileStrip(ctx, 'water', camera, G + 36, W, H - G - 36);
+      tileStrip(ctx, 'water', camera, G + 36, W, H - G - 36 + floorOffset);
       tileStrip(ctx, 'water_top', camera, G + 22, W, 32);
     }
     for (const [a, b] of level.ground) {
       const end = b === level.width ? b + 160 : b;
       const left = Math.max(a, Math.floor((camera - a) / 48) * 48 + a);
       const right = Math.min(end, camera + W + 48);
-      ctx.save(); ctx.beginPath(); ctx.rect(a, G, end - a, H - G); ctx.clip();
+      ctx.save(); ctx.beginPath(); ctx.rect(a, G, end - a, H - G + floorOffset); ctx.clip();
       for (let x = left; x < right; x += 48) {
         const edge = x === a ? '_left' : x + 48 >= end ? '_right' : '';
         sprite(ctx, 'terrain_' + terrain + '_block_top' + edge, x, G, 48, 48);
-        for (let y = G + 48; y < H; y += 48) sprite(ctx, 'terrain_' + terrain + '_block_center', x, y, 48, 48);
+        for (let y = G + 48; y < H + floorOffset; y += 48) sprite(ctx, 'terrain_' + terrain + '_block_center', x, y, 48, 48);
       }
       ctx.restore();
     }

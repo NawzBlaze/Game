@@ -25,3 +25,9 @@ No replacement illustrated artwork was AI-generated or hand-drawn.
 No online account, analytics, advertising or game-server requests.
 Game progress is stored locally. A static host may process normal access logs.
 This notice is not a final jurisdiction-specific privacy policy or store approval.
+
+Mobile interface additions: Kenney UI Pack 2.0 and Mobile Controls 1.0, CC0.
+https://kenney.nl/assets/ui-pack
+https://kenney.nl/assets/mobile-controls
+Original unmodified PNG files and notices in assets/mobile-ui/.
+Pinned mirror commit fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa; source hashes in asset-manifest.json.

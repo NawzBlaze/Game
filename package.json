@@ -1,7 +1,7 @@
 {
   "name": "little-parcel-crew",
   "private": true,
-  "version": "0.19.0-rc.1",
+  "version": "0.20.0-rc.1",
   "description": "Offline delivery adventure and turn-based puzzle game",
   "scripts": {
     "test": "node tools/verify.js",
@@ -35,7 +35,8 @@
     "test:saves": "node tests/save-store.js",
     "release:check": "python3 tools/release_gate.py",
     "test:android-evidence": "python3 -m unittest discover -s tests -p test_android_evidence.py -v",
-    "diagnostics:package": "python3 tools/package_android_diagnostics.py"
+    "diagnostics:package": "python3 tools/package_android_diagnostics.py",
+    "test:mobile": "node tests/mobile-ui.js"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

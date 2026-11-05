@@ -42,6 +42,8 @@
     try { window.ParcelSaves.restore(pending);location.reload(); }
     catch {status.textContent='Restore could not complete. Existing progress was retained or preserved in a local recovery copy. Do not clear browser data.';}
   });
+  // Browser tooling is development-only until Android file handling is implemented.
+  if(window.NativeOrientation)return;
   const home=document.querySelector('#advHome .adv-home-actions');
   const button=document.createElement('button');button.className='adv-plain';button.dataset.progress='open';button.textContent='Progress & backups';home.appendChild(button);
 })();

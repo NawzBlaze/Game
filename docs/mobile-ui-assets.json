@@ -1,0 +1,205 @@
+{
+  "commit": "fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa",
+  "assets": [
+    {
+      "file": "assets/mobile-ui/green-button_rectangle_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Green/Default/button_rectangle_depth_flat.png",
+      "sha256": "f356ba76050319e08ff7a68458f28f068dd57b1facf156a0da4348de8c5fffe1"
+    },
+    {
+      "file": "assets/mobile-ui/green-button_square_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Green/Default/button_square_depth_flat.png",
+      "sha256": "3410e98c8b1c9bbc5941724e3b5db41a745c64e44c1178273a5d54302cdab891"
+    },
+    {
+      "file": "assets/mobile-ui/green-button_round_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Green/Default/button_round_depth_flat.png",
+      "sha256": "f711bf0042ae7fd24734c845493d27528f6fdf6cb453d42aab381dc8b4daed49"
+    },
+    {
+      "file": "assets/mobile-ui/blue-button_rectangle_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Blue/Default/button_rectangle_depth_flat.png",
+      "sha256": "6c709a45aae0330ffff5b060d9f14cc2297839f664e0a4c9e516d90ad085ec0b"
+    },
+    {
+      "file": "assets/mobile-ui/blue-button_square_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Blue/Default/button_square_depth_flat.png",
+      "sha256": "7f113aa488dee62009fe7b7043b51672c9845d5d0dd0c856d8aa179c91a9c688"
+    },
+    {
+      "file": "assets/mobile-ui/blue-button_round_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Blue/Default/button_round_depth_flat.png",
+      "sha256": "49bdaa6172e3670fa6c1cfb347fd7fdc7fb8bdd2c5e75b0429c41e4309c85541"
+    },
+    {
+      "file": "assets/mobile-ui/grey-button_rectangle_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Grey/Default/button_rectangle_depth_flat.png",
+      "sha256": "7de9ba1d4bca313fd2c02e3595f3d699c1201d84d70a3c69828e56782d585ce7"
+    },
+    {
+      "file": "assets/mobile-ui/grey-button_square_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Grey/Default/button_square_depth_flat.png",
+      "sha256": "381aa4900b97e21422460bdb7003d321846c2ae430c10661d4d97618bbbb9df6"
+    },
+    {
+      "file": "assets/mobile-ui/grey-button_round_depth_flat.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/PNG/Grey/Default/button_round_depth_flat.png",
+      "sha256": "b05e6488e5b67f8b30e9ad28217320c3c97ef4ebd458ab627ae6200987fa2095"
+    },
+    {
+      "file": "assets/mobile-ui/arrow.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_arrow.png",
+      "sha256": "f338bd8f3a0f37781dc81463dae1acda89a34a46ac258de5d3ff03b5eb279c67"
+    },
+    {
+      "file": "assets/mobile-ui/cog.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_cog.png",
+      "sha256": "7a12354ab61d51c55f3c1bb78ebd2bc20876d68d3dc44b2ffa5219e624846144"
+    },
+    {
+      "file": "assets/mobile-ui/cross.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_cross.png",
+      "sha256": "33dbb5f0895fc60c0fee8e21009e02e6d58947a24dc929e14c45f502c9590537"
+    },
+    {
+      "file": "assets/mobile-ui/jump.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_jump.png",
+      "sha256": "e63b25805434fee6913296811f903f6c2fa1722d627af6ad03d0d5e1d50ee157"
+    },
+    {
+      "file": "assets/mobile-ui/lock.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_lock.png",
+      "sha256": "db9cdbb8b63cc4cd1b9091a93d1f9fc4f07cac3050fe441ca507b5b86a1cab2a"
+    },
+    {
+      "file": "assets/mobile-ui/music.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_music.png",
+      "sha256": "ef5c23e52c0c636dbcce20b624b8637f141b463a95308296fd74a17baba1f844"
+    },
+    {
+      "file": "assets/mobile-ui/music_disabled.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_music_disabled.png",
+      "sha256": "2e7395e3d2cdc5644c957b307dc24d07265a9d28dd3c08143bd397380f46e0aa"
+    },
+    {
+      "file": "assets/mobile-ui/pause.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_pause.png",
+      "sha256": "8a2f4999746234cb16e49c798b27a3aa890965446e6bdc0c9112e01286940469"
+    },
+    {
+      "file": "assets/mobile-ui/play.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_play.png",
+      "sha256": "2fcc2650c7dab11236b70ba32023629da82200c3680e87db74af4cf1fb90d038"
+    },
+    {
+      "file": "assets/mobile-ui/save.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_save.png",
+      "sha256": "5bcec03ba272bb3d80f2c664372fbc50902f305c25fd287b3af1283a852eff1f"
+    },
+    {
+      "file": "assets/mobile-ui/sound.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_sound.png",
+      "sha256": "79580b08a529ad03b03449bd703692e959f88b402e215c4e190925d1b860f818"
+    },
+    {
+      "file": "assets/mobile-ui/sound_disabled.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_sound_disabled.png",
+      "sha256": "2ab1ac07dd6a7fed0b0da838c90e8931d4c0c4f2f4c95a8c598d19cd14ca7510"
+    },
+    {
+      "file": "assets/mobile-ui/star.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_star.png",
+      "sha256": "5bf5adf47f0fd0deb43a76c98cb8d256ab590a2ca914fd0e8838ffcdbcab16cf"
+    },
+    {
+      "file": "assets/mobile-ui/talk.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/Sprites/Icons/Default/icon_talk.png",
+      "sha256": "814cb9764c28cfc1cafa50584e7dbc1f51f6c8169642992d0f59d131c61e92df"
+    },
+    {
+      "file": "assets/mobile-ui/UI-LICENSE.txt",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/ui-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/UI Pack/License.txt",
+      "sha256": "69f7eaa5e05913b4d09cf5848f75390b5c3c9a409ef8555777803d9ca0c171fb"
+    },
+    {
+      "file": "assets/mobile-ui/CONTROLS-LICENSE.txt",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/mobile-controls",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/License.txt",
+      "sha256": "0522777b2550f959ba5c504d97042bb17f2cd895d0562f5a4a13fc579f69bdaf"
+    }
+  ]
+}

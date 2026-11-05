@@ -78,6 +78,13 @@ def main():
             print('::error title=Emulator instrumentation::'+diagnostic)
         if not report['passed']:
             raise RuntimeError('Instrumentation did not confirm both tests passed')
+        for name in ['mobile-home.png','mobile-game.png','mobile-pause.png']:
+            image=subprocess.run(['adb','-s',serial,'exec-out','run-as',package,'cat','files/'+name],capture_output=True,timeout=30)
+            if image.returncode != 0 or not image.stdout.startswith(b'\x89PNG\r\n\x1a\n'):
+                report['passed']=False
+                raise RuntimeError('Missing emulator UI screenshot: '+name)
+            (args.output/name).write_bytes(image.stdout)
+
     except (RuntimeError, OSError, ValueError, subprocess.TimeoutExpired) as error:
         report['error'] = str(error)
         print(str(error), file=sys.stderr)

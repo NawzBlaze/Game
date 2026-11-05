@@ -1,6 +1,14 @@
 package com.onestepdelivery.game;
 
 import android.view.View;
+import android.graphics.Bitmap;
+import java.io.File;
+import java.io.FileOutputStream;
+import android.view.MotionEvent;
+import android.view.InputDevice;
+import android.os.SystemClock;
+import androidx.test.platform.app.InstrumentationRegistry;
+import org.json.JSONObject;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import androidx.test.core.app.ActivityScenario;
@@ -33,17 +41,48 @@ public class WebGameSmokeDeviceTest {
         while(System.nanoTime()<deadline){if("true".equals(js(scene,expression)))return;Thread.sleep(250);}
         fail("Timed out: "+expression);
     }
+    private static void capture(String name) throws Exception {
+        Bitmap image=InstrumentationRegistry.getInstrumentation().getUiAutomation().takeScreenshot();
+        assertNotNull("Emulator screenshot unavailable",image);
+        File file=new File(InstrumentationRegistry.getInstrumentation().getTargetContext().getFilesDir(),name);
+        try(FileOutputStream output=new FileOutputStream(file)){assertTrue(image.compress(Bitmap.CompressFormat.PNG,100,output));}
+        image.recycle();
+    }
+    private static void touch(ActivityScenario<MainActivity> scene,String selector,long holdMs) throws Exception {
+        JSONObject point=new JSONObject(js(scene,"(()=>{const r=document.querySelector('"+selector+"').getBoundingClientRect();return {x:(r.x+r.width/2)/innerWidth,y:(r.y+r.height/2)/innerHeight}})()"));
+        AtomicReference<float[]> screenPoint=new AtomicReference<>();
+        scene.onActivity(a->{WebView w=find(a.findViewById(android.R.id.content));int[] origin=new int[2];w.getLocationOnScreen(origin);screenPoint.set(new float[]{origin[0]+(float)point.optDouble("x")*w.getWidth(),origin[1]+(float)point.optDouble("y")*w.getHeight()});});
+        float[] xy=screenPoint.get();long downTime=SystemClock.uptimeMillis();
+        MotionEvent down=MotionEvent.obtain(downTime,downTime,MotionEvent.ACTION_DOWN,xy[0],xy[1],0);down.setSource(InputDevice.SOURCE_TOUCHSCREEN);
+        InstrumentationRegistry.getInstrumentation().sendPointerSync(down);down.recycle();
+        Thread.sleep(holdMs);
+        MotionEvent up=MotionEvent.obtain(downTime,SystemClock.uptimeMillis(),MotionEvent.ACTION_UP,xy[0],xy[1],0);up.setSource(InputDevice.SOURCE_TOUCHSCREEN);
+        InstrumentationRegistry.getInstrumentation().sendPointerSync(up);up.recycle();
+    }
     @Test public void offlineGameStartsPausesAndKeepsProgressThroughRecreation() throws Exception {
         try(ActivityScenario<MainActivity> scene=ActivityScenario.launch(MainActivity.class)) {
             await(scene,"!!document.querySelector('#advHome [data-action=play]') && !!window.ParcelRenderer && ParcelRenderer.ready()");
             assertEquals("false",js(scene,"!!window.__ADV_TEST__"));
             assertEquals("true",js(scene,"location.href==='file:///android_asset/index.html'"));
-            js(scene,"document.querySelector('#advHome [data-action=play]').click()");
+            assertEquals("true",js(scene,"!document.querySelector('#advHome [data-progress=open]')"));
+            assertEquals("true",js(scene,"[...document.querySelectorAll('#advHome button')].filter(b=>b.getClientRects().length).every(b=>{const r=b.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight+1&&r.left>=0&&r.right<=innerWidth+1})"));
+            capture("mobile-home.png");
+            touch(scene,"#advHome [data-action=play]",80);
             await(scene,"!document.querySelector('#advGame').classList.contains('adv-hidden')");
             assertEquals("true",js(scene,"document.querySelector('#advCanvas').width>0 && document.querySelector('#advCanvas').height>0"));
-            js(scene,"document.querySelector('#advGame [data-action=pause]').click()");
+            capture("mobile-game.png");
+            double progress=Double.parseDouble(js(scene,"parseFloat(document.querySelector('#advProgress').style.width)||0"));
+            touch(scene,"#advGame [data-control=right]",450);
+            await(scene,"(parseFloat(document.querySelector('#advProgress').style.width)||0)>"+progress);
+            touch(scene,"#advGame [data-action=pause]",80);
             await(scene,"!document.querySelector('#advDialog').classList.contains('adv-hidden')");
-            js(scene,"document.querySelector('#advCard [data-action=resume]').click()");
+            assertEquals("true",js(scene,"[...document.querySelectorAll('#advCard button')].every(b=>{const r=b.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight+1})"));
+            capture("mobile-pause.png");
+            touch(scene,"#advCard [data-action=settings]",80);
+            await(scene,"document.querySelector('#advCard').dataset.dialog==='settings'");
+            scene.onActivity(a->a.onBackPressed());
+            await(scene,"document.querySelector('#advCard').dataset.dialog==='pause'");
+            touch(scene,"#advCard [data-action=resume]",80);
             await(scene,"document.querySelector('#advDialog').classList.contains('adv-hidden')");
             String before=js(scene,"localStorage.getItem('delivery-adventure-v1')");
             assertNotEquals("null",before);
