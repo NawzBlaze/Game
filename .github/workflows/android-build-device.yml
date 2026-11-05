@@ -70,6 +70,21 @@ jobs:
           name: android-unsigned-and-debug-candidates
           path: dist/android-candidates/
           retention-days: 14
+      - name: Prepare a single mobile preview APK download
+        run: |
+          VERSION=$(python3 -c "import json; print(json.load(open('package.json'))['version'])")
+          mkdir -p dist/mobile-apk
+          cp android/app/build/outputs/apk/debug/app-debug.apk "dist/mobile-apk/little-parcel-crew-$VERSION-preview.apk"
+          cp dist/android-candidates/SOURCE_COMMIT.txt dist/mobile-apk/
+          echo 'Test-signed preview APK. Clean test device only. Do not uninstall or overwrite the affected game. Not a signed production/store release.' > dist/mobile-apk/READ_ME_FIRST.txt
+          cd dist/mobile-apk
+          sha256sum *.apk > SHA256SUMS.txt
+          echo "::notice title=Mobile preview APK SHA256::$(cat SHA256SUMS.txt)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mobile-apk-preview
+          path: dist/mobile-apk/
+          retention-days: 14
       - uses: actions/upload-artifact@v4
         if: always()
         with:
