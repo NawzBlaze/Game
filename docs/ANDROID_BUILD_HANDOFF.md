@@ -4,13 +4,15 @@ The product target is **mobile Android APK**. Browser preview and static payload
 
 ## Download the redesigned APK
 
-**[Download mobile-apk-preview](https://github.com/NawzBlaze/Game/actions/runs/41984998840/artifacts/13395817085)** from [successful CI run 41984998840](https://github.com/NawzBlaze/Game/actions/runs/41984998840).
+**[Download mobile-apk-preview](https://github.com/NawzBlaze/Game/actions/runs/41988965383/artifacts/13397058838)** from [successful CI run 41988965383](https://github.com/NawzBlaze/Game/actions/runs/41988965383).
 
 GitHub downloads an artifact ZIP. Extract and use **`little-parcel-crew-0.20.0-rc.1-preview.apk`**. This separate artifact contains the game APK, checksum, source commit and safety note—not the instrumentation APK or an unsigned APK that cannot be installed normally. GitHub login may be required; artifacts have 14-day retention.
 
-APK SHA-256: `646beb90b51794b7211759c17a87d1a545c96811698c1f5e46ce5a37ee31a5a4`.
+Finished APK size: **1,080,149 bytes (1.08 MB)**. CI now checks every finished APK/AAB against a strict **100,000,000-byte maximum**. Production signing must be owner-controlled; see [release signing instructions](RELEASE_SIGNING.md).
 
-Verified source commit: `d2ca430d34b9d605936f2cd638a3a5551d952807` on `arena/fcb06d04-game`.
+APK SHA-256: `6293f25da2b1c1eab63c7b2d2848932174295cfcdbb292ccfcf729ff612ae7a4`.
+
+Verified source commit: `3c8f348e1082ea11319d62aeebaccb59e1481dbb` on `arena/fcb06d04-game`.
 
 **This is a debug/test-signed preview APK, not a production-signed or store-approved release. Use a clean test device only. Do not uninstall, clear data, or overwrite the affected existing game to try this candidate.** App ID remains `com.onestepdelivery.game` for save/update continuity; debug signing is not proof of update compatibility.
 
@@ -20,6 +22,7 @@ Verified source commit: `d2ca430d34b9d605936f2cd638a3a5551d952807` on `arena/fcb
 
 ## Verification completed
 
+- **13/13** Android host tooling tests, including exact 100 MB acceptance, over-limit rejection and missing/empty/symlink output rejection; finished debug/release APK and AAB size gates passed.
 - **18/18** automated engine/UI checks, exact payload binding in `LATEST_WEB_QA.json`.
 - Native debug/release APK and AAB builds, debug lint and simulated framework tests on APIs 29, 33 and 36 passed. The simulated tests include hardware Back being routed once per key pair.
 - **Android 13/API 33 and Android 16/API 36:** both instrumentation tests passed on each disposable emulator.
