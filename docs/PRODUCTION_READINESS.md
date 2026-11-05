@@ -1,5 +1,7 @@
 # Release engineering handoff — 0.19.0-rc.1
 
+**Current product target is mobile Android APK, not a web/desktop release.** The subsequent [0.20 mobile redesign](MOBILE_REDESIGN.md) and [current APK handoff](ANDROID_BUILD_HANDOFF.md) supersede the older candidate UI/artifact details below. The original Android 13 crash and production/human approvals remain unresolved.
+
 ## Decision
 
 **Web release candidate is implemented and automated checks pass. Overall production gate is BLOCKED pending independent human/owner and Android-device evidence.** No production-signed release APK/AAB or app-store submission was created. Debug/unsigned Android candidates and emulator results are recorded in [the Android handoff](ANDROID_BUILD_HANDOFF.md). No monetary-quality/perfection claim is made.

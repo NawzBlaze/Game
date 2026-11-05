@@ -2,7 +2,7 @@
 
 An offline delivery adventure with **24 Adventure routes, 48 Classic puzzles and six optional special deliveries**. This repository now includes the restored game, matching sourced artwork for both modes, save recovery, and an Android-first interface using original freely licensed game UI assets.
 
-**Product target: mobile Android APK. Browser previews are development/test tooling, not a desktop/web product.** The 0.20 redesign passes 18 engine/UI checks; fresh Android candidate verification is recorded separately. Production signing, physical-phone and owner approvals remain required. See [production readiness](docs/PRODUCTION_READINESS.md). A successful build is not permission to publish.
+**Product target: mobile Android APK. Browser previews are development/test tooling, not a desktop/web product.** The 0.20 redesign passes 18 engine/UI checks plus Android build/lint/simulated tests and two instrumentation tests on each of API 33/36 emulators. [Download and limits](docs/ANDROID_BUILD_HANDOFF.md). Production signing, physical-phone and owner approvals remain required. See [production readiness](docs/PRODUCTION_READINESS.md). A successful build is not permission to publish.
 
 ## Develop and play
 

@@ -1,5 +1,7 @@
 # Android validation — emulator verified, original phone pending
 
+**Update, 2026-11-05:** The 0.20 mobile redesign passes build/lint/simulated tests and system-touchscreen/back/save/recovery instrumentation on API 33 and 36. Adaptive launcher resources now wrap the original sourced icon. [Current artifact-bound evidence](android-ci-run.json); [0.19 historical record](android-ci-run-0.19.json). The physical affected phone and its original crash remain unverified.
+
 **Update, 2026-11-01:** Native build/lint/simulated tests and two real-WebView instrumentation tests on each of API 33/36 disposable emulators now pass. See [CI evidence](android-ci-run.json) and [build handoff](../ANDROID_BUILD_HANDOFF.md). No physical phone was tested; the original crash is still undiagnosed. Earlier diagnostic-only observations below are historical.
 
 ## Completed in this step
