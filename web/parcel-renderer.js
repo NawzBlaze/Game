@@ -28,7 +28,7 @@
     ctx.restore();
   }
   function character(ctx, who, x, y, width, height, moving, frame, flip, jumping, look = {}) {
-    const pose = jumping ? 'jump' : moving ? (Math.floor(frame / 6) % 2 ? 'walk_a' : 'walk_b') : 'idle';
+    const pose = jumping ? 'jump' : moving ? (Math.floor(frame / 2) % 2 ? 'walk_a' : 'walk_b') : 'idle';
     // Uniform size across all couriers: no stretched pig/human aspect ratios.
     const h = Math.min(height, 64), w = h * .8;
     sprite(ctx, 'character_' + (look.hat === 'cap' ? 'beige' : look.hat === 'flower' ? 'yellow' : colors[who] || 'green') + '_' + pose,
@@ -52,8 +52,15 @@
     const backgrounds = ['hills', 'trees', 'mushrooms', 'hills', 'trees'];
     const backdrop = 'background_color_' + backgrounds[level.theme];
     // Repeat complete authored panoramas; scenery scrolls slower than collision plane.
+    const motion=save.effects!==false&&!reducedMotion;
+    const cloudPan=(camera*.06+(motion?clock*4:0))%800;
+    for(let x=-cloudPan;x<W;x+=800)sprite(ctx,'background_clouds',x,0,800,G+18);
     const pan = (camera * .18) % 800;
+    // Authored panorama backgrounds have white skies. Multiply composites their
+    // original white pixels over the authored cloud layer without editing either PNG.
+    ctx.save();ctx.globalCompositeOperation='multiply';
     for (let x = -pan; x < W; x += 800) sprite(ctx, backdrop, x, 0, 800, G + 18);
+    ctx.restore();
     // Leave a ground strip for the mobile thumb controls; collision coordinates stay unchanged.
     const floorOffset=s.floorOffset||0;
     ctx.save(); ctx.translate(-camera, -floorOffset);
@@ -94,7 +101,7 @@
       sprite(ctx, level.theme === 2 ? 'mushroom_red' : n % 3 ? 'grass' : 'bush', x, G - 28, 40, 28);
     }
     for (const x of level.boxes) if (visible(x)) sprite(ctx, 'block_planks', x, G - 42, 42, 42);
-    for (const x of level.springs) if (visible(x)) sprite(ctx, 'spring', x, G - 22, 42, 22);
+    for(const x of level.springs)if(visible(x)){const extended=motion&&s.springPulse?.x===x&&clock-s.springPulse.time>=0&&clock-s.springPulse.time<.24;sprite(ctx,extended?'spring_out':'spring',x,G-(extended?40:22),42,extended?40:22)}
     if (level.postGate) {
       const g = level.postGate;
       if (!postGateOpen) {
@@ -102,7 +109,7 @@
         sprite(ctx, 'key_yellow', g.switchX - 21, g.switchY - 12, 42, 24);
       }
     }
-    sprite(ctx, checkpoint === 55 ? 'flag_off' : 'flag_green_a', level.checkpoint, G - 64, 48, 64);
+    sprite(ctx, checkpoint === 55 ? 'flag_off' : motion&&Math.floor(clock*4)%2?'flag_green_b':'flag_green_a', level.checkpoint, G - 64, 48, 64);
     function door(x, delivered) {
       sprite(ctx, delivered ? 'door_open' : 'door_closed', x, G - 48, 48, 48);
       sprite(ctx, delivered ? 'door_open_top' : 'door_closed_top', x, G - 96, 48, 48);
@@ -130,19 +137,19 @@
     if (level.kind === 'buddy') { sprite(ctx, 'mouse_rest', 269, G - 34, 56, 34); sprite(ctx, 'heart', 290, G - 58, 20, 20); if(buddyMet && !secretFound) sprite(ctx, 'heart', 635, G - 72, 28, 28); }
     if (!s.hideCourier && !(invulnerable > 0 && save.effects !== false && !reducedMotion && Math.floor(invulnerable * 10) % 2)) {
       character(ctx, save.courier, p.x - 11, p.y + p.h - 62, p.w + 22, 62,
-        p.ground && Math.abs(p.vx) > 20 && ending <= 0, Math.floor(clock * 18), p.face < 0, !p.ground, save);
+        motion && p.ground && Math.abs(p.vx) > 20 && ending <= 0, Math.floor(clock * 18), p.face < 0, !p.ground, save);
       if (hasParcel && ending <= 0) sprite(ctx, parcel.asset, p.x + (p.face > 0 ? 20 : -9), p.y + 28, 20, 20);
       if (ending > 0) {
-        const t = Math.max(0, Math.min(1, 1 - ending / 1.15));
+        const raw=Math.max(0,Math.min(1,1-ending/1.15)),t=motion?raw*raw*(3-2*raw):raw;
         sprite(ctx, parcel.asset, p.x + 18 + (level.width - 51 - p.x - 18) * t,
-          p.y + 30 + (G - 39 - p.y - 30) * t, 20, 20);
+          p.y + 30 + (G - 39 - p.y - 30) * t-(motion?Math.sin(t*Math.PI)*18:0), 20, 20);
       }
     }
     ctx.restore();
   }
   // Preload the entire renderer family before the first route is started.
   const names = ['background_solid_sky','background_color_hills','background_color_trees',
-    'background_color_mushrooms','block_planks','bridge','bridge_logs','grass','bush',
+    'background_color_mushrooms','background_clouds','flag_green_b','spring_out','block_planks','bridge','bridge_logs','grass','bush',
     'mushroom_red','water','water_top','star','spring','heart','flag_off','flag_green_a',
     'door_closed','door_closed_top','door_open','door_open_top','sign_exit','key_yellow',
     'lock_yellow','lever_left','lever_right','block_blue','block_red','block_yellow','gem_green','gem_red','gem_blue','sign_right','conveyor','mouse_rest','mouse_walk_a','mouse_walk_b'];

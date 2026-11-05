@@ -7,7 +7,7 @@ WEB=ROOT/'web'
 OUT=ROOT/'dist'
 version=json.loads((ROOT/'package.json').read_text())['version']
 manifest=json.loads((ROOT/'docs/release-assets.json').read_text())
-code=['index.html','style.css','adventure.css','dispatch.css','levels.js','game.js','adventure.js','route-experience.js','parcel-renderer.js','presentation-rules.js','asset-bounds.js','compatibility.js','save-store.js','progress-panel.js','runtime-config.js','CREDITS.txt']
+code=['index.html','style.css','adventure.css','dispatch.css','levels.js','game.js','adventure.js','route-experience.js','courier-mastery.js','parcel-campaign.js','parcel-renderer.js','presentation-rules.js','asset-bounds.js','compatibility.js','save-store.js','progress-panel.js','runtime-config.js','CREDITS.txt']
 def digest(data):return hashlib.sha256(data).hexdigest()
 files={}
 def read(rel):

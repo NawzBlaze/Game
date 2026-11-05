@@ -40,3 +40,10 @@ Special deliveries: Mission Plausible. Dispatch office: Mishief Stroll.
 https://kenney.nl/assets/music-loops
 Pinned source URLs and SHA-256 hashes: bundled asset-manifest.json.
 Original notice: assets/release-audio/MUSIC-LICENSE.txt.
+
+1.0 CAMPAIGN PRESENTATION
+Chapter panoramas: Kenney New Platformer Pack 1.1, CC0.
+Original background_fade_hills, background_fade_trees and background_fade_mushrooms
+PNG files, unmodified. Immutable source URLs and SHA-256 hashes are bundled in
+asset-manifest.json. Cloud/panorama compositing, sprite placement and animation
+happen at runtime; no replacement illustrated artwork was generated.

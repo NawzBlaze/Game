@@ -23,3 +23,5 @@ for(const raw of ['null','[]','"hello"','{broken']){const {store,map}=environmen
 console.log('PASS save validation, corrupt originals, quota protection, backup roundtrip and failed-restore rollback.');
 
 {const {store}=environment({[A]:JSON.stringify({unlocked:12,best:{1:3},musicVolume:999,effectsVolume:-5,districtMusic:false})});const s=store.read(A,{});assert.equal(s.musicVolume,100);assert.equal(s.effectsVolume,0);assert.equal(s.districtMusic,false);assert.equal(s.unlocked,12);assert.equal(s.best[1],3);}
+
+{const {store}=environment({[A]:JSON.stringify({unlocked:8,best:{1:2},express:true,expressBest:{1:3,2:9,99:3}})});const s=store.read(A,{});assert.equal(s.express,true);assert.equal(s.expressBest[1],3);assert.equal(s.expressBest[2],undefined);assert.equal(s.expressBest[99],undefined);assert.equal(s.best[1],2);}
