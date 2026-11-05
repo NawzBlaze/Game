@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android applies its launcher mask. No new illustrated icon is drawn. -->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@color/launcher_background" />
+    <foreground><inset android:drawable="@drawable/ic_launcher" android:inset="16dp" /></foreground>
+</adaptive-icon>

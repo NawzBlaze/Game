@@ -65,7 +65,7 @@ public class MainActivity extends Activity {
         }
         if (Build.VERSION.SDK_INT >= 30) getWindow().setDecorFitsSystemWindows(false);
         root = new FrameLayout(this);
-        root.setBackgroundColor(Color.rgb(247, 243, 230));
+        root.setBackgroundColor(Color.rgb(237, 247, 251));
         setContentView(root);
         immersive();
         openGame();
@@ -77,7 +77,7 @@ public class MainActivity extends Activity {
         try {
             WebView view = new WebView(this);
             webView = view;
-            view.setBackgroundColor(Color.rgb(220, 237, 230));
+            view.setBackgroundColor(Color.rgb(228, 246, 255));
             view.getSettings().setJavaScriptEnabled(true);
             view.getSettings().setDomStorageEnabled(true);
             view.getSettings().setAllowFileAccess(true);
@@ -151,13 +151,13 @@ public class MainActivity extends Activity {
         panel.setPadding(padding, padding, padding, padding);
         TextView title = new TextView(this);
         title.setText("Little Parcel Crew");
-        title.setTextColor(Color.rgb(36, 77, 70));
+        title.setTextColor(Color.rgb(32, 62, 83));
         title.setTextSize(23);
         title.setGravity(Gravity.CENTER);
         panel.addView(title);
         TextView body = new TextView(this);
         body.setText(explanation + "\n\nDo not uninstall the game or clear its data; that can erase your saved progress.");
-        body.setTextColor(Color.rgb(36, 77, 70));
+        body.setTextColor(Color.rgb(32, 62, 83));
         body.setTextSize(16);
         body.setPadding(0, padding / 2, 0, padding / 2);
         body.setGravity(Gravity.CENTER);
