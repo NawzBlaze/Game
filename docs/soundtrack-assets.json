@@ -1,0 +1,59 @@
+{
+  "purpose": "District-specific offline music; all six tracks are used by gameplay, not size padding",
+  "assets": [
+    {
+      "file": "assets/release-audio/garden.ogg",
+      "creator": "Kenney",
+      "title": "Farm Frolics",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/music-loops",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Music Loops/Loops/Farm Frolics.ogg",
+      "sha256": "3c1a6ae05701a7e32b6b3c19fae046a46d7183785ff0dbab4cd9b0683655dd89"
+    },
+    {
+      "file": "assets/release-audio/market.ogg",
+      "creator": "Kenney",
+      "title": "Italian Mom",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/music-loops",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Music Loops/Loops/Italian Mom.ogg",
+      "sha256": "d9392f3a561623c72a5a0a793984272a2264d350d9d61bfcd9bf4bdb8cfdd49b"
+    },
+    {
+      "file": "assets/release-audio/golden.ogg",
+      "creator": "Kenney",
+      "title": "Swinging Pants",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/music-loops",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Music Loops/Loops/Swinging Pants.ogg",
+      "sha256": "8f60328d8664e050b7fb5c8c7f97862aca0f190a3f6e31d00f0415726d76d52c"
+    },
+    {
+      "file": "assets/release-audio/harbour.ogg",
+      "creator": "Kenney",
+      "title": "Night at the Beach",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/music-loops",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Music Loops/Loops/Night at the Beach.ogg",
+      "sha256": "8beff4d1153fcea045d1f3d01a241f81c6bb7645d64d5e52511152d1ff19c768"
+    },
+    {
+      "file": "assets/release-audio/hilltop.ogg",
+      "creator": "Kenney",
+      "title": "Flowing Rocks",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/music-loops",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Music Loops/Loops/Flowing Rocks.ogg",
+      "sha256": "8563774243e381e827cba402cf6ccdc471b8bed3e3fafdf182f36039c2a8479f"
+    },
+    {
+      "file": "assets/release-audio/special.ogg",
+      "creator": "Kenney",
+      "title": "Mission Plausible",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/music-loops",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Music Loops/Loops/Mission Plausible.ogg",
+      "sha256": "324bb691a715a51875973079f9e0706fc81168203401725d4131d0fa1528c621"
+    }
+  ]
+}

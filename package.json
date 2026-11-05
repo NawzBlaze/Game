@@ -1,7 +1,7 @@
 {
   "name": "little-parcel-crew",
   "private": true,
-  "version": "0.20.0-rc.1",
+  "version": "0.21.0-rc.1",
   "description": "Offline delivery adventure and turn-based puzzle game",
   "scripts": {
     "test": "node tools/verify.js",

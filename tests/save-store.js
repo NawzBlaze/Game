@@ -21,3 +21,5 @@ for(const raw of ['null','[]','"hello"','{broken']){const {store,map}=environmen
  assert.throws(()=>store.restore({[A]:{unlocked:20},[C]:{unlocked:30}}));assert.equal(map.get(A),oldA);assert.equal(map.get(C),oldC);
 }
 console.log('PASS save validation, corrupt originals, quota protection, backup roundtrip and failed-restore rollback.');
+
+{const {store}=environment({[A]:JSON.stringify({unlocked:12,best:{1:3},musicVolume:999,effectsVolume:-5,districtMusic:false})});const s=store.read(A,{});assert.equal(s.musicVolume,100);assert.equal(s.effectsVolume,0);assert.equal(s.districtMusic,false);assert.equal(s.unlocked,12);assert.equal(s.best[1],3);}

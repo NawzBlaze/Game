@@ -31,3 +31,12 @@ https://kenney.nl/assets/ui-pack
 https://kenney.nl/assets/mobile-controls
 Original unmodified PNG files and notices in assets/mobile-ui/.
 Pinned mirror commit fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa; source hashes in asset-manifest.json.
+
+DISTRICT SOUNDTRACK UPGRADE
+Kenney — Music Loops, CC0 1.0 (original Ogg files, unmodified):
+Garden: Farm Frolics. Market: Italian Mom. Golden: Swinging Pants.
+Harbour: Night at the Beach. Hilltop: Flowing Rocks.
+Special deliveries: Mission Plausible. Dispatch office: Mishief Stroll.
+https://kenney.nl/assets/music-loops
+Pinned source URLs and SHA-256 hashes: bundled asset-manifest.json.
+Original notice: assets/release-audio/MUSIC-LICENSE.txt.

@@ -1,8 +1,14 @@
-# Little Parcel Crew · 0.20.0-rc.1
+# Little Parcel Crew · 0.21.0-rc.1 (upgrade in progress)
 
 An offline delivery adventure with **24 Adventure routes, 48 Classic puzzles and six optional special deliveries**. This repository now includes the restored game, matching sourced artwork for both modes, save recovery, and an Android-first interface using original freely licensed game UI assets.
 
 **Product target: mobile Android APK. Browser previews are development/test tooling, not a desktop/web product.** The 0.20 redesign passes 18 engine/UI checks plus Android build/lint/simulated tests and two instrumentation tests on each of API 33/36 emulators. [Download and limits](docs/ANDROID_BUILD_HANDOFF.md). Production signing, physical-phone and owner approvals remain required. See [production readiness](docs/PRODUCTION_READINESS.md). A successful build is not permission to publish.
+
+## Professional-content upgrade — first implementation
+
+0.21 adds original district-specific music, separate saved music/effects levels, an optional district-soundtrack switch, contextual route field notes/checklists and per-district completion/rating totals. Existing progress keys, levels and movement rules are preserved. The current source passes **19/19** engine/UI checks; this is not physical-device or production approval. The linked 0.20 native handoff above is historical, not evidence for 0.21. See [upgrade scope and outstanding content target](docs/PROFESSIONAL_UPGRADE.md).
+
+The requested finished-app budget is **20 MB minimum, about 50 MB preferred, 100 MB maximum**. This first implementation does **not** meet the new minimum yet. No filler, duplicated music or inflated files were added.
 
 ## Develop and play
 
@@ -18,7 +24,7 @@ The server binds to `0.0.0.0`, accepts Arena preview hosts, and uses relative as
 
 ```sh
 npm run build                  # audited allowlist → dist/web and deterministic ZIP
-npm test                       # starts its own local servers; runs 18 serial engine/UI checks
+npm test                       # starts its own local servers; runs 19 serial engine/UI checks
 npm run preview                # built RC: port 4188
 npm run release:check          # fails until artifact-bound human + Android evidence exists
 ```
@@ -26,7 +32,7 @@ npm run release:check          # fails until artifact-bound human + Android evid
 Do not run the self-managed verification while ports 4187/4188 are occupied. For already-running local previews, use `LPC_USE_EXISTING_SERVERS=1 npm test`. `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` can select an external browser. CI installs Chromium and runs the same suite.
 
 Outputs:
-- `dist/little-parcel-crew-0.20.0-rc.1.zip`: internal WebView payload archive, not the mobile deliverable.
+- `dist/little-parcel-crew-0.21.0-rc.1.zip`: internal WebView payload archive, not the mobile deliverable.
 - `dist/SHA256SUMS.txt`: archive digest.
 - `dist/qa-report.json`: fresh automated results, bound to the archive hash.
 - `dist/web/build-manifest.json`: per-file build integrity record.
@@ -36,7 +42,7 @@ Use the built package, **not a ZIP of the entire source web/ directory**. The wo
 
 ## Art, audio and customization
 
-Both modes use original Kenney New Platformer Pack artwork. Music and effects are fresh Kenney Music Loops/Interface Sounds downloads. Nunito comes from the Google Fonts repository. All 146 release asset/licence files have source hashes and bundled CC0/OFL notices. No replacement illustrated artwork was generated or drawn by this agent. Functional interface layout and code are AI-assisted.
+Both modes use original Kenney New Platformer Pack artwork. Music and effects are fresh Kenney Music Loops/Interface Sounds downloads. Nunito comes from the Google Fonts repository. All 152 release asset/licence files have source hashes and bundled CC0/OFL notices. No replacement illustrated artwork was generated or drawn by this agent. Functional interface layout and code are AI-assisted.
 
 Old hats/bags/cart selections retain their save IDs but now map to matching source-pack **uniforms, route badges and dispatch parcels**. Courier IDs and abilities remain unchanged. See [credits](web/CREDITS.txt) and [asset manifest](docs/release-assets.json). Source licensing is documented; final rights/production-method and title review still requires owner approval.
 

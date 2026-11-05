@@ -21,10 +21,11 @@
     if (!keys.includes(key) || !object(value)) throw new Error('Invalid save object');
     const adventure = key === keys[0], out = {};
     out.unlocked = Number.isInteger(value.unlocked) ? Math.max(1, Math.min(adventure ? 24 : 48,value.unlocked)) : 1;
-    for (const name of adventure ? ['sound','seen','autoRun','effects'] : ['sound','introSeen','dogIntroSeen','motion','lookAhead']) {
+    for (const name of adventure ? ['sound','seen','autoRun','effects','districtMusic'] : ['sound','introSeen','dogIntroSeen','motion','lookAhead']) {
       if (typeof value[name] === 'boolean') out[name] = value[name];
     }
     if (adventure) {
+      for(const name of ['musicVolume','effectsVolume']){if(Number.isFinite(value[name]))out[name]=Math.max(0,Math.min(100,Math.round(value[name])))}
       out.best = record(value.best,24,3);
       out.bonus = record(value.bonus,5,3,false,true);
       out.clean = record(value.clean,5,1,true,true);
