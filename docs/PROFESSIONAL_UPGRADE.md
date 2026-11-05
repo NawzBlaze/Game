@@ -18,7 +18,7 @@ A richer, detailed, entirely local/offline mobile game, with at least 20 MB of m
 
 19/19 serial engine/UI checks pass, including a new regression for district/special track selection, single-player reuse, zero-volume pause, persisted independent gains and soundtrack preferences, old-progress preservation and contextual route notes. Real browser decoders started all twelve bundled audio files; this is format validation, not an ear-quality review. Existing all-route, special-mechanic, mobile safe-area/controls, offline, release integrity and audio-mode switching checks still pass. Android host tooling: 13/13 tests pass.
 
-`LATEST_WEB_QA.json` binds the engine checks to this version's actual payload. Historical 0.20 Android evidence is not evidence for this version; 0.21 native build/emulator results must be checked independently.
+`LATEST_WEB_QA.json` binds the engine checks to this version's actual payload. The 0.21 Android build/lint/simulated tests and two instrumentation tests on each API 33/36 emulator passed in run 41993357076. The exact test APK is 2,750,353 bytes; hashes and source binding are in `device-evidence/android-ci-run.json`. Historical 0.20 evidence is preserved separately. No physical-phone or production approval is implied.
 
 ## Not complete / do not call this final
 

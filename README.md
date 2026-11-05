@@ -2,11 +2,11 @@
 
 An offline delivery adventure with **24 Adventure routes, 48 Classic puzzles and six optional special deliveries**. This repository now includes the restored game, matching sourced artwork for both modes, save recovery, and an Android-first interface using original freely licensed game UI assets.
 
-**Product target: mobile Android APK. Browser previews are development/test tooling, not a desktop/web product.** The 0.20 redesign passes 18 engine/UI checks plus Android build/lint/simulated tests and two instrumentation tests on each of API 33/36 emulators. [Download and limits](docs/ANDROID_BUILD_HANDOFF.md). Production signing, physical-phone and owner approvals remain required. See [production readiness](docs/PRODUCTION_READINESS.md). A successful build is not permission to publish.
+**Product target: mobile Android APK. Browser previews are development/test tooling, not a desktop/web product.** The 0.21 first upgrade passes 19 engine/UI checks plus Android build/lint/simulated tests and two instrumentation tests on each of API 33/36 emulators. [Download and limits](docs/ANDROID_BUILD_HANDOFF.md). Production signing, physical-phone and owner approvals remain required. See [production readiness](docs/PRODUCTION_READINESS.md). A successful build is not permission to publish.
 
 ## Professional-content upgrade — first implementation
 
-0.21 adds original district-specific music, separate saved music/effects levels, an optional district-soundtrack switch, contextual route field notes/checklists and per-district completion/rating totals. Existing progress keys, levels and movement rules are preserved. The current source passes **19/19** engine/UI checks; this is not physical-device or production approval. The linked 0.20 native handoff above is historical, not evidence for 0.21. See [upgrade scope and outstanding content target](docs/PROFESSIONAL_UPGRADE.md).
+0.21 adds original district-specific music, separate saved music/effects levels, an optional district-soundtrack switch, contextual route field notes/checklists and per-district completion/rating totals. Existing progress keys, levels and movement rules are preserved. The current source passes **19/19** engine/UI checks; this is not physical-device or production approval. The linked handoff records the exact 0.21 test APK and successful Android 13/16 emulator run, not a production approval. See [upgrade scope and outstanding content target](docs/PROFESSIONAL_UPGRADE.md).
 
 The requested finished-app budget is **20 MB minimum, about 50 MB preferred, 100 MB maximum**. This first implementation does **not** meet the new minimum yet. No filler, duplicated music or inflated files were added.
 
