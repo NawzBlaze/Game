@@ -2,7 +2,7 @@
 
 An offline delivery adventure with **24 Adventure routes, 48 Classic puzzles and six optional special deliveries**. This repository now includes the restored game, matching sourced artwork for both modes, save recovery, and an Android-first interface using original freely licensed game UI assets.
 
-**Product target: mobile Android APK. Browser previews are development/test tooling, not a desktop/web product.** The 0.21 first upgrade passes 19 engine/UI checks plus Android build/lint/simulated tests and two instrumentation tests on each of API 33/36 emulators. [Download and limits](docs/ANDROID_BUILD_HANDOFF.md). Production signing, physical-phone and owner approvals remain required. See [production readiness](docs/PRODUCTION_READINESS.md). A successful build is not permission to publish.
+**Product target: mobile Android APK. Browser previews are development/test tooling, not a desktop/web product.** The 1.0 campaign candidate passes 22 engine/UI checks plus Android build/lint/simulated tests and two instrumentation tests on each of API 33/36 emulators. [Download and limits](docs/ANDROID_BUILD_HANDOFF.md). Production signing, physical-phone and owner approvals remain required. See [production readiness](docs/PRODUCTION_READINESS.md). A successful build is not permission to publish.
 
 ## 1.0 campaign release candidate
 
@@ -10,15 +10,11 @@ The Lantern Round connects all 24 main routes into five story chapters with 24 d
 
 **22/22 engine/UI checks pass**, including all 24 three-star Standard clears and all 24 Express clears. [Candidate scope and limits](docs/V1_RELEASE_CANDIDATE.md). This is not a stable/production-approved 1.0 release. The requested 20 MB minimum / approximately 50 MB content target remains unmet. Native candidate verification must be recorded separately from the engine tests.
 
-## Previous premium-polish pass — 0.22
+## Included earlier upgrades
 
-11 progress-derived courier honours, next-route/mastery recommendations, earned-honour result feedback, persistent nested-dialog Back controls, and a home-image loading race fix. **20/20** engine/UI checks passed for the 0.22 source. See [implementation and verification](docs/PREMIUM_POLISH.md). Android 0.22 has **not** been rebuilt or physically tested in this pass; the Android download/evidence linked above is the previous 0.21 candidate, not this version. The 20–50 MB content expansion is still unfinished.
+Independent saved music/effects levels, seven original Kenney music tracks, optional district soundtrack switching, contextual route field notes/checklists, 11 progress-derived honours, next-dispatch recommendations and persistent nested-dialog Back controls. Earlier upgrade history: [0.21](docs/PROFESSIONAL_UPGRADE.md), [0.22](docs/PREMIUM_POLISH.md).
 
-## Professional-content upgrade — first implementation
-
-0.21 adds original district-specific music, separate saved music/effects levels, an optional district-soundtrack switch, contextual route field notes/checklists and per-district completion/rating totals. Existing progress keys, levels and movement rules are preserved. The 0.21 source passed **19/19** engine/UI checks; this is not physical-device or production approval. The linked handoff records the exact 0.21 test APK and successful Android 13/16 emulator run, not a production approval. See [upgrade scope and outstanding content target](docs/PROFESSIONAL_UPGRADE.md).
-
-The requested finished-app budget is **20 MB minimum, about 50 MB preferred, 100 MB maximum**. This first implementation does **not** meet the new minimum yet. No filler, duplicated music or inflated files were added.
+The finished-app budget remains **20 MB minimum, about 50 MB preferred, 100 MB maximum**. The verified 1.0 candidate is **2,771,465 bytes (2.77 MB)** and does **not** meet that minimum. No filler, duplicated music or inflated files were added. Production signing and physical-phone/owner approval remain outstanding.
 
 ## Develop and play
 

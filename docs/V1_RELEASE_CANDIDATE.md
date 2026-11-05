@@ -15,7 +15,7 @@ This is a **1.0 release candidate**, not a declaration that every bug is fixed o
 
 22/22 engine/UI checks passed. Full simulated-input clears cover all 24 Standard routes at three stars and all 24 Express variants at three stars. Express records survive reload; a missing-star Express run is refused at the final door. Tests also cover story coverage, district filters/navigation, sealed replies, immutable difficulty settings/level geometry, authored frame selection, reduced-motion poses, prior saves, all six specials, Classic's 48 puzzles, offline startup, phone layouts and deterministic payload integrity. Android host tooling: 13/13 tests pass.
 
-Exact internal payload identity and per-check results: `LATEST_WEB_QA.json`. Map and gameplay images were inspected locally for layout/compositing, not treated as physical-device evidence. Native APK tests/build identity must be recorded separately in `device-evidence/android-ci-run.json` and `ANDROID_BUILD_HANDOFF.md`.
+Exact internal payload identity and per-check results: `LATEST_WEB_QA.json`. Map and gameplay images were inspected locally for layout/compositing, not treated as physical-device evidence. Native run 42054211954 also passed build/lint/simulated checks, finished APK/AAB size gates and both instrumentation tests on each API 33/36 emulator. Exact APK size: 2,771,465 bytes (2.77 MB). Native build identity and artifact hashes are recorded separately in `device-evidence/android-ci-run.json` and `ANDROID_BUILD_HANDOFF.md`. This does not establish physical-phone, signing or owner approval.
 
 ## Remaining release requirements
 

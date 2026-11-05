@@ -21,3 +21,5 @@ Landscape honours and scrolled settings screenshots were inspected locally as in
 This is a polish pass, **not** completion of the requested premium game. The 20 MB minimum / approximately 50 MB preferred content budget is still unmet; the 100 MB maximum remains enforced by Android build tooling. Environment/content/animation expansion remains future work, not a shipped claim.
 
 The internal payload ZIP is not an APK. No 0.22 native Android build, emulator test, production signing, physical-phone review or store submission was performed in this pass. Existing `ANDROID_BUILD_HANDOFF.md` and Android evidence refer to the prior 0.21 candidate; do not relabel that APK as 0.22. The original affected Android 13 phone remains unverified. No owner/device approval flags were changed.
+
+Historical note: this document records the earlier 0.22 engine-only pass. The later 1.0 candidate has separate native verification; see `V1_RELEASE_CANDIDATE.md` and the current `ANDROID_BUILD_HANDOFF.md`.
