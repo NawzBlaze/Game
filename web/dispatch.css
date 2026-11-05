@@ -4,7 +4,7 @@
 :root{--ink:#203e53;--muted:#526d7c;--paper:#edf7fb;--line:#c8dee8;--accent:#14b982}
 html,body{background:#edf7fb;color:var(--ink);overscroll-behavior:none}
 #advApp{--ink:#203e53;--muted:#526d7c;--paper:#edf7fb;--line:#c8dee8;--accent:#14b982;font-family:Nunito,system-ui,sans-serif;background:var(--paper);color:var(--ink);scrollbar-width:thin}
-#advApp button,button.primary-btn,button.secondary-btn,.icon-btn,.modal-card button,#progressPanel button{border:10px solid transparent;border-image:url('assets/mobile-ui/grey-button_rectangle_depth_flat.png') 12 fill stretch;background:transparent;box-shadow:none;border-radius:0;color:#203e53;font:800 14px/1.2 Nunito,system-ui,sans-serif;min-height:48px;padding:4px 8px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+#advApp button,.app-shell button,.modal-layer button,button.primary-btn,button.secondary-btn,.icon-btn,.modal-card button,#progressPanel button{border:10px solid transparent;border-image:url('assets/mobile-ui/grey-button_rectangle_depth_flat.png') 12 fill stretch;background:transparent;box-shadow:none;border-radius:0;color:#203e53;font:800 14px/1.2 Nunito,system-ui,sans-serif;min-height:48px;padding:4px 8px;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 #advApp button:hover:not(:disabled){background:transparent}
 #advApp button:active:not(:disabled),#advApp button.pressed{transform:translateY(2px)}
 #advApp button:focus-visible{outline:3px solid #1d6590;outline-offset:2px}
@@ -193,3 +193,29 @@ html,body{background:#edf7fb;color:var(--ink);overscroll-behavior:none}
 #advApp .adv-card[data-dialog=pause]>.adv-eyebrow,#advApp .adv-card[data-dialog=pause]>h3,#advApp .adv-card[data-dialog=pause]>[data-action=resume]{grid-column:1/-1}
 #advApp .adv-card[data-dialog=pause] button{margin:0}
 #advApp .adv-card[data-dialog=pause] h3{margin:0 0 6px}
+/* The retained puzzle mode uses the same mobile skin, not a second visual theme. */
+.app-shell .game-top{background:#203e53;color:#fff;min-height:56px;margin:0 -16px 16px;padding:4px 12px;border:0}
+.app-shell .game-screen{padding:0 16px 20px}
+.app-shell .game-top .level-indicator{color:#d2e8f3}
+.app-shell .game-intro h2{font-size:26px;color:#203e53;margin:8px 0}
+.app-shell .game-intro>p{font-size:13px;color:#526d7c}
+.app-shell .mission-card{background:#fff;border:2px solid #c8dee8;border-radius:0;margin-top:14px;padding:12px}
+.app-shell .board-frame{border:2px solid #99c7da;border-radius:0;background:#fff}
+.app-shell .board{background:#e3f1e9}
+.app-shell .tile{background-color:#e3f1e9;border-color:#b4d4c8}
+.app-shell .tile.wall{background-color:#c5e1d5}
+.app-shell .tile.exit{background-color:#b5e7b6}
+.app-shell .tile.reachable{outline-color:#43876f}
+.app-shell .tool-row{gap:6px}
+.app-shell .tool-btn{font-size:12px;padding:2px;min-height:48px}
+.app-shell .dpad button{border-image-source:url('assets/mobile-ui/blue-button_square_depth_flat.png');color:#fff;min-width:52px;min-height:52px;padding:4px}
+.app-shell .puzzle-arrow{width:24px;height:24px;object-fit:contain;pointer-events:none}
+.app-shell .puzzle-up{transform:rotate(-90deg)}
+.app-shell .puzzle-down{transform:rotate(90deg)}
+.app-shell .puzzle-left{transform:rotate(180deg)}
+.app-shell .title-content h1{color:#203e53}
+.app-shell .chapter,.app-shell .classic-result{background:#fff;border:2px solid #c8dee8;border-radius:0}
+.app-shell .level-cell.current{border-image-source:url('assets/mobile-ui/green-button_rectangle_depth_flat.png')}
+.modal-layer{background:#102c42c9}
+.modal-card{background:#edf7fb;color:#203e53;border:3px solid #fff;border-radius:0;box-shadow:none}
+.modal-card h2,.modal-card h3{color:#203e53}

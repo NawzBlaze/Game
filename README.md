@@ -1,8 +1,8 @@
-# Little Parcel Crew · 0.19.0-rc.1
+# Little Parcel Crew · 0.20.0-rc.1
 
-An offline delivery adventure with **24 Adventure routes, 48 Classic puzzles and six optional special deliveries**. This repository now includes the restored game, matching sourced artwork for both modes, save recovery, and a reproducible, tested web release candidate.
+An offline delivery adventure with **24 Adventure routes, 48 Classic puzzles and six optional special deliveries**. This repository now includes the restored game, matching sourced artwork for both modes, save recovery, and an Android-first interface using original freely licensed game UI assets.
 
-**Status: web RC verified; final production approval and Android validation remain blocked.** See [production readiness](docs/PRODUCTION_READINESS.md). A successful build is not permission to publish.
+**Product target: mobile Android APK. Browser previews are development/test tooling, not a desktop/web product.** The 0.20 redesign passes 18 engine/UI checks; fresh Android candidate verification is recorded separately. Production signing, physical-phone and owner approvals remain required. See [production readiness](docs/PRODUCTION_READINESS.md). A successful build is not permission to publish.
 
 ## Develop and play
 
@@ -18,7 +18,7 @@ The server binds to `0.0.0.0`, accepts Arena preview hosts, and uses relative as
 
 ```sh
 npm run build                  # audited allowlist → dist/web and deterministic ZIP
-npm test                       # starts its own local servers; runs 17 serial checks
+npm test                       # starts its own local servers; runs 18 serial engine/UI checks
 npm run preview                # built RC: port 4188
 npm run release:check          # fails until artifact-bound human + Android evidence exists
 ```
@@ -26,17 +26,17 @@ npm run release:check          # fails until artifact-bound human + Android evid
 Do not run the self-managed verification while ports 4187/4188 are occupied. For already-running local previews, use `LPC_USE_EXISTING_SERVERS=1 npm test`. `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` can select an external browser. CI installs Chromium and runs the same suite.
 
 Outputs:
-- `dist/little-parcel-crew-0.19.0-rc.1.zip`: static web candidate, index.html at ZIP root.
+- `dist/little-parcel-crew-0.20.0-rc.1.zip`: internal WebView payload archive, not the mobile deliverable.
 - `dist/SHA256SUMS.txt`: archive digest.
 - `dist/qa-report.json`: fresh automated results, bound to the archive hash.
 - `dist/web/build-manifest.json`: per-file build integrity record.
 - `dist/web/asset-manifest.json`: exact source URLs, licences and SHA-256 values.
 
-Use the built package, **not a ZIP of the entire source web/ directory**. The workbench retains historical assets for traceability; the release allowlist excludes them. `_headers` is for Cloudflare Pages-compatible static hosts; other hosts must apply equivalent security/cache settings. No public deployment is performed by these commands.
+Use the built package, **not a ZIP of the entire source web/ directory**. The workbench retains historical assets for traceability; the release allowlist excludes them. `_headers` is for Cloudflare Pages-compatible static hosts; other hosts must apply equivalent security/cache settings. No public web deployment is performed by these commands. Android Gradle packages this payload into the APK; obtain mobile candidates from the Android CI artifact. See [the mobile redesign notes](docs/MOBILE_REDESIGN.md).
 
 ## Art, audio and customization
 
-Both modes use original Kenney New Platformer Pack artwork. Music and effects are fresh Kenney Music Loops/Interface Sounds downloads. Nunito comes from the Google Fonts repository. All 121 release asset files have source hashes and bundled CC0/OFL notices. No replacement illustrated artwork was generated or drawn by this agent. Functional interface layout and code are AI-assisted.
+Both modes use original Kenney New Platformer Pack artwork. Music and effects are fresh Kenney Music Loops/Interface Sounds downloads. Nunito comes from the Google Fonts repository. All 146 release asset/licence files have source hashes and bundled CC0/OFL notices. No replacement illustrated artwork was generated or drawn by this agent. Functional interface layout and code are AI-assisted.
 
 Old hats/bags/cart selections retain their save IDs but now map to matching source-pack **uniforms, route badges and dispatch parcels**. Courier IDs and abilities remain unchanged. See [credits](web/CREDITS.txt) and [asset manifest](docs/release-assets.json). Source licensing is documented; final rights/production-method and title review still requires owner approval.
 
