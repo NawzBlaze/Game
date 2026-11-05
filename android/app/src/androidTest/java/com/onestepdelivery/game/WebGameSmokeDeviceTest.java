@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import java.io.File;
 import java.io.FileOutputStream;
 import android.view.MotionEvent;
+import android.view.KeyEvent;
 import android.view.InputDevice;
 import android.os.SystemClock;
 import androidx.test.platform.app.InstrumentationRegistry;
@@ -49,9 +50,15 @@ public class WebGameSmokeDeviceTest {
         image.recycle();
     }
     private static void touch(ActivityScenario<MainActivity> scene,String selector,long holdMs) throws Exception {
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        CountDownLatch rendered=new CountDownLatch(1);
+        scene.onActivity(a->{assertFalse("Activity unexpectedly finishing before "+selector,a.isFinishing());WebView w=find(a.findViewById(android.R.id.content));assertNotNull(w);w.postVisualStateCallback(SystemClock.uptimeMillis(),new WebView.VisualStateCallback(){@Override public void onComplete(long id){rendered.countDown();}});});
+        assertTrue("WebView did not present updated UI",rendered.await(15,TimeUnit.SECONDS));
         JSONObject point=new JSONObject(js(scene,"(()=>{const r=document.querySelector('"+selector+"').getBoundingClientRect();return {x:(r.x+r.width/2)/innerWidth,y:(r.y+r.height/2)/innerHeight}})()"));
         AtomicReference<float[]> screenPoint=new AtomicReference<>();
         scene.onActivity(a->{WebView w=find(a.findViewById(android.R.id.content));int[] origin=new int[2];w.getLocationOnScreen(origin);screenPoint.set(new float[]{origin[0]+(float)point.optDouble("x")*w.getWidth(),origin[1]+(float)point.optDouble("y")*w.getHeight()});});
+        assertTrue("Target outside WebView: "+selector+" "+point,point.optDouble("x")>0&&point.optDouble("x")<1&&point.optDouble("y")>0&&point.optDouble("y")<1);
+        InstrumentationRegistry.getInstrumentation().waitForIdleSync();
         float[] xy=screenPoint.get();long downTime=SystemClock.uptimeMillis();
         MotionEvent down=MotionEvent.obtain(downTime,downTime,MotionEvent.ACTION_DOWN,xy[0],xy[1],0);down.setSource(InputDevice.SOURCE_TOUCHSCREEN);
         InstrumentationRegistry.getInstrumentation().sendPointerSync(down);down.recycle();
@@ -80,8 +87,8 @@ public class WebGameSmokeDeviceTest {
             capture("mobile-pause.png");
             touch(scene,"#advCard [data-action=settings]",80);
             await(scene,"document.querySelector('#advCard').dataset.dialog==='settings'");
-            scene.onActivity(a->a.onBackPressed());
-            await(scene,"document.querySelector('#advCard').dataset.dialog==='pause'");
+            InstrumentationRegistry.getInstrumentation().sendKeyDownUpSync(KeyEvent.KEYCODE_BACK);
+            await(scene,"document.querySelector('#advCard').dataset.dialog==='pause' && !document.querySelector('#advDialog').classList.contains('adv-hidden')");
             touch(scene,"#advCard [data-action=resume]",80);
             await(scene,"document.querySelector('#advDialog').classList.contains('adv-hidden')");
             String before=js(scene,"localStorage.getItem('delivery-adventure-v1')");
