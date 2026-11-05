@@ -61,6 +61,12 @@ def main():
                        'sourceCommit': (args.candidates / 'SOURCE_COMMIT.txt').read_text().strip(),
                        'api': adb('shell', 'getprop', 'ro.build.version.sdk').stdout.strip()})
         (args.output / 'webview-provider.txt').write_text(adb('shell', 'dumpsys', 'webviewupdate').stdout)
+        # Fresh CI emulators have Android's first-run immersive-mode teaching
+        # overlay. Acknowledge it in the test OS, not in the game, so touches
+        # are directed to the app rather than SystemUI. Never runs on a phone.
+        adb('shell', 'settings', 'put', 'secure', 'immersive_mode_confirmations', 'confirmed')
+        adb('shell', 'input', 'keyevent', 'KEYCODE_WAKEUP')
+        adb('shell', 'wm', 'dismiss-keyguard')
         adb('shell', 'svc', 'wifi', 'disable')
         adb('shell', 'svc', 'data', 'disable')
         adb('logcat', '-c')  # Only this disposable emulator's logs.

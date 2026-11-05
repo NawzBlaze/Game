@@ -53,7 +53,7 @@ public class WebGameSmokeDeviceTest {
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
         long focusDeadline=SystemClock.uptimeMillis()+10000;java.util.concurrent.atomic.AtomicBoolean focused=new java.util.concurrent.atomic.AtomicBoolean(false);
         while(!focused.get()&&SystemClock.uptimeMillis()<focusDeadline){scene.onActivity(a->focused.set(a.hasWindowFocus()));if(!focused.get())Thread.sleep(100);}
-        assertTrue("App window did not gain focus before "+selector,focused.get());
+        assertTrue("App window did not gain focus before "+selector+"; active root="+InstrumentationRegistry.getInstrumentation().getUiAutomation().getRootInActiveWindow(),focused.get());
         CountDownLatch rendered=new CountDownLatch(1);
         scene.onActivity(a->{assertFalse("Activity unexpectedly finishing before "+selector,a.isFinishing());WebView w=find(a.findViewById(android.R.id.content));assertNotNull(w);w.postVisualStateCallback(SystemClock.uptimeMillis(),new WebView.VisualStateCallback(){@Override public void onComplete(long id){rendered.countDown();}});});
         assertTrue("WebView did not present updated UI",rendered.await(15,TimeUnit.SECONDS));
