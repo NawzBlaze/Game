@@ -11,6 +11,7 @@ import android.view.DisplayCutout;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.view.KeyEvent;
 import android.view.WindowInsets;
 import android.view.WindowInsetsController;
 import android.view.WindowManager;
@@ -225,6 +226,15 @@ public class MainActivity extends Activity {
             View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
     }
     @Override public void onWindowFocusChanged(boolean focused) { super.onWindowFocusChanged(focused); if(focused) immersive(); }
+    // Consume the hardware Back pair before WebView can translate it into a
+    // DOM key/navigation as well as Activity back. A single release routes once.
+    @Override public boolean dispatchKeyEvent(KeyEvent event) {
+        if (event.getKeyCode() == KeyEvent.KEYCODE_BACK) {
+            if (event.getAction() == KeyEvent.ACTION_UP && !event.isCanceled()) onBackPressed();
+            return true;
+        }
+        return super.dispatchKeyEvent(event);
+    }
     @SuppressWarnings("deprecation") @Override public void onBackPressed() {
         WebView current=webView;
         if(current == null) { super.onBackPressed(); return; }

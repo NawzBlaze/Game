@@ -3,6 +3,7 @@ package com.onestepdelivery.game;
 import static org.junit.Assert.*;
 import android.app.Activity;
 import android.view.View;
+import android.view.KeyEvent;
 import android.view.ViewGroup;
 import android.webkit.RenderProcessGoneDetail;
 import android.webkit.WebView;
@@ -71,6 +72,25 @@ public class MainActivityTest {
         f.set(a,unavailable);
         try { a.onPause(); a.onResume(); }
         finally { f.set(a,original); unavailable.destroy(); }
+    }
+
+    static class BackCountingWebView extends WebView {
+        int backCalls;
+        BackCountingWebView(Activity a){super(a);}
+        @Override public void evaluateJavascript(String script,android.webkit.ValueCallback<String> callback){
+            if(script.contains("window.gameBack")){backCalls++;if(callback!=null)callback.onReceiveValue("true");}
+        }
+    }
+    @Test public void hardwareBackPairRoutesToGameOnlyOnce() throws Exception {
+        MainActivity a=Robolectric.buildActivity(MainActivity.class).setup().get();
+        java.lang.reflect.Field field=MainActivity.class.getDeclaredField("webView");field.setAccessible(true);
+        WebView original=(WebView)field.get(a);BackCountingWebView counting=new BackCountingWebView(a);field.set(a,counting);
+        try {
+            assertTrue(a.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN,KeyEvent.KEYCODE_BACK)));
+            assertEquals(0,counting.backCalls);
+            assertTrue(a.dispatchKeyEvent(new KeyEvent(KeyEvent.ACTION_UP,KeyEvent.KEYCODE_BACK)));
+            assertEquals(1,counting.backCalls);
+        } finally {field.set(a,original);counting.destroy();}
     }
 
 }

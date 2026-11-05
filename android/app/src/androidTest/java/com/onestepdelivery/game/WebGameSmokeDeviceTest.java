@@ -51,6 +51,9 @@ public class WebGameSmokeDeviceTest {
     }
     private static void touch(ActivityScenario<MainActivity> scene,String selector,long holdMs) throws Exception {
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
+        long focusDeadline=SystemClock.uptimeMillis()+10000;java.util.concurrent.atomic.AtomicBoolean focused=new java.util.concurrent.atomic.AtomicBoolean(false);
+        while(!focused.get()&&SystemClock.uptimeMillis()<focusDeadline){scene.onActivity(a->focused.set(a.hasWindowFocus()));if(!focused.get())Thread.sleep(100);}
+        assertTrue("App window did not gain focus before "+selector,focused.get());
         CountDownLatch rendered=new CountDownLatch(1);
         scene.onActivity(a->{assertFalse("Activity unexpectedly finishing before "+selector,a.isFinishing());WebView w=find(a.findViewById(android.R.id.content));assertNotNull(w);w.postVisualStateCallback(SystemClock.uptimeMillis(),new WebView.VisualStateCallback(){@Override public void onComplete(long id){rendered.countDown();}});});
         assertTrue("WebView did not present updated UI",rendered.await(15,TimeUnit.SECONDS));
@@ -61,10 +64,10 @@ public class WebGameSmokeDeviceTest {
         InstrumentationRegistry.getInstrumentation().waitForIdleSync();
         float[] xy=screenPoint.get();long downTime=SystemClock.uptimeMillis();
         MotionEvent down=MotionEvent.obtain(downTime,downTime,MotionEvent.ACTION_DOWN,xy[0],xy[1],0);down.setSource(InputDevice.SOURCE_TOUCHSCREEN);
-        InstrumentationRegistry.getInstrumentation().sendPointerSync(down);down.recycle();
+        assertTrue("Touch-down injection failed",InstrumentationRegistry.getInstrumentation().getUiAutomation().injectInputEvent(down,true));down.recycle();
         Thread.sleep(holdMs);
         MotionEvent up=MotionEvent.obtain(downTime,SystemClock.uptimeMillis(),MotionEvent.ACTION_UP,xy[0],xy[1],0);up.setSource(InputDevice.SOURCE_TOUCHSCREEN);
-        InstrumentationRegistry.getInstrumentation().sendPointerSync(up);up.recycle();
+        assertTrue("Touch-up injection failed",InstrumentationRegistry.getInstrumentation().getUiAutomation().injectInputEvent(up,true));up.recycle();
     }
     @Test public void offlineGameStartsPausesAndKeepsProgressThroughRecreation() throws Exception {
         try(ActivityScenario<MainActivity> scene=ActivityScenario.launch(MainActivity.class)) {
