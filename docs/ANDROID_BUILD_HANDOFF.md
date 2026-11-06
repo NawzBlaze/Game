@@ -1,51 +1,44 @@
-# Mobile Android APK handoff — 1.0.0-rc.2 / code 101
+# Android APK handoff — 1.0.0-rc.3 / code 102
 
-The product target is **mobile Android APK**. Browser preview and static payload archives are development/verification tools, not desktop/web deliverables.
+The final product target is an offline mobile **Android APK**, not a browser/desktop package.
 
-> **Source binding:** the download below is the verified `3db86dc` baseline, not the later audit fixes. See [audit reinspection](audits/02-reinspection.md). A fresh native build is required for those changes.
+## Verified test candidate
 
-## Download the redesigned APK
+[Download the APK artifact ZIP](https://github.com/NawzBlaze/Game/actions/runs/42175617339/artifacts/13483102904) and extract `little-parcel-crew-1.0.0-rc.3-preview.apk`. GitHub login may be required; artifacts expire according to the run's retention policy.
 
-**[Download mobile-apk-preview](https://github.com/NawzBlaze/Game/actions/runs/42164619926/artifacts/13478975457)** from [successful CI run 42164619926](https://github.com/NawzBlaze/Game/actions/runs/42164619926).
+| Item | Verified value |
+|---|---|
+| Native source | `286ecfe7d22d6df0e8a97ea715f957bef867c8f3` |
+| Native run | [42175617339](https://github.com/NawzBlaze/Game/actions/runs/42175617339) |
+| Build / API 33 / API 36 | All successful |
+| Finished APK bytes | **53,039,043** — within 20–100 MB |
+| APK SHA-256 | `80c96dd7cb7468481cae55a76c18b36d031a8443052259d1bf80e43a45c5d041` |
+| Signing | Debug/test only — **not a production-signed update** |
 
-GitHub downloads an artifact ZIP. Extract and use **`little-parcel-crew-1.0.0-rc.2-preview.apk`**. This separate artifact contains the game APK, checksum, source commit and safety note—not the instrumentation APK or an unsigned APK that cannot be installed normally. GitHub login may be required; artifacts have 14-day retention.
+Do **not** uninstall, clear data or overwrite the previously affected existing installation to try this APK. Use a separate clean test phone. The package ID remains `com.onestepdelivery.game`; a matching package ID does not establish certificate/update compatibility.
 
-Finished APK size: **53,032,215 bytes (53.03 MB)**. CI now checks every finished APK/AAB against a strict **20,000,000–100,000,000-byte range**. Production signing must be owner-controlled; see [release signing instructions](RELEASE_SIGNING.md).
+The sandbox cannot download GitHub's artifact blob host, so the APK is linked rather than attached locally. Ignore unsigned build artifacts when looking for an installable preview.
 
-APK SHA-256: `51c1a8118c20b85fb7e62292b4799b6e2053071e4a9b519f453c0cc2e7682022`.
+## Implemented and tested
 
-Verified source commit: `3db86dcf2c7f1cfe107a398e7674671d88a55924` on `arena/2ae7d624-game`.
+- Safe original-origin WebView startup/recovery and offline package allowlisting.
+- 24-route campaign, Express variants, six specials, Classic, letters, honours and original licensed soundtrack.
+- Older-WebView save fix, truthful mastery ratings, accessible Adventure dialog names and low-effects walking correction.
+- Native progress documents using the system picker, bounded UTF-8 I/O, confirmation-before-restore and pre-restore recovery.
+- Landscape route-book side controls, optional chapter details and sticky backup Close action.
+- In-game privacy/support and a stricter production gate that verifies actual signed APK/certificate/payload binding.
 
-**This is a debug/test-signed preview APK, not a production-signed or store-approved release. Use a clean test device only. Do not uninstall, clear data, or overwrite the affected existing game to try this candidate.** App ID remains `com.onestepdelivery.game` for save/update continuity; debug signing is not proof of update compatibility.
+Local verification: **25/25** engine/UI/build checks, **14/14** Android host-tooling tests, **6/6** production-gate safety tests, zero known npm audit findings. Native CI additionally passed lint/JVM tests and two real WebView instrumentation tests on each API 33/36 emulator. The progress UI and hardware Back were exercised; **actual document-provider file round-trip is not claimed**.
 
-## What changed
+The first rc.3 attempt failed an immediate progress-entry assertion before the final UI module was ready. It is recorded as a failure, not hidden. The amended test waits for that capability without removing the assertion, and the exact amended native run above passed.
 
-[1.0 campaign candidate](V1_RELEASE_CANDIDATE.md): 24 connected letters and replies, five story chapters, improved chapter map/filtering, three original creator panoramas, 24 optional Express variants, authored sprite-animation improvements, and the earlier soundtrack/mixer/earned-honour upgrades. **The content-size requirement is met by rc.2 with five original composer recordings. This remains a release candidate, not a production-approved release.**
+## Evidence and unresolved public-release gates
 
-[Mobile redesign notes](MOBILE_REDESIGN.md): original freely licensed Kenney UI faces/control icons; mobile home, HUD, larger independent thumb controls, route/courier/special/scrapbook presentation, compact pause/settings/back navigation, and the same skin/phone-fit controls for Classic. Android launch/recovery colours and adaptive launcher resources match the new direction. No newly generated illustrated artwork was added. Existing save schemas and movement rules are retained.
+- [Current native receipt](device-evidence/android-ci-run.json); [previous rc.2 receipt](device-evidence/android-ci-run-rc2.json).
+- [Third inspection/fix report](audits/03-release-hardening.md).
+- [Production signing and final APK gate](RELEASE_SIGNING.md).
+- [Privacy information for publisher review](PRIVACY.md).
 
-## Verification completed
+Public release still requires owner-controlled signing; first-release/update identity confirmation; compatible signed-update/save-retention evidence where applicable; physical affected-phone/performance/audio/accessibility tests; actual document-provider round-trip; human visual/gameplay approval and publisher/legal information. Art-direction concerns are still listed in the audit, not falsely marked resolved. `docs/release-approval.json` remains unapproved.
 
-- **14/14** Android host tooling tests, including exact 20 MB/100 MB acceptance, under/over-limit rejection and missing/empty/symlink output rejection; finished debug/release APK and AAB size gates passed.
-- **23/23** automated engine/UI checks for the verified baseline payload; its hash is recorded in `device-evidence/android-ci-run.json`. `LATEST_WEB_QA.json` now describes the newer, locally tested audit payload, not this historical APK. Includes all 24 three-star Standard and all 24 three-star Express engine clears; the emulator smoke tests do not claim full-campaign phone play.
-- Native debug/release APK and AAB builds, debug lint and simulated framework tests on APIs 29, 33 and 36 passed. The simulated tests include hardware Back being routed once per key pair.
-- **Android 13/API 33 and Android 16/API 36:** both instrumentation tests passed on each disposable emulator.
-- Native smoke test used system-injected touchscreen events to start, move, pause, open settings, press hardware Back, and resume. It checked on-screen home/pause actions, disabled test hooks, original local asset URL, hidden unsupported native backup entry and progress through Activity recreation.
-- Renderer test deliberately crashed WebView, required explicit retry and verified retained localStorage origin/content.
-- Exact debug/test APKs were hash-checked before emulator installation. The preview download is a renamed byte-for-byte copy of the tested debug APK.
-- Each emulator evidence artifact contains `mobile-home.png`, `mobile-game.png`, `mobile-pause.png`, instrumentation results, provider details and logs from that clean emulator. These are QA screenshots, not game artwork. Local browser screenshots were inspected; native screenshot files are available in the run artifacts, not claimed locally inspected here.
-
-Earlier native touch attempts failed because the app did not own input focus. The CI test OS now acknowledges Android's first-use immersive teaching prompt and wakes/unlocks the disposable emulator before testing. Tests synchronize WebView presentation and verify focus rather than falling back to scripted DOM clicks. The app does **not** change those system settings on a real phone. Earlier failures are not hidden or treated as passes.
-
-Exact run/job/artifact metadata, archive digests and APK hash are in [android-ci-run.json](device-evidence/android-ci-run.json). Previous 0.21 evidence is preserved in [android-ci-run-0.21.json](device-evidence/android-ci-run-0.21.json). Previous 0.20 evidence is preserved in [android-ci-run-0.20.json](device-evidence/android-ci-run-0.20.json). The previous 0.19 evidence is preserved separately in [android-ci-run-0.19.json](device-evidence/android-ci-run-0.19.json).
-
-## Still not established
-
-- Comprehensive physical-phone play, touch/accessibility/audio/lifecycle review or zero-bug status.
-- Diagnosis/fix verification for the historical Android 13 installation's crash.
-- Native document backup/import support: unsupported entry points are hidden, not falsely marked implemented.
-- Production signing, installed certificate/version/update compatibility, physical launcher-mask review, store assets/declarations, and human/owner approval.
-
-Keep the affected phone untouched and use the [read-only diagnostic quick start](device-evidence/QUICK_START.md) for its existing failure. Use a separate clean test phone to review this APK. Do not upload private logs or signing secrets. No store submission or production approval was performed.
-
-The sandbox cannot fetch GitHub's artifact blob host, so there is no local APK attachment; download directly through the link above. Build-only artifacts also include unsigned release APK/AAB files, but those are internal candidates, not the preview APK or a ready Play submission.
+Keep the affected phone untouched and use the [read-only diagnostic quick start](device-evidence/QUICK_START.md). No production key was created or requested in chat, no gate was bypassed, and no public release/store submission was performed.

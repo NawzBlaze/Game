@@ -59,6 +59,61 @@ class ProductionGateTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             gate.verify_apk(ROOT / 'missing-production.apk', self.approval, ROOT / 'dist/web')
 
+# Sparse 20 MB ZIP fixtures below are temporary test inputs, NOT game assets/APKs.
+# The SDK signature command is mocked: these tests do not claim real APK signing.
+class SignedApkGateTests(unittest.TestCase):
+    def test_signature_payload_and_owner_bindings(self):
+        import hashlib
+        import json
+        import tempfile
+        import types
+        import zipfile
+        from unittest.mock import patch
+        certificate = 'c' * 64
+        with tempfile.TemporaryDirectory() as temp:
+            folder = Path(temp)
+            payload = folder / 'payload'
+            payload.mkdir()
+            (payload / 'index.html').write_bytes(b'demo')
+            (payload / 'build-manifest.json').write_text(json.dumps({'version': '1.0.0', 'files': {'index.html': hashlib.sha256(b'demo').hexdigest()}}))
+            apk = folder / 'fixture.apk'
+            def create(content=b'demo', extra=False):
+                with apk.open('wb') as stream:
+                    stream.truncate(20_000_000)
+                with zipfile.ZipFile(apk, 'a') as archive:
+                    archive.writestr('assets/build-manifest.json', (payload / 'build-manifest.json').read_bytes())
+                    archive.writestr('assets/index.html', content)
+                    if extra:
+                        archive.writestr('assets/unapproved.js', 'bad')
+                with apk.open('rb') as stream:
+                    sha = hashlib.file_digest(stream, 'sha256').hexdigest()
+                return {'androidArtifactSha256': sha, 'androidSigningCertificateSha256': certificate}
+            output = types.SimpleNamespace(stdout='Signer #1 certificate SHA-256 digest: ' + certificate)
+            with patch.object(gate.subprocess, 'run', return_value=output):
+                approval = create()
+                self.assertEqual(gate.verify_apk(apk, approval, payload), approval['androidArtifactSha256'])
+                approval['androidArtifactSha256'] = 'f' * 64
+                with self.assertRaisesRegex(ValueError, 'exact APK hash'):
+                    gate.verify_apk(apk, approval, payload)
+                approval = create()
+                approval['androidSigningCertificateSha256'] = 'd' * 64
+                with self.assertRaisesRegex(ValueError, 'certificate'):
+                    gate.verify_apk(apk, approval, payload)
+                approval = create(content=b'evil')
+                with self.assertRaisesRegex(ValueError, 'payload hash'):
+                    gate.verify_apk(apk, approval, payload)
+                approval = create(extra=True)
+                with self.assertRaisesRegex(ValueError, 'extra game assets'):
+                    gate.verify_apk(apk, approval, payload)
+            approval = create()
+            debug = types.SimpleNamespace(stdout=output.stdout + '\nSigner #1 certificate DN: CN=Android Debug')
+            with patch.object(gate.subprocess, 'run', return_value=debug):
+                with self.assertRaisesRegex(ValueError, 'Debug/test'):
+                    gate.verify_apk(apk, approval, payload)
+            with patch.object(gate.subprocess, 'run', side_effect=gate.subprocess.CalledProcessError(1, 'apksigner')):
+                with self.assertRaises(gate.subprocess.CalledProcessError):
+                    gate.verify_apk(apk, approval, payload)
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -42,11 +42,11 @@ This is implementation work toward a finished public release, not an approval sh
 
 ## Additional production-gate inspection
 
-The former approval loop could overlook a removed/empty approval section. The gate now enumerates all mandatory approvals and rejects malformed/truthy flags or empty evidence. Full public-release checks also require a stable version and a real 20–100 MB owner-signed APK, verify its SDK signature/certificate and owner-approved APK hash, reject debug signing, and verify the embedded allowlisted payload against the locally tested build. Five Python safety tests run inside the 25-check suite. No approval flags were enabled.
+The former approval loop could overlook a removed/empty approval section. The gate now enumerates all mandatory approvals and rejects malformed/truthy flags or empty evidence. Full public-release checks also require a stable version and a real 20–100 MB owner-signed APK, verify its SDK signature/certificate and owner-approved APK hash, reject debug signing, and verify the embedded allowlisted payload against the locally tested build. Six Python safety tests run inside the 25-check suite, including temporary sparse ZIP fixtures with a mocked SDK verifier to exercise hash/certificate/payload rejection. These fixtures are not game assets or claims of real signing. No approval flags were enabled.
 
 ## Native verification status
 
-A fresh exact-source Android build and API 33/36 instrumentation run is required for rc.3. The first rc.3 native run (42174758471) passed build/lint/JVM tests but failed its immediate backup-button presence assertion at startup. That check now waits for the last UI module rather than assuming renderer-image readiness implies progress-panel readiness; readiness diagnostics were added without removing the assertion. The exact amended candidate must pass a fresh run. No old rc.2 native pass is inherited by this candidate. No production keystore was created, read or requested in chat.
+Exact-source rc.3 native verification is complete for commit `286ecfe7d22d6df0e8a97ea715f957bef867c8f3`. The first rc.3 native run (42174758471) passed build/lint/JVM tests but failed its immediate backup-button presence assertion at startup. That check now waits for the last UI module rather than assuming renderer-image readiness implies progress-panel readiness; readiness diagnostics were added without removing the assertion. The amended candidate **passed** fresh run 42175617339: build/lint/JVM tests plus both API 33/36 emulator jobs. No old rc.2 native pass is inherited by this candidate. No production keystore was created, read or requested in chat.
 
 ## Public release still requires real evidence
 
@@ -57,3 +57,13 @@ A fresh exact-source Android build and API 33/36 instrumentation run is required
 5. Publisher contact, privacy/store declarations, listing screenshots and candidate-bound owner approval.
 
 These are explicit release gates, not excuses to skip implementation. This pass closes portability, menu-density and information gaps; it does not manufacture physical or human evidence.
+
+## Verified candidate handoff
+
+- Native run: https://github.com/NawzBlaze/Game/actions/runs/42175617339 — all three jobs successful.
+- APK: **53,039,043 bytes**; SHA-256 `80c96dd7cb7468481cae55a76c18b36d031a8443052259d1bf80e43a45c5d041`.
+- Test-signed download: https://github.com/NawzBlaze/Game/actions/runs/42175617339/artifacts/13483102904 . This is not an owner-signed production update.
+- Latest full local retest: **25/25**; Android host tooling **14/14**; gate safety **6/6**; full npm audit **zero known vulnerabilities**.
+- Final QA captures: [small-landscape route book](rc3-screens/568-route-book.png), [landscape route book](rc3-screens/844-route-book.png), [backup panel](rc3-screens/568-progress.png). These are browser/native-bridge-mock captures, not physical-phone evidence.
+
+The remaining blockers need real owner/device input, especially first-release-versus-update signing identity. No public release, merge, production approval or store submission was performed.

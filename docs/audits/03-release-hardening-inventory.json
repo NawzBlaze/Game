@@ -1,9 +1,9 @@
 {
   "scope": "Complete file inventory and listed machine checks, NOT complete manual code/visual/audio/phone review",
   "version": "1.0.0-rc.3",
-  "sourceHead": "dfb9a38355e27498f39c2c1b8bc25f479df24a03",
+  "sourceHead": "286ecfe7d22d6df0e8a97ea715f957bef867c8f3",
   "roles": {
-    "documentation-or-project-config": 43,
+    "documentation-or-project-config": 44,
     "android-source-or-build-config": 11,
     "test-or-test-evidence": 122,
     "tooling-review-required": 41,
@@ -12,7 +12,7 @@
     "excluded-legacy-asset": 335,
     "shipped-asset": 161
   },
-  "fileCount": 734,
+  "fileCount": 735,
   "shippedAssetCount": 161,
   "shippedAssetBytes": 53012369,
   "excludedLegacyBytes": 19123328,
@@ -307,8 +307,8 @@
     },
     {
       "path": "docs/LATEST_WEB_QA.json",
-      "bytes": 3531,
-      "sha256": "c1e29c42c5691cca165f2ee34fabd33b42df2a8e1d20b82e91dc944eeffebd9d",
+      "bytes": 3532,
+      "sha256": "f0d63148f3482c4fe7839d990b6e56ad9d8f016d4a6139c9cae268675edd3055",
       "coverage": "inventory/hash only; no blanket manual approval",
       "role": "documentation-or-project-config"
     },
@@ -418,9 +418,16 @@
       "role": "documentation-or-project-config"
     },
     {
-      "path": "docs/device-evidence/android-ci-run.json",
+      "path": "docs/device-evidence/android-ci-run-rc2.json",
       "bytes": 11537,
       "sha256": "2f197947c073786708a791235a8280ca3cd88990dca4cfc57c4ac7a8c7d1cddb",
+      "coverage": "inventory/hash only; no blanket manual approval",
+      "role": "documentation-or-project-config"
+    },
+    {
+      "path": "docs/device-evidence/android-ci-run.json",
+      "bytes": 12071,
+      "sha256": "2813f966893190b7c8844bb1e6bfebd645f5311ffbea015f6fbc18e41b0824d5",
       "coverage": "inventory/hash only; no blanket manual approval",
       "role": "documentation-or-project-config"
     },
@@ -1285,8 +1292,8 @@
     },
     {
       "path": "tests/test_release_gate.py",
-      "bytes": 2772,
-      "sha256": "aac4b29212e16a4ab52f3401c0b981eb554cb0d7a38b25014554c12b804f8c92",
+      "bytes": 6080,
+      "sha256": "538ff6e03441e525e2cf764290de9c9eefbd43d18c4e7134b71e0f898d3ed0ea",
       "coverage": "inventory/hash only; no blanket manual approval",
       "role": "test-or-test-evidence",
       "pythonSyntax": "valid"
@@ -1605,8 +1612,8 @@
     },
     {
       "path": "tools/release_gate.py",
-      "bytes": 6400,
-      "sha256": "f003370d373b682c20fb7fe68a334d6b5a0bf640d15842930203a3652423a2b8",
+      "bytes": 6540,
+      "sha256": "f3f447b2f6f42166fb179b6d0250b323bff82ca9c4e51f23d02b7932d2d8519c",
       "coverage": "inventory/hash only; no blanket manual approval",
       "role": "tooling-review-required",
       "pythonSyntax": "valid"

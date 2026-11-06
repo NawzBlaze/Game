@@ -58,7 +58,9 @@ def verify_apk(apk, approval, payload, signer='apksigner'):
         names = archive.namelist()
         if len(names) != len(set(names)):
             raise ValueError('APK contains duplicate ZIP entries.')
-        if archive.read('assets/build-manifest.json') != (payload / 'build-manifest.json').read_bytes():
+        manifest_bytes = (payload / 'build-manifest.json').read_bytes()
+        if (archive.getinfo('assets/build-manifest.json').file_size != len(manifest_bytes) or
+                archive.read('assets/build-manifest.json') != manifest_bytes):
             raise ValueError('APK is not bound to the current tested engine payload.')
         assets = {n for n in names if n.startswith('assets/') and not n.endswith('/')}
         required = {'assets/' + n for n in expected['files']} | {'assets/build-manifest.json'}
