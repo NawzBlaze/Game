@@ -11,7 +11,7 @@ const fs=require('node:fs'),crypto=require('node:crypto');
   page.on('pageerror',e=>errors.push(e.message));
   await page.addInitScript(()=>{
    window.__audios=[];window.Audio=class{constructor(src){this.src=src;this.paused=true;window.__audios.push(this)}play(){this.paused=false;return Promise.resolve()}pause(){this.paused=true}};
-   if(!sessionStorage.getItem('experience-seeded')){sessionStorage.setItem('experience-seeded','yes');localStorage.setItem('delivery-adventure-v1',JSON.stringify({unlocked:24,best:{1:3},seen:true,sound:true}));}
+   if(!sessionStorage.getItem('experience-seeded')){sessionStorage.setItem('experience-seeded','yes');localStorage.setItem('delivery-adventure-v1',JSON.stringify({unlocked:24,best:{1:3},seen:true,sound:true,fullSoundtrack:false}));}
   });
   await page.goto('http://127.0.0.1:4187');await page.waitForFunction(()=>ParcelRenderer.ready());
   await page.evaluate(()=>__ADV_TEST__.testMode(true));

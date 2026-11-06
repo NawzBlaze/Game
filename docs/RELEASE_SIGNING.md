@@ -26,7 +26,7 @@ From `android/`, in the secure configured environment:
 ./gradlew --no-daemon -PrequireReleaseSigning=true lintRelease verifyReleaseSize
 ```
 
-`-PrequireReleaseSigning=true` fails immediately if signing is missing; incomplete signing configuration also fails. `verifyReleaseSize` builds the release APK and AAB and checks their finished sizes, including any configured signing. **Every output must be at most 100,000,000 bytes (100 MB)**. Empty/missing artifacts fail. Do not pad the app to reach a desired size.
+`-PrequireReleaseSigning=true` fails immediately if signing is missing; incomplete signing configuration also fails. `verifyReleaseSize` builds the release APK and AAB and checks their finished sizes, including any configured signing. **Every finished game APK/AAB must be between 20,000,000 and 100,000,000 bytes (20–100 MB), inclusive**. Empty/missing artifacts fail. Do not pad the app to reach a desired size.
 
 Outputs are under `android/app/build/outputs/apk/release/` and `android/app/build/outputs/bundle/release/`. Verify the actual APK with Android SDK `apksigner verify --verbose --print-certs`; verify the AAB signature and bundle/device compatibility separately. Google Play generally uses an AAB for new apps; an APK may be appropriate for other distribution channels.
 

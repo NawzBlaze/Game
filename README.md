@@ -1,20 +1,24 @@
-# Little Parcel Crew · 1.0.0-rc.1
+# Little Parcel Crew · 1.0.0-rc.2
 
 An offline delivery adventure with **24 Adventure routes, 48 Classic puzzles and six optional special deliveries**. This repository now includes the restored game, matching sourced artwork for both modes, save recovery, and an Android-first interface using original freely licensed game UI assets.
 
 **Product target: mobile Android APK. Browser previews are development/test tooling, not a desktop/web product.** The 1.0 campaign candidate passes 22 engine/UI checks plus Android build/lint/simulated tests and two instrumentation tests on each of API 33/36 emulators. [Download and limits](docs/ANDROID_BUILD_HANDOFF.md). Production signing, physical-phone and owner approvals remain required. See [production readiness](docs/PRODUCTION_READINESS.md). A successful build is not permission to publish.
 
+## Current 20–100 MB content-budget correction
+
+The new candidate adds five original Juhani Junkala stereo PCM recordings used by menus, routes and delivery results, with the earlier Cozy loops selectable. Original source identities and author CC0 notice are bundled; no resampling, silent padding or duplicate recordings. The internal game package is approximately 52 MB; obtain the actual finished APK size and candidate identity from the handoff. Both finished APK and AAB must now be **20,000,000–100,000,000 bytes**, not just below 100 MB. **23/23 engine/UI checks and 14/14 Android host tooling tests pass.** [Content and size evidence](docs/STUDIO_SOUNDTRACK.md).
+
 ## 1.0 campaign release candidate
 
 The Lantern Round connects all 24 main routes into five story chapters with 24 dispatches and earned replies. The map adds chapter jumps, route filters, difficulty labels and three newly downloaded original Kenney chapter panoramas. Optional Express variants require all three stars, with quicker neighbours and bridges; Standard geometry/progress and special-delivery rules are preserved. Animation now uses original flag/spring frames, faster walk cycles, cloud/panorama compositing and eased parcel hand-off, with reduced-motion support.
 
-**22/22 engine/UI checks pass**, including all 24 three-star Standard clears and all 24 Express clears. [Candidate scope and limits](docs/V1_RELEASE_CANDIDATE.md). This is not a stable/production-approved 1.0 release. The requested 20 MB minimum / approximately 50 MB content target remains unmet. Native candidate verification must be recorded separately from the engine tests.
+**22/22 engine/UI checks pass**, including all 24 three-star Standard clears and all 24 Express clears. [Candidate scope and limits](docs/V1_RELEASE_CANDIDATE.md). This is not a stable/production-approved 1.0 release. The original rc.1 did not meet the requested minimum; rc.2 adds the real-content soundtrack and enforces the 20–100 MB budget. Native candidate verification must be recorded separately from the engine tests.
 
 ## Included earlier upgrades
 
 Independent saved music/effects levels, seven original Kenney music tracks, optional district soundtrack switching, contextual route field notes/checklists, 11 progress-derived honours, next-dispatch recommendations and persistent nested-dialog Back controls. Earlier upgrade history: [0.21](docs/PROFESSIONAL_UPGRADE.md), [0.22](docs/PREMIUM_POLISH.md).
 
-The finished-app budget remains **20 MB minimum, about 50 MB preferred, 100 MB maximum**. The verified 1.0 candidate is **2,771,465 bytes (2.77 MB)** and does **not** meet that minimum. No filler, duplicated music or inflated files were added. Production signing and physical-phone/owner approval remain outstanding.
+The finished-app budget remains **20 MB minimum, about 50 MB preferred, 100 MB maximum**. The previous rc.1 APK was **2,771,465 bytes (2.77 MB)** and did not meet that minimum. It is superseded by the studio-soundtrack candidate; see the current handoff for actual APK bytes. No filler, duplicated music or inflated files were added. Production signing and physical-phone/owner approval remain outstanding.
 
 ## Develop and play
 
@@ -30,7 +34,7 @@ The server binds to `0.0.0.0`, accepts Arena preview hosts, and uses relative as
 
 ```sh
 npm run build                  # audited allowlist → dist/web and deterministic ZIP
-npm test                       # starts its own local servers; runs 22 serial engine/UI checks
+npm test                       # starts its own local servers; runs 23 serial engine/UI checks
 npm run preview                # built RC: port 4188
 npm run release:check          # fails until artifact-bound human + Android evidence exists
 ```
@@ -38,7 +42,7 @@ npm run release:check          # fails until artifact-bound human + Android evid
 Do not run the self-managed verification while ports 4187/4188 are occupied. For already-running local previews, use `LPC_USE_EXISTING_SERVERS=1 npm test`. `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` can select an external browser. CI installs Chromium and runs the same suite.
 
 Outputs:
-- `dist/little-parcel-crew-1.0.0-rc.1.zip`: internal WebView payload archive, not the mobile deliverable.
+- `dist/little-parcel-crew-1.0.0-rc.2.zip`: internal WebView payload archive, not the mobile deliverable.
 - `dist/SHA256SUMS.txt`: archive digest.
 - `dist/qa-report.json`: fresh automated results, bound to the archive hash.
 - `dist/web/build-manifest.json`: per-file build integrity record.
@@ -48,7 +52,7 @@ Use the built package, **not a ZIP of the entire source web/ directory**. The wo
 
 ## Art, audio and customization
 
-Both modes use original Kenney New Platformer Pack artwork. Music and effects are fresh Kenney Music Loops/Interface Sounds downloads. Nunito comes from the Google Fonts repository. All 155 release asset/licence files have source hashes and bundled CC0/OFL notices. No replacement illustrated artwork was generated or drawn by this agent. Functional interface layout and code are AI-assisted.
+Both modes use original Kenney New Platformer Pack artwork. Music and effects are fresh Kenney Music Loops/Interface Sounds downloads. Nunito comes from the Google Fonts repository. All 161 release asset/licence files have source hashes and bundled CC0/OFL notices. No replacement illustrated artwork was generated or drawn by this agent. Functional interface layout and code are AI-assisted.
 
 Old hats/bags/cart selections retain their save IDs but now map to matching source-pack **uniforms, route badges and dispatch parcels**. Courier IDs and abilities remain unchanged. See [credits](web/CREDITS.txt) and [asset manifest](docs/release-assets.json). Source licensing is documented; final rights/production-method and title review still requires owner approval.
 

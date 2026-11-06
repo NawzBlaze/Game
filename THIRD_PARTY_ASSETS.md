@@ -1,6 +1,6 @@
 # Current release assets
 
-The current release uses **155 exact source files** recorded in `docs/release-assets.json`:
+The current release uses **161 exact source files** recorded in `docs/release-assets.json`:
 
 - Kenney New Platformer Pack 1.1 artwork, CC0.
 - Kenney Interface Sounds effects, CC0.
@@ -18,3 +18,6 @@ Kenney UI Pack 2.0 and Mobile Controls 1.0 (CC0): original PNG button faces and 
 
 ## 1.0 chapter panoramas
 Three further unmodified original New Platformer Pack 1.1 images (CC0): background_fade_hills, background_fade_trees and background_fade_mushrooms. Pinned source URLs and SHA-256 hashes: `docs/v1-background-assets.json`. Game animation reuses original authored spring and flag frames already in the release allowlist. Cloud/panorama blending and sprite transformations occur at runtime, not by changing the source PNGs.
+
+## Full studio soundtrack
+Juhani Junkala, Retro Game Music Pack / 5 Action Chiptunes, CC0 1.0. Five original stereo PCM recordings plus the author’s original CC0 notice. Files are unconverted originals, pinned by upstream Git blob and SHA-256 in `docs/studio-soundtrack-assets.json`. Used offline in menus, routes and completion results; the older Kenney loops remain selectable.

@@ -14,9 +14,18 @@
     const route=Number.isInteger(index)?Math.max(0,Math.min(23,index)):0;
     return districts[route<12?Math.floor(route/4):route<18?3:4];
   }
-  function soundtrack(screen,index,bonus) {
+  const studioTracks=Object.freeze({
+    title:Object.freeze({title:'Retro Game Music Pack — Title Screen',file:'assets/studio-audio/title.wav'}),
+    'round-1':Object.freeze({title:'Retro Game Music Pack — Level 1',file:'assets/studio-audio/round-1.wav'}),
+    'round-2':Object.freeze({title:'Retro Game Music Pack — Level 2',file:'assets/studio-audio/round-2.wav'}),
+    'round-3':Object.freeze({title:'Retro Game Music Pack — Level 3',file:'assets/studio-audio/round-3.wav'}),
+    ending:Object.freeze({title:'Retro Game Music Pack — Ending',file:'assets/studio-audio/ending.wav'})
+  });
+  function soundtrack(screen,index,bonus,full=false,victory=false) {
+    if(full){const key=victory?'ending':screen!=='game'?'title':bonus>=0?'round-3':({garden:'round-1',market:'round-2',golden:'round-3',harbour:'round-2',hilltop:'round-3'}[district(index).track]);return {...studioTracks[key],creator:'Juhani Junkala',loop:!victory}}
+
     const entry=screen==='game'?(bonus>=0?special:district(index)):home;
-    return {...entry,file:'assets/release-audio/'+entry.track+'.ogg'};
+    return {...entry,file:'assets/release-audio/'+entry.track+'.ogg',creator:'Kenney',loop:true};
   }
   function advice(level) {
     const rules=[];
@@ -33,5 +42,5 @@
     if(level.kind==='buddy')rules.push('Say hello to your little companion and look for the secret along the route.');
     return rules;
   }
-  window.ParcelExperience=Object.freeze({district,soundtrack,advice,districts:Object.freeze(districts)});
+  window.ParcelExperience=Object.freeze({district,soundtrack,advice,studioTracks,districts:Object.freeze(districts)});
 })();

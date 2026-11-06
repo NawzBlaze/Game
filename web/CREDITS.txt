@@ -47,3 +47,13 @@ Original background_fade_hills, background_fade_trees and background_fade_mushro
 PNG files, unmodified. Immutable source URLs and SHA-256 hashes are bundled in
 asset-manifest.json. Cloud/panorama compositing, sprite placement and animation
 happen at runtime; no replacement illustrated artwork was generated.
+
+FULL STUDIO SOUNDTRACK — 1.0.0-rc.2
+Juhani Junkala, Retro Game Music Pack / 5 Action Chiptunes, CC0 1.0.
+Original Title Screen, Level 1, Level 2, Level 3 and Ending stereo PCM WAV files.
+These are the composer-supplied files, NOT conversions/upscales of compressed audio.
+Source: https://opengameart.org/content/5-chiptunes-action
+Author's original CC0 notice: assets/studio-audio/INFO.txt
+Immutable mirror, upstream Git blob identities and SHA-256: asset-manifest.json.
+Music is used offline in menus, main routes/specials and completion results.
+The previous Kenney Cozy loops remain selectable in Adventure settings.

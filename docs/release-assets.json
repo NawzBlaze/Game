@@ -1235,6 +1235,80 @@
       "upstream": "https://kenney.nl/assets/new-platformer-pack",
       "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Backgrounds/Double/background_fade_mushrooms.png",
       "sha256": "6fcb2b6b582144539072a9f4c7517e1af005a79ea8139319423c8362d830b959"
+    },
+    {
+      "file": "assets/studio-audio/title.wav",
+      "creator": "Juhani Junkala",
+      "title": "Retro Game Music Pack \u2014 Title Screen",
+      "license": "CC0-1.0",
+      "upstream": "https://opengameart.org/content/5-chiptunes-action",
+      "mirror": "https://github.com/AMAYZING31/game-mayz/blob/fd5f4c1ec652b102b73ae57c2cf70977e7b5e4dd/assets/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Title Screen.wav",
+      "gitBlob": "b4704be01a43194cc4de6c02c4a9eb2dafc1685c",
+      "sha256": "d1590ec1b4a9e0ff948437c8e1d7f416ee382600af6e454fa0452903d8de1964",
+      "sizeBytes": 1992686,
+      "durationSeconds": 11.294,
+      "format": "Original unmodified 44.1 kHz / 16-bit stereo PCM WAV; not converted or upsampled"
+    },
+    {
+      "file": "assets/studio-audio/round-1.wav",
+      "creator": "Juhani Junkala",
+      "title": "Retro Game Music Pack \u2014 Level 1",
+      "license": "CC0-1.0",
+      "upstream": "https://opengameart.org/content/5-chiptunes-action",
+      "mirror": "https://github.com/AMAYZING31/game-mayz/blob/fd5f4c1ec652b102b73ae57c2cf70977e7b5e4dd/assets/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Level 1.wav",
+      "gitBlob": "01fc7f83ae6ad4dac014b064c08237f3d7ef9ceb",
+      "sha256": "6f79ae4c6f2b59baa62c46bcd264c9d157f5dca2c30845fabc3c5be4e2b64a43",
+      "sizeBytes": 13098822,
+      "durationSeconds": 74.254,
+      "format": "Original unmodified 44.1 kHz / 16-bit stereo PCM WAV; not converted or upsampled"
+    },
+    {
+      "file": "assets/studio-audio/round-2.wav",
+      "creator": "Juhani Junkala",
+      "title": "Retro Game Music Pack \u2014 Level 2",
+      "license": "CC0-1.0",
+      "upstream": "https://opengameart.org/content/5-chiptunes-action",
+      "mirror": "https://github.com/AMAYZING31/game-mayz/blob/fd5f4c1ec652b102b73ae57c2cf70977e7b5e4dd/assets/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Level 2.wav",
+      "gitBlob": "c0766b4a18c8d1cef02418e055ae330f1c546a83",
+      "sha256": "c782eccc0634db2818feee4b1f01360dd355505df036732359f2bedb7c772758",
+      "sizeBytes": 12841642,
+      "durationSeconds": 72.796,
+      "format": "Original unmodified 44.1 kHz / 16-bit stereo PCM WAV; not converted or upsampled"
+    },
+    {
+      "file": "assets/studio-audio/round-3.wav",
+      "creator": "Juhani Junkala",
+      "title": "Retro Game Music Pack \u2014 Level 3",
+      "license": "CC0-1.0",
+      "upstream": "https://opengameart.org/content/5-chiptunes-action",
+      "mirror": "https://github.com/AMAYZING31/game-mayz/blob/fd5f4c1ec652b102b73ae57c2cf70977e7b5e4dd/assets/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Level 3.wav",
+      "gitBlob": "590955aca84e10243ea489562f703c855e72c762",
+      "sha256": "c30ae8521119deefd0e22224310e45c07ca726c20760dd93e64e02b9b59a8e6c",
+      "sizeBytes": 14446802,
+      "durationSeconds": 81.896,
+      "format": "Original unmodified 44.1 kHz / 16-bit stereo PCM WAV; not converted or upsampled"
+    },
+    {
+      "file": "assets/studio-audio/ending.wav",
+      "creator": "Juhani Junkala",
+      "title": "Retro Game Music Pack \u2014 Ending",
+      "license": "CC0-1.0",
+      "upstream": "https://opengameart.org/content/5-chiptunes-action",
+      "mirror": "https://github.com/AMAYZING31/game-mayz/blob/fd5f4c1ec652b102b73ae57c2cf70977e7b5e4dd/assets/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Ending.wav",
+      "gitBlob": "5160703cc07ae66fa807c3827671bf5df383e2ac",
+      "sha256": "d5ec74e7f90f0b407f68e44ef791b28af30b47e5252414bdb289ae371fc59173",
+      "sizeBytes": 7876878,
+      "durationSeconds": 44.651,
+      "format": "Original unmodified 44.1 kHz / 16-bit stereo PCM WAV; not converted or upsampled"
+    },
+    {
+      "file": "assets/studio-audio/INFO.txt",
+      "creator": "Juhani Junkala",
+      "license": "CC0-1.0",
+      "upstream": "https://opengameart.org/content/5-chiptunes-action",
+      "mirror": "https://github.com/AMAYZING31/game-mayz/blob/fd5f4c1ec652b102b73ae57c2cf70977e7b5e4dd/assets/5 Action Chiptunes By Juhani Junkala/INFO.txt",
+      "gitBlob": "4cbf5ec94b55a6aacf9862861bba5eaa79b8ec89",
+      "sha256": "3f53572dd283cd8adb4985c8de18326f9325c9fd10ac20ae6ddd8841d9f07779"
     }
   ]
 }
