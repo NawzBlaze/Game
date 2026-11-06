@@ -2,7 +2,7 @@
 const {spawn,spawnSync}=require('node:child_process');
 const fs=require('node:fs');
 const results=[],servers=[];
-const tests=['save-store','native-progress','test','full_campaign','startup','adventure','all-stars','special-deliveries','parcel-mechanics','multitouch','offline-storage','audio-lifecycle','audio-decode','route-experience','courier-mastery','campaign-edition','studio-soundtrack','express-campaign','landscape','presentation','mobile-ui','release'];
+const tests=['save-store','release-gate','native-progress','test','full_campaign','startup','adventure','all-stars','special-deliveries','parcel-mechanics','multitouch','offline-storage','audio-lifecycle','audio-decode','route-experience','courier-mastery','campaign-edition','studio-soundtrack','express-campaign','landscape','presentation','mobile-ui','release'];
 function run(name,command,args){
  console.log('\n=== '+name+' ===');
  const started=Date.now(),result=spawnSync(command,args,{encoding:'utf8',timeout:180000,env:process.env,maxBuffer:16*1024*1024});

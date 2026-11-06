@@ -32,6 +32,20 @@ Outputs are under `android/app/build/outputs/apk/release/` and `android/app/buil
 
 ## Before calling it final
 
-Production signing alone does not establish release readiness. Test the exact signed artifact on physical phones, verify a compatible update preserves existing progress, resolve the historical affected Android 13 installation's crash, review accessibility/play feel/native audio and store assets/declarations, and obtain owner approval. Native backup file handling remains unsupported. Record real artifact-bound evidence; do not mark approvals true because an unsigned/debug emulator build passed.
+Production signing alone does not establish release readiness. Test the exact signed artifact on physical phones, verify a compatible update preserves existing progress, resolve the historical affected Android 13 installation's crash, review accessibility/play feel/native audio and store assets/declarations, and obtain owner approval. Native document backup/import is implemented in rc.3; actual document-provider and physical-phone validation must still be recorded. Record real artifact-bound evidence; do not mark approvals true because an unsigned/debug emulator build passed.
 
 This document provides the build path, not an assertion that production signing or store approval has happened.
+
+## Final signed-APK gate
+
+The full gate now rejects prerelease version labels, missing approval sections, debug certificates, unsigned/unverified APKs, mismatched APK/certificate hashes and embedded game payloads that differ from the tested build. Removing a required approval entry does not bypass it. `--web` is internal evidence only, never Android production approval.
+
+After the exact stable-version signed APK has been reviewed, record its **public** SHA-256 and signing-certificate SHA-256 in `androidArtifactSha256` and `androidSigningCertificateSha256` in the approval record. These are public fingerprints, not signing secrets. Bind the human evidence to that APK; do not mark fixture or emulator evidence as physical approval. Then run:
+
+```sh
+python3 tools/release_gate.py \
+  --apk android/app/build/outputs/apk/release/app-release.apk \
+  --apksigner "$ANDROID_HOME/build-tools/36.0.0/apksigner"
+```
+
+A successful gate is a verification step, not a store upload or owner authorization to publish. Missing signing secrets must be supplied only through the owner's secure build environment, never chat.

@@ -40,7 +40,7 @@ public class WebGameSmokeDeviceTest {
     private static void await(ActivityScenario<MainActivity> scene,String expression) throws Exception {
         long deadline=System.nanoTime()+TimeUnit.SECONDS.toNanos(45);
         while(System.nanoTime()<deadline){if("true".equals(js(scene,expression)))return;Thread.sleep(250);}
-        fail("Timed out: "+expression);
+        fail("Timed out: "+expression+"; readiness="+js(scene,"JSON.stringify({ready:document.readyState,bridge:typeof window.NativeProgress,importMethod:window.NativeProgress?typeof NativeProgress.importBackup:'missing',exportMethod:window.NativeProgress?typeof NativeProgress.exportBackup:'missing',panel:!!document.querySelector('#progressPanel')})"));
     }
     private static void capture(String name) throws Exception {
         Bitmap image=InstrumentationRegistry.getInstrumentation().getUiAutomation().takeScreenshot();
@@ -74,7 +74,7 @@ public class WebGameSmokeDeviceTest {
             await(scene,"!!document.querySelector('#advHome [data-action=play]') && !!window.ParcelRenderer && ParcelRenderer.ready()");
             assertEquals("false",js(scene,"!!window.__ADV_TEST__"));
             assertEquals("true",js(scene,"location.href==='file:///android_asset/index.html'"));
-            assertEquals("true",js(scene,"!!document.querySelector('#advHome [data-progress=open]') && typeof NativeProgress.importBackup==='function'"));
+            await(scene,"!!document.querySelector('#advHome [data-progress=open]') && typeof NativeProgress.importBackup==='function'");
             assertEquals("true",js(scene,"[...document.querySelectorAll('#advHome button')].filter(b=>b.getClientRects().length).every(b=>{const r=b.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight+1&&r.left>=0&&r.right<=innerWidth+1})"));
             capture("mobile-home.png");
             touch(scene,"#advHome [data-progress=open]",80);

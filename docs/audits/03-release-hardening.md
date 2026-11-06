@@ -14,6 +14,7 @@ This is implementation work toward a finished public release, not an approval sh
 - Native results are JSON-encoded into a DOM event, not interpolated as executable content. No file contents or document URIs are logged.
 - Imported records pass the existing save validator and show a summary. **No restore until confirmation.** Existing transactional restore/pre-restore recovery remains in use.
 - Cancellations, unavailable picker/provider, duplicate operations, closed panels and stale WebView results are handled. Process death while a picker is open does not restore automatically; reopen the progress panel and retry the operation.
+- A sticky Close toolbar remains reachable even after scrolling long backup content.
 - Hardware Back closes the progress panel before routing to game navigation or exiting the home screen.
 - Older native hosts without the new bridge retain the hidden unsupported entry, rather than falling back to broken blob downloads.
 
@@ -31,7 +32,7 @@ This is implementation work toward a finished public release, not an approval sh
 
 ## Verification completed locally
 
-- **24/24** engine/UI/build checks passed, including the new native-progress UI suite with bridge mocks.
+- **25/25** engine/UI/build checks passed, including the new native-progress UI suite with bridge mocks.
 - New browser tests at 568×320, 844×390 and 390×844 cover: native export payload; rejected malformed import; confirmation-before-write; pre-restore backup; script-like content as inert data; Back; late results; visible first-fold landscape routes; chapter disclosures; privacy dialog naming and no horizontal overflow.
 - Existing browser export/import, all campaign routes/Express/specials, Classic, audio, offline and deterministic packaging tests still pass.
 - **14/14** existing Android host-tooling tests passed. This count does not include new JVM tests until native CI runs them.
@@ -39,9 +40,13 @@ This is implementation work toward a finished public release, not an approval sh
 - Added JVM tests for UTF-8 round-trip, exact byte boundary, oversized/empty/malformed files, write failure, document intent scoping, cancellation/retry and duplicate operations.
 - Extended real WebView instrumentation to check native backup UI and hardware Back. Actual system document-provider round-trip and physical-phone approval remain distinct from these checks.
 
+## Additional production-gate inspection
+
+The former approval loop could overlook a removed/empty approval section. The gate now enumerates all mandatory approvals and rejects malformed/truthy flags or empty evidence. Full public-release checks also require a stable version and a real 20–100 MB owner-signed APK, verify its SDK signature/certificate and owner-approved APK hash, reject debug signing, and verify the embedded allowlisted payload against the locally tested build. Five Python safety tests run inside the 25-check suite. No approval flags were enabled.
+
 ## Native verification status
 
-A fresh exact-source Android build and API 33/36 instrumentation run is required for rc.3. Results will be recorded after completion; no old rc.2 native pass is inherited by this candidate. No production keystore was created, read or requested in chat.
+A fresh exact-source Android build and API 33/36 instrumentation run is required for rc.3. The first rc.3 native run (42174758471) passed build/lint/JVM tests but failed its immediate backup-button presence assertion at startup. That check now waits for the last UI module rather than assuming renderer-image readiness implies progress-panel readiness; readiness diagnostics were added without removing the assertion. The exact amended candidate must pass a fresh run. No old rc.2 native pass is inherited by this candidate. No production keystore was created, read or requested in chat.
 
 ## Public release still requires real evidence
 

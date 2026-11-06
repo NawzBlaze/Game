@@ -32,5 +32,7 @@
       "approved": false,
       "evidence": ""
     }
-  }
+  },
+  "androidArtifactSha256": null,
+  "androidSigningCertificateSha256": null
 }
