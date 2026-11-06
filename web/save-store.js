@@ -27,6 +27,8 @@
     }
     if (adventure) {
       for(const name of ['musicVolume','effectsVolume']){if(Number.isFinite(value[name]))out[name]=Math.max(0,Math.min(100,Math.round(value[name])))}
+      if(['none','wind','fragile','bouncy'].includes(value.twist))out.twist=value.twist;
+      out.twistBest={};for(const twist of ['wind','fragile','bouncy'])out.twistBest[twist]=record(value.twistBest?.[twist],24,3);
       out.best = record(value.best,24,3);
       out.expressBest = record(value.expressBest,24,3);
       out.bonus = record(value.bonus,5,3,false,true);

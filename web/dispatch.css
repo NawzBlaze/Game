@@ -357,3 +357,18 @@ html,body{background:#edf7fb;color:var(--ink);overscroll-behavior:none}
 #progressPanel .progress-toolbar strong{font-size:10px;letter-spacing:.08em;flex:1}
 #progressPanel .progress-toolbar button{width:auto;min-width:80px;margin:0}
 #progressPanel h2{margin-top:12px}
+
+/* Identity and route choice use original creator sprites, not new illustration. */
+#advApp .twist-picker{margin:16px 0;padding:12px;border:2px solid #c8dee8;background:#fff;min-width:0}
+#advApp .twist-picker legend{font-size:12px;font-weight:1000;color:#24765e;padding:0 6px}
+#advApp .twist-picker label{display:block;font-size:12px;font-weight:800;margin-bottom:6px}
+#advApp .twist-picker select{width:100%;min-height:48px;padding:8px;font:800 14px Nunito,system-ui,sans-serif;color:#203e53;background:#edf7fb;border:1px solid #9cbcc9;border-radius:3px}
+#advApp .twist-picker p{font-size:12px;line-height:1.5;color:#526d7c;margin-bottom:0}
+#advApp .chapter-nav button{display:flex;align-items:center;justify-content:center;gap:6px}
+#advApp .chapter-nav img{width:20px;height:20px;object-fit:contain}
+#advApp .courier-personality{display:block;font-size:13px;line-height:1.5;color:#526d7c;margin:10px 0}
+#advApp .courier-skill{display:block;font-size:10px;line-height:1.6;font-weight:900;color:#24765e;padding-top:8px;border-top:1px solid #c8dee8}
+#advApp .adv-courier.selected{background:#f0faf4!important}
+#advApp .adv-courier-art{background:#edf7fb;border:1px solid #d4e7ef;min-width:96px}
+#advApp .adv-district-head{padding:10px 12px;background:#fff;border-left:5px solid #24765e}
+#advApp .adv-level small{display:block;padding-top:6px;border-top:1px solid #d4e7ef;color:#24765e;font-weight:900}

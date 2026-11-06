@@ -88,17 +88,18 @@
       tileStrip(ctx, 'conveyor', x, G - 8, w, 16, 32);
       sprite(ctx, 'sign_right', x+w/2-14, G-55, 28, 38, direction<0);
     }
-    if(level.kind==='wind') for(const x of [570,1350]) if(visible(x)) {
-      sprite(ctx,'sign_right',x,G-70,32,42);
+    if(level.kind==='wind'||level.twist==='wind') for(const x of [570,1350]) if(visible(x)) {
+      sprite(ctx,'sign_right',x,G-70,32,42,window.ParcelPresentation.wind(level,clock,900)<0);
       ctx.font='bold 11px Nunito, sans-serif';ctx.fillStyle='#283629';ctx.textAlign='center';
-      ctx.fillText(x===570?'BREEZE →':'END BREEZE',x+16,G-78);
+      ctx.fillText(x===570?(level.twist==='wind'?'WINDSHIFT': 'BREEZE →'):'END BREEZE',x+16,G-78);
     }
     // Sparse foreground planting, always outside obstacle and objective bounds.
     for (let x = 110 + (index % 4) * 30, n = 0; x < level.width; x += 310, n++) {
       if (!visible(x)) continue;
       if (!level.ground.some(([a,b]) => x > a + 35 && x < b - 60)) continue;
       if (level.boxes.some(b => Math.abs(x-b) < 65) || Math.abs(x-level.checkpoint)<70) continue;
-      sprite(ctx, level.theme === 2 ? 'mushroom_red' : n % 3 ? 'grass' : 'bush', x, G - 28, 40, 28);
+      sprite(ctx, level.theme === 2 ? (n%2?'mushroom_brown':'mushroom_red') : n % 3 ? 'grass' : 'bush', x, G - 28, 40, 28);
+      if(n%2===0&&level.ground.some(([a,b])=>x+90<b-70&&x>a+35)&&!level.boxes.some(b=>Math.abs(x+50-b)<80)&&Math.abs(x+50-level.checkpoint)>90) sprite(ctx,level.theme===3?'rock':'fence',x+48,G-30,44,30);
     }
     for (const x of level.boxes) if (visible(x)) sprite(ctx, 'block_planks', x, G - 42, 42, 42);
     for(const x of level.springs)if(visible(x)){const extended=motion&&s.springPulse?.x===x&&clock-s.springPulse.time>=0&&clock-s.springPulse.time<.24;sprite(ctx,extended?'spring_out':'spring',x,G-(extended?40:22),42,extended?40:22)}
@@ -114,10 +115,14 @@
       sprite(ctx, delivered ? 'door_open' : 'door_closed', x, G - 48, 48, 48);
       sprite(ctx, delivered ? 'door_open_top' : 'door_closed_top', x, G - 96, 48, 48);
       sprite(ctx, 'sign_exit', x + 53, G - 45, 40, 45);
+      if(visible(x-52)&&!level.boxes.some(b=>Math.abs(x-52-b)<48)&&level.ground.some(([a,b])=>x-52>a&&x-10<b)) {
+        character(ctx,'player',x-52,G-54,40,54,false,0,false,false,{hat:x===level.width-84?'cap':'flower'});
+        if(delivered){ctx.font='bold 10px Nunito, sans-serif';ctx.fillStyle='#203e53';ctx.textAlign='center';ctx.fillText('THANK YOU!',x-30,G-65)}
+      }
     }
     door(level.width - 84, ending > 0);
     if (level.stop) door(level.stop - 12, midDelivered);
-    const parcel=window.ParcelPresentation.parcel(level.kind);
+    const parcel=window.ParcelPresentation.parcel(window.ParcelPresentation.cargoKind(level));
     if (!hasParcel && parcelSpawnX != null) {
       const y=G-36-(parcelBounce?Math.abs(Math.sin(parcelBounce*12))*16:0);
       sprite(ctx,parcel.asset,parcelSpawnX,y,36,36);
@@ -150,7 +155,7 @@
   // Preload the entire renderer family before the first route is started.
   const names = ['background_solid_sky','background_color_hills','background_color_trees',
     'background_color_mushrooms','background_clouds','flag_green_b','spring_out','block_planks','bridge','bridge_logs','grass','bush',
-    'mushroom_red','water','water_top','star','spring','heart','flag_off','flag_green_a',
+    'mushroom_red','mushroom_brown','fence','rock','water','water_top','star','spring','heart','flag_off','flag_green_a',
     'door_closed','door_closed_top','door_open','door_open_top','sign_exit','key_yellow',
     'lock_yellow','lever_left','lever_right','block_blue','block_red','block_yellow','gem_green','gem_red','gem_blue','sign_right','conveyor','mouse_rest','mouse_walk_a','mouse_walk_b'];
   for (const t of ['grass','dirt','purple','sand']) for (const e of ['block_top','block_top_left','block_top_right','block_center']) names.push('terrain_' + t + '_' + e);

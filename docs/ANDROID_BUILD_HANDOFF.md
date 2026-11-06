@@ -1,5 +1,7 @@
 # Android APK handoff — 1.0.0-rc.3 / code 102
 
+> **New source:** rc.4 / code 103 adds [dispatch twists and character/world polish](DISPATCH_TWISTS.md). It has passed 26 local checks but needs its own native CI result. The rc.3 download below is historical and does not include these changes.
+
 The final product target is an offline mobile **Android APK**, not a browser/desktop package.
 
 ## Verified test candidate

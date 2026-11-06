@@ -40,3 +40,5 @@ console.log('PASS save validation, corrupt originals, quota protection, backup r
  assert.equal(store.write(A,{unlocked:9,best:{1:3}}),true);
  console.log('PASS legacy WebView without Object.hasOwn: valid progress, no false recovery, backup and restore.');
 }
+
+{const {store}=environment({[A]:JSON.stringify({unlocked:8,best:{1:3},twist:'wind',twistBest:{wind:{1:2,2:99,99:3},fragile:{2:3},bouncy:{3:1},unknown:{1:3}}})});const s=store.read(A,{});assert.equal(s.twist,'wind');assert.equal(s.twistBest.wind[1],2);assert.equal(s.twistBest.wind[2],undefined);assert.equal(s.twistBest.unknown,undefined);assert.equal(s.best[1],3);const b=store.parseBackup(JSON.stringify(store.snapshot()));store.restore(b);assert.equal(store.read(A,{}).twistBest.fragile[2],3);}
