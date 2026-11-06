@@ -1,7 +1,7 @@
 name: Verify mobile game engine
 on:
   push:
-    branches: [main, arena/fcb06d04-game]
+    branches: [main, "arena/**"]
   pull_request:
 permissions:
   contents: read

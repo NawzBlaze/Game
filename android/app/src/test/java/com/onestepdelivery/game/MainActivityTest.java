@@ -93,4 +93,36 @@ public class MainActivityTest {
         } finally {field.set(a,original);counting.destroy();}
     }
 
+    @Test public void progressPickerUsesScopedDocumentsAndCancellationAllowsRetry() {
+        MainActivity a=Robolectric.buildActivity(MainActivity.class).setup().get();
+        a.requestProgressImport();
+        org.robolectric.shadows.ShadowActivity.IntentForResult opened=shadowOf(a).getNextStartedActivityForResult();
+        assertNotNull(opened);
+        assertEquals(android.content.Intent.ACTION_OPEN_DOCUMENT,opened.intent.getAction());
+        assertTrue(opened.intent.hasCategory(android.content.Intent.CATEGORY_OPENABLE));
+        a.onActivityResult(opened.requestCode,Activity.RESULT_CANCELED,null);
+        a.requestProgressExport("{\"format\":\"little-parcel-crew-backup\"}");
+        org.robolectric.shadows.ShadowActivity.IntentForResult saved=shadowOf(a).getNextStartedActivityForResult();
+        assertNotNull(saved);
+        assertEquals(android.content.Intent.ACTION_CREATE_DOCUMENT,saved.intent.getAction());
+        assertEquals("application/json",saved.intent.getType());
+        assertEquals("little-parcel-crew-progress.json",saved.intent.getStringExtra(android.content.Intent.EXTRA_TITLE));
+        // The progress itself must not be put into an Intent or sent to another app.
+        assertEquals(1,saved.intent.getExtras().size());
+        a.onActivityResult(saved.requestCode,Activity.RESULT_CANCELED,null);
+    }
+    @Test public void duplicateDocumentOperationsAreBlockedAndOversizedExportDoesNotLaunch() {
+        MainActivity a=Robolectric.buildActivity(MainActivity.class).setup().get();
+        a.requestProgressExport("é".repeat(ProgressFiles.MAX_BYTES/2+1));
+        assertNull(shadowOf(a).getNextStartedActivityForResult());
+        a.requestProgressImport();
+        org.robolectric.shadows.ShadowActivity.IntentForResult first=shadowOf(a).getNextStartedActivityForResult();
+        assertNotNull(first);
+        a.requestProgressImport();
+        assertNull(shadowOf(a).getNextStartedActivityForResult());
+        a.onActivityResult(first.requestCode,Activity.RESULT_CANCELED,null);
+        a.requestProgressImport();
+        assertNotNull(shadowOf(a).getNextStartedActivityForResult());
+    }
+
 }

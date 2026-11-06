@@ -247,3 +247,128 @@ html,body{background:#edf7fb;color:var(--ink);overscroll-behavior:none}
  .app-shell .swipe-note{display:none}
  .app-shell .dpad>div{display:contents}
 }
+
+/* Native-sized settings controls; scroll stays inside the existing safe-area dialog. */
+.audio-settings{margin:14px 0;padding:12px;border:1px solid #bbcebf;border-radius:12px;text-align:left;min-width:0}
+.audio-settings legend{font-weight:900;padding:0 7px}
+.audio-settings label{display:flex;justify-content:space-between;align-items:center;font-weight:800}
+.audio-settings input[type=range]{display:block;width:100%;min-height:44px;margin:0 0 8px;accent-color:#315f58;touch-action:pan-y}
+.audio-settings p{font-size:12px;line-height:1.5;margin-bottom:0}
+.route-dossier{text-align:left;padding:14px;margin-bottom:16px;background:#f0f4e9;border:1px solid #b8cbb7;border-radius:12px}
+.route-dossier h4{font-size:18px;margin:8px 0}
+.route-dossier ul{padding-left:20px;line-height:1.55;font-size:14px}
+.route-dossier .route-checklist{list-style:none;padding:0}
+.route-checklist li{padding:6px 0;border-bottom:1px solid #d5decf}
+.route-checklist .done{color:#235c43;font-weight:800}
+.adv-district-head .district-progress{color:#235c43;font-weight:900;margin-top:5px}
+
+/* Progression UI uses only original bundled sprites; no illustrated assets are drawn here. */
+#advApp .dispatch-goal{display:flex;align-items:center;gap:16px;padding:16px;margin:20px 0 26px;background:#edf7fb;border:2px solid #bfd6d9;border-left:6px solid #315f58}
+#advApp .dispatch-goal>img{width:44px;height:44px;object-fit:contain;flex:none}
+#advApp .dispatch-goal>div{flex:1;min-width:0}
+#advApp .dispatch-goal small{font-size:10px;letter-spacing:.08em;font-weight:900;color:#315f58}
+#advApp .dispatch-goal h3{font-size:20px;line-height:1.2;margin:4px 0}
+#advApp .dispatch-goal p{font-size:13px;line-height:1.5;margin:4px 0 0;color:#526d7c}
+#advApp .dispatch-goal button{min-width:130px;min-height:48px;flex:none}
+#advApp .honours-heading{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:24px}
+#advApp .honours-heading h3{font-size:24px;margin:6px 0}
+#advApp .honours-heading>span{font-weight:900;white-space:nowrap;font-size:13px;color:#315f58}
+#advApp .honours-note{font-size:13px;color:#526d7c}
+#advApp .honours-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0 28px}
+#advApp .honour-card{display:flex;gap:14px;padding:16px;background:#edf7fb;border:2px solid #c5d8dc;align-items:flex-start}
+#advApp .honour-card.earned{background:#eef5e9;border-color:#a1bfa4}
+#advApp .honour-card>img{width:40px;height:40px;object-fit:contain;flex:none;opacity:.45}
+#advApp .honour-card.earned>img{opacity:1}
+#advApp .honour-card>div{flex:1;min-width:0}
+#advApp .honour-card h4{font-size:15px;line-height:1.4;margin:0}
+#advApp .honour-card p{font-size:12px;line-height:1.5;color:#526d7c;margin:6px 0 12px}
+#advApp .honour-card label{font-size:11px;font-weight:900;color:#315f58}
+#advApp .honour-card progress{display:block;width:100%;height:8px;margin-top:8px;accent-color:#315f58}
+#advApp .journal-heading{font-size:22px;margin:22px 0 14px}
+#advApp .dialog-toolbar{position:sticky;top:-20px;z-index:2;display:flex;align-items:center;gap:12px;background:#edf7fb;padding:8px 0 10px;border-bottom:1px solid #c5d8dc;margin-bottom:16px}
+#advApp .dialog-toolbar button{width:auto;min-width:110px;margin:0}
+#advApp .dialog-toolbar span{font-size:11px;color:#526d7c;margin-left:auto}
+@media(max-height:480px){#advApp .dialog-toolbar{top:-14px}}
+@media(max-width:600px){#advApp .honours-grid{grid-template-columns:1fr}#advApp .dispatch-goal{flex-wrap:wrap;gap:12px}#advApp .dispatch-goal>div{flex-basis:calc(100% - 60px)}#advApp .dispatch-goal button{width:100%}#advApp .honours-heading{align-items:flex-start;flex-direction:column}}
+
+/* Chapter navigation is functional UI, not a drawn replacement map illustration. */
+#advApp .chapter-nav{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 12px}
+#advApp .chapter-nav button{flex:1;min-width:84px;min-height:48px;font-size:12px}
+#advApp .route-filters{display:flex;gap:8px;flex-wrap:wrap}
+#advApp .route-filters button{min-height:44px;padding:8px 14px;font-size:12px}
+#advApp .route-filters [aria-pressed=true]{border-image-source:url('assets/mobile-ui/green-button_rectangle_depth_flat.png')}
+#advApp #mapFilterStatus{font-size:12px;color:#526d7c;margin:12px 0}
+#advApp .adv-district{scroll-margin-top:72px}
+#advApp .chapter-story{font-size:14px;line-height:1.65;color:#526d7c;max-width:720px;margin:0 0 16px}
+#advApp .chapter-empty{font-size:13px;color:#526d7c;grid-column:1/-1;padding:12px;border:1px solid #c5d8dc}
+#advApp .route-grade{display:block;font-size:9px;font-style:normal;font-weight:1000;color:#315f58;letter-spacing:.03em;margin:6px 0}
+#advApp .route-parcel{display:block;font-size:11px;line-height:1.4;font-style:normal;color:#526d7c;margin:6px 0}
+#advApp .adv-level{min-height:218px;transition:border-color .15s ease,transform .15s ease}
+#advApp .adv-level:not(:disabled):active{transform:translateY(2px)}
+#advApp .campaign-letters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#advApp .campaign-letter{background:#fff;border:2px solid #c5d8dc;align-self:start}
+#advApp .campaign-letter.delivered{border-color:#93b89d}
+#advApp .campaign-letter summary{cursor:pointer;display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-height:64px;padding:12px;list-style:revert}
+#advApp .campaign-letter summary>span{font-size:12px;font-weight:1000;color:#315f58}
+#advApp .campaign-letter summary>b{flex:1;font-size:13px}
+#advApp .campaign-letter summary>em{font-size:10px;color:#526d7c;font-style:normal}
+#advApp .campaign-letter>div{padding:0 14px 14px;font-size:13px;line-height:1.65;color:#526d7c}
+#advApp .letter-reply{border-left:3px solid #315f58;padding:8px 12px;background:#eef5e9}
+#advApp .dispatch-note{padding:12px;border-left:3px solid #315f58;background:#fff;font-size:13px;line-height:1.5}
+@media(max-width:600px){#advApp .campaign-letters{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){#advApp .adv-level{transition:none}#advApp .adv-level:not(:disabled):active{transform:none}}
+#advApp .chapter-presentation{display:flex;align-items:center;gap:18px;padding:14px;margin-bottom:16px;background:#fff;border:1px solid #c5d8dc}
+#advApp .chapter-presentation>img{width:112px;height:84px;object-fit:cover;object-position:50% 75%;flex:none}
+#advApp .chapter-presentation .chapter-story{margin:0}
+@media(max-width:400px){#advApp .chapter-presentation{flex-direction:column;align-items:stretch}#advApp .chapter-presentation>img{width:100%;height:88px}}
+
+/* Route controls and actual deliveries share the first landscape viewport.
+   Chapter prose remains available without pushing every route below the fold. */
+#advApp .route-book-controls>p{font-size:13px;line-height:1.5;color:var(--muted)}
+#advApp details.chapter-presentation{display:block;padding:0}
+#advApp .chapter-presentation>summary{min-height:44px;display:list-item;padding:12px 14px;cursor:pointer;font-size:13px;font-weight:900;color:var(--ink)}
+#advApp .chapter-presentation-content{display:flex;align-items:center;gap:14px;padding:0 14px 14px}
+#advApp .chapter-presentation-content>img{width:112px;height:84px;object-fit:cover;object-position:50% 75%;flex:none}
+#advApp .chapter-presentation-content .chapter-story{margin:0}
+@media(orientation:landscape) and (max-height:480px){
+ #advApp #advMap{display:grid;grid-template-columns:minmax(200px,30%) minmax(0,1fr);column-gap:18px;align-content:start}
+ #advApp #advMap>.adv-top{grid-column:1/-1;margin-bottom:10px}
+ #advApp #advMap .route-book-controls{min-width:0}
+ #advApp #advMap .route-book-controls h2{font-size:23px;margin-top:0}
+ #advApp #advMap .dispatch-goal{flex-wrap:wrap;margin:12px 0;padding:10px;gap:8px}
+ #advApp #advMap .dispatch-goal>img{width:30px;height:30px}
+ #advApp #advMap .dispatch-goal h3{font-size:16px}
+ #advApp #advMap .dispatch-goal p{font-size:12px}
+ #advApp #advMap .dispatch-goal button{width:100%}
+ #advApp #advMap .chapter-nav{margin:12px 0 8px;gap:6px}
+ #advApp #advMap .chapter-nav button{min-width:76px;min-height:44px}
+ #advApp #advMap .route-filters{gap:6px}
+ #advApp #advMap .route-filters button{flex:1;padding:4px;font-size:11px}
+ #advApp #advMap #advLevels{min-width:0}
+ #advApp #advMap .adv-district:first-child{margin-top:0}
+ #advApp #advMap .adv-map-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #advApp #advMap .chapter-presentation-content{flex-direction:column;align-items:stretch}
+ #advApp #advMap .chapter-presentation-content>img{width:100%;height:70px}
+}
+@media(max-width:400px){#advApp .chapter-presentation-content{flex-direction:column;align-items:stretch}#advApp .chapter-presentation-content>img{width:100%;height:84px}}
+/* Backup confirmation can scroll, but its exit must never scroll out of reach. */
+#progressPanel{max-height:90vh;max-height:90dvh}
+#progressPanel .progress-toolbar{position:sticky;top:-28px;z-index:2;display:flex;align-items:center;gap:12px;margin:-16px 0 12px;padding:8px 0;background:#edf7fb;border-bottom:1px solid #c8dee8}
+#progressPanel .progress-toolbar strong{font-size:10px;letter-spacing:.08em;flex:1}
+#progressPanel .progress-toolbar button{width:auto;min-width:80px;margin:0}
+#progressPanel h2{margin-top:12px}
+
+/* Identity and route choice use original creator sprites, not new illustration. */
+#advApp .twist-picker{margin:16px 0;padding:12px;border:2px solid #c8dee8;background:#fff;min-width:0}
+#advApp .twist-picker legend{font-size:12px;font-weight:1000;color:#24765e;padding:0 6px}
+#advApp .twist-picker label{display:block;font-size:12px;font-weight:800;margin-bottom:6px}
+#advApp .twist-picker select{width:100%;min-height:48px;padding:8px;font:800 14px Nunito,system-ui,sans-serif;color:#203e53;background:#edf7fb;border:1px solid #9cbcc9;border-radius:3px}
+#advApp .twist-picker p{font-size:12px;line-height:1.5;color:#526d7c;margin-bottom:0}
+#advApp .chapter-nav button{display:flex;align-items:center;justify-content:center;gap:6px}
+#advApp .chapter-nav img{width:20px;height:20px;object-fit:contain}
+#advApp .courier-personality{display:block;font-size:13px;line-height:1.5;color:#526d7c;margin:10px 0}
+#advApp .courier-skill{display:block;font-size:10px;line-height:1.6;font-weight:900;color:#24765e;padding-top:8px;border-top:1px solid #c8dee8}
+#advApp .adv-courier.selected{background:#f0faf4!important}
+#advApp .adv-courier-art{background:#edf7fb;border:1px solid #d4e7ef;min-width:96px}
+#advApp .adv-district-head{padding:10px 12px;background:#fff;border-left:5px solid #24765e}
+#advApp .adv-level small{display:block;padding-top:6px;border-top:1px solid #d4e7ef;color:#24765e;font-weight:900}

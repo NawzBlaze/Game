@@ -1157,6 +1157,158 @@
       "upstream": "https://kenney.nl/assets/mobile-controls",
       "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/UI assets/Mobile Controls/License.txt",
       "sha256": "0522777b2550f959ba5c504d97042bb17f2cd895d0562f5a4a13fc579f69bdaf"
+    },
+    {
+      "file": "assets/release-audio/garden.ogg",
+      "creator": "Kenney",
+      "title": "Farm Frolics",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/music-loops",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Music Loops/Loops/Farm Frolics.ogg",
+      "sha256": "3c1a6ae05701a7e32b6b3c19fae046a46d7183785ff0dbab4cd9b0683655dd89"
+    },
+    {
+      "file": "assets/release-audio/market.ogg",
+      "creator": "Kenney",
+      "title": "Italian Mom",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/music-loops",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Music Loops/Loops/Italian Mom.ogg",
+      "sha256": "d9392f3a561623c72a5a0a793984272a2264d350d9d61bfcd9bf4bdb8cfdd49b"
+    },
+    {
+      "file": "assets/release-audio/golden.ogg",
+      "creator": "Kenney",
+      "title": "Swinging Pants",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/music-loops",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Music Loops/Loops/Swinging Pants.ogg",
+      "sha256": "8f60328d8664e050b7fb5c8c7f97862aca0f190a3f6e31d00f0415726d76d52c"
+    },
+    {
+      "file": "assets/release-audio/harbour.ogg",
+      "creator": "Kenney",
+      "title": "Night at the Beach",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/music-loops",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Music Loops/Loops/Night at the Beach.ogg",
+      "sha256": "8beff4d1153fcea045d1f3d01a241f81c6bb7645d64d5e52511152d1ff19c768"
+    },
+    {
+      "file": "assets/release-audio/hilltop.ogg",
+      "creator": "Kenney",
+      "title": "Flowing Rocks",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/music-loops",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Music Loops/Loops/Flowing Rocks.ogg",
+      "sha256": "8563774243e381e827cba402cf6ccdc471b8bed3e3fafdf182f36039c2a8479f"
+    },
+    {
+      "file": "assets/release-audio/special.ogg",
+      "creator": "Kenney",
+      "title": "Mission Plausible",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/music-loops",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/Audio/Music Loops/Loops/Mission Plausible.ogg",
+      "sha256": "324bb691a715a51875973079f9e0706fc81168203401725d4131d0fa1528c621"
+    },
+    {
+      "file": "assets/kenney/background_fade_hills.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Backgrounds/Double/background_fade_hills.png",
+      "sha256": "afcf41aa5f87008f2c78e7d43bc700336e5392b881a1a9b8a0dfebee9ab39020"
+    },
+    {
+      "file": "assets/kenney/background_fade_trees.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Backgrounds/Double/background_fade_trees.png",
+      "sha256": "e88852efe2e5e92c9178b4b02fad785940defeb92d1def0f6d1b5cbd03ca2d39"
+    },
+    {
+      "file": "assets/kenney/background_fade_mushrooms.png",
+      "creator": "Kenney",
+      "license": "CC0-1.0",
+      "upstream": "https://kenney.nl/assets/new-platformer-pack",
+      "mirror": "https://github.com/eturner58/game-assets/blob/fc2cd355a8e7c1d8e625fd650abf64f50a1fddaa/kenney/2D assets/New Platformer Pack/Sprites/Backgrounds/Double/background_fade_mushrooms.png",
+      "sha256": "6fcb2b6b582144539072a9f4c7517e1af005a79ea8139319423c8362d830b959"
+    },
+    {
+      "file": "assets/studio-audio/title.wav",
+      "creator": "Juhani Junkala",
+      "title": "Retro Game Music Pack \u2014 Title Screen",
+      "license": "CC0-1.0",
+      "upstream": "https://opengameart.org/content/5-chiptunes-action",
+      "mirror": "https://github.com/AMAYZING31/game-mayz/blob/fd5f4c1ec652b102b73ae57c2cf70977e7b5e4dd/assets/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Title Screen.wav",
+      "gitBlob": "b4704be01a43194cc4de6c02c4a9eb2dafc1685c",
+      "sha256": "d1590ec1b4a9e0ff948437c8e1d7f416ee382600af6e454fa0452903d8de1964",
+      "sizeBytes": 1992686,
+      "durationSeconds": 11.294,
+      "format": "Original unmodified 44.1 kHz / 16-bit stereo PCM WAV; not converted or upsampled"
+    },
+    {
+      "file": "assets/studio-audio/round-1.wav",
+      "creator": "Juhani Junkala",
+      "title": "Retro Game Music Pack \u2014 Level 1",
+      "license": "CC0-1.0",
+      "upstream": "https://opengameart.org/content/5-chiptunes-action",
+      "mirror": "https://github.com/AMAYZING31/game-mayz/blob/fd5f4c1ec652b102b73ae57c2cf70977e7b5e4dd/assets/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Level 1.wav",
+      "gitBlob": "01fc7f83ae6ad4dac014b064c08237f3d7ef9ceb",
+      "sha256": "6f79ae4c6f2b59baa62c46bcd264c9d157f5dca2c30845fabc3c5be4e2b64a43",
+      "sizeBytes": 13098822,
+      "durationSeconds": 74.254,
+      "format": "Original unmodified 44.1 kHz / 16-bit stereo PCM WAV; not converted or upsampled"
+    },
+    {
+      "file": "assets/studio-audio/round-2.wav",
+      "creator": "Juhani Junkala",
+      "title": "Retro Game Music Pack \u2014 Level 2",
+      "license": "CC0-1.0",
+      "upstream": "https://opengameart.org/content/5-chiptunes-action",
+      "mirror": "https://github.com/AMAYZING31/game-mayz/blob/fd5f4c1ec652b102b73ae57c2cf70977e7b5e4dd/assets/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Level 2.wav",
+      "gitBlob": "c0766b4a18c8d1cef02418e055ae330f1c546a83",
+      "sha256": "c782eccc0634db2818feee4b1f01360dd355505df036732359f2bedb7c772758",
+      "sizeBytes": 12841642,
+      "durationSeconds": 72.796,
+      "format": "Original unmodified 44.1 kHz / 16-bit stereo PCM WAV; not converted or upsampled"
+    },
+    {
+      "file": "assets/studio-audio/round-3.wav",
+      "creator": "Juhani Junkala",
+      "title": "Retro Game Music Pack \u2014 Level 3",
+      "license": "CC0-1.0",
+      "upstream": "https://opengameart.org/content/5-chiptunes-action",
+      "mirror": "https://github.com/AMAYZING31/game-mayz/blob/fd5f4c1ec652b102b73ae57c2cf70977e7b5e4dd/assets/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Level 3.wav",
+      "gitBlob": "590955aca84e10243ea489562f703c855e72c762",
+      "sha256": "c30ae8521119deefd0e22224310e45c07ca726c20760dd93e64e02b9b59a8e6c",
+      "sizeBytes": 14446802,
+      "durationSeconds": 81.896,
+      "format": "Original unmodified 44.1 kHz / 16-bit stereo PCM WAV; not converted or upsampled"
+    },
+    {
+      "file": "assets/studio-audio/ending.wav",
+      "creator": "Juhani Junkala",
+      "title": "Retro Game Music Pack \u2014 Ending",
+      "license": "CC0-1.0",
+      "upstream": "https://opengameart.org/content/5-chiptunes-action",
+      "mirror": "https://github.com/AMAYZING31/game-mayz/blob/fd5f4c1ec652b102b73ae57c2cf70977e7b5e4dd/assets/5 Action Chiptunes By Juhani Junkala/Juhani Junkala [Retro Game Music Pack] Ending.wav",
+      "gitBlob": "5160703cc07ae66fa807c3827671bf5df383e2ac",
+      "sha256": "d5ec74e7f90f0b407f68e44ef791b28af30b47e5252414bdb289ae371fc59173",
+      "sizeBytes": 7876878,
+      "durationSeconds": 44.651,
+      "format": "Original unmodified 44.1 kHz / 16-bit stereo PCM WAV; not converted or upsampled"
+    },
+    {
+      "file": "assets/studio-audio/INFO.txt",
+      "creator": "Juhani Junkala",
+      "license": "CC0-1.0",
+      "upstream": "https://opengameart.org/content/5-chiptunes-action",
+      "mirror": "https://github.com/AMAYZING31/game-mayz/blob/fd5f4c1ec652b102b73ae57c2cf70977e7b5e4dd/assets/5 Action Chiptunes By Juhani Junkala/INFO.txt",
+      "gitBlob": "4cbf5ec94b55a6aacf9862861bba5eaa79b8ec89",
+      "sha256": "3f53572dd283cd8adb4985c8de18326f9325c9fd10ac20ae6ddd8841d9f07779"
     }
   ]
 }

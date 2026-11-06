@@ -1,8 +1,14 @@
 name: Android build and emulator tests
 on:
   workflow_dispatch:
+    inputs:
+      verified_run:
+        description: 'Optional successful native run ID: publish its exact APK as a TEST pre-release, not production'
+        required: false
+        default: ''
+        type: string
   push:
-    branches: [arena/fcb06d04-game]
+    branches: ["arena/**"]
     paths: ['android/**', 'web/**', 'tools/build_release.py', 'tools/check_android_size.py', 'tests/test_android_size.py', 'tools/run_android_emulator_tests.py', 'tests/test_android_emulator_runner.py', 'docs/release-assets.json', 'package.json', '.github/workflows/android-build-device.yml']
 permissions:
   contents: read
@@ -11,6 +17,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build:
+    if: ${{ github.event_name != 'workflow_dispatch' || inputs.verified_run == '' }}
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
@@ -135,3 +142,31 @@ jobs:
           retention-days: 14
 # Installs ONLY in a freshly created CI emulator. Never targets a user's phone.
 # No release signing credentials or Play publishing permissions are used.
+
+  publish-verified-preview:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.verified_run != '' }}
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      actions: read
+      checks: read
+    env:
+      GH_TOKEN: ${{ github.token }}
+      VERIFIED_RUN: ${{ inputs.verified_run }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Require successful native build, both emulators and exact source
+        run: python3 tools/publish_verified_preview.py validate --run "$VERIFIED_RUN" --metadata "$RUNNER_TEMP/preview-meta.json"
+      - uses: actions/download-artifact@v4
+        with:
+          name: mobile-apk-preview
+          path: release-preview
+          run-id: ${{ inputs.verified_run }}
+          github-token: ${{ github.token }}
+      - name: Verify exact APK bytes and publish clearly labelled pre-release
+        run: python3 tools/publish_verified_preview.py publish --metadata "$RUNNER_TEMP/preview-meta.json" --directory release-preview

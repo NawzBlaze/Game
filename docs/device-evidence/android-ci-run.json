@@ -1,20 +1,20 @@
 {
-  "recordedDate": "2026-11-05",
-  "version": "0.20.0-rc.1",
-  "versionCode": 21,
+  "recordedDate": "2026-11-06",
+  "version": "1.0.0-rc.3",
+  "versionCode": 102,
   "productTarget": "Android mobile APK; browser tools are internal engine/UI verification only",
   "scope": "CI build, simulated Android framework tests and disposable-emulator instrumentation; NOT physical-phone, original-crash, production-signing or store approval",
   "run": {
     "conclusion": "success",
-    "databaseId": 41988965383,
-    "headSha": "3c8f348e1082ea11319d62aeebaccb59e1481dbb",
+    "databaseId": 42175617339,
+    "headSha": "286ecfe7d22d6df0e8a97ea715f957bef867c8f3",
     "jobs": [
       {
-        "completedAt": "2026-11-05T07:46:48Z",
+        "completedAt": "2026-11-06T06:42:55Z",
         "conclusion": "success",
-        "databaseId": 127116360742,
+        "databaseId": 127753269250,
         "name": "build",
-        "startedAt": "2026-11-05T07:41:12Z",
+        "startedAt": "2026-11-06T06:37:32Z",
         "status": "completed",
         "steps": [
           {
@@ -120,73 +120,14 @@
             "status": "completed"
           }
         ],
-        "url": "https://github.com/NawzBlaze/Game/actions/runs/41988965383/job/127116360742"
+        "url": "https://github.com/NawzBlaze/Game/actions/runs/42175617339/job/127753269250"
       },
       {
-        "completedAt": "2026-11-05T07:46:48Z",
+        "completedAt": "2026-11-06T06:42:55Z",
         "conclusion": "success",
-        "databaseId": 127117082667,
-        "name": "emulator (36)",
-        "startedAt": "2026-11-05T07:43:19Z",
-        "status": "completed",
-        "steps": [
-          {
-            "conclusion": "success",
-            "name": "Set up job",
-            "number": 1,
-            "status": "completed"
-          },
-          {
-            "conclusion": "success",
-            "name": "Run actions/checkout@v5",
-            "number": 2,
-            "status": "completed"
-          },
-          {
-            "conclusion": "success",
-            "name": "Run actions/download-artifact@v4",
-            "number": 3,
-            "status": "completed"
-          },
-          {
-            "conclusion": "success",
-            "name": "Enable emulator hardware acceleration",
-            "number": 4,
-            "status": "completed"
-          },
-          {
-            "conclusion": "success",
-            "name": "Test exact debug candidate in disposable offline emulator",
-            "number": 5,
-            "status": "completed"
-          },
-          {
-            "conclusion": "success",
-            "name": "Run actions/upload-artifact@v4",
-            "number": 6,
-            "status": "completed"
-          },
-          {
-            "conclusion": "success",
-            "name": "Post Run actions/checkout@v5",
-            "number": 12,
-            "status": "completed"
-          },
-          {
-            "conclusion": "success",
-            "name": "Complete job",
-            "number": 13,
-            "status": "completed"
-          }
-        ],
-        "url": "https://github.com/NawzBlaze/Game/actions/runs/41988965383/job/127117082667"
-      },
-      {
-        "completedAt": "2026-11-05T07:46:48Z",
-        "conclusion": "success",
-        "databaseId": 127117082694,
+        "databaseId": 127753841502,
         "name": "emulator (33)",
-        "startedAt": "2026-11-05T07:43:08Z",
+        "startedAt": "2026-11-06T06:39:15Z",
         "status": "completed",
         "steps": [
           {
@@ -238,61 +179,119 @@
             "status": "completed"
           }
         ],
-        "url": "https://github.com/NawzBlaze/Game/actions/runs/41988965383/job/127117082694"
+        "url": "https://github.com/NawzBlaze/Game/actions/runs/42175617339/job/127753841502"
+      },
+      {
+        "completedAt": "2026-11-06T06:42:55Z",
+        "conclusion": "success",
+        "databaseId": 127753841609,
+        "name": "emulator (36)",
+        "startedAt": "2026-11-06T06:39:15Z",
+        "status": "completed",
+        "steps": [
+          {
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/checkout@v5",
+            "number": 2,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/download-artifact@v4",
+            "number": 3,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Enable emulator hardware acceleration",
+            "number": 4,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Test exact debug candidate in disposable offline emulator",
+            "number": 5,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Run actions/upload-artifact@v4",
+            "number": 6,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v5",
+            "number": 12,
+            "status": "completed"
+          },
+          {
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 13,
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/NawzBlaze/Game/actions/runs/42175617339/job/127753841609"
       }
     ],
-    "status": "completed",
-    "url": "https://github.com/NawzBlaze/Game/actions/runs/41988965383"
+    "url": "https://github.com/NawzBlaze/Game/actions/runs/42175617339"
   },
   "previewApk": {
-    "filename": "little-parcel-crew-0.20.0-rc.1-preview.apk",
-    "sha256": "6293f25da2b1c1eab63c7b2d2848932174295cfcdbb292ccfcf729ff612ae7a4",
-    "artifactUrl": "https://github.com/NawzBlaze/Game/actions/runs/41988965383/artifacts/13397058838",
+    "filename": "little-parcel-crew-1.0.0-rc.3-preview.apk",
+    "sha256": "80c96dd7cb7468481cae55a76c18b36d031a8443052259d1bf80e43a45c5d041",
+    "artifactUrl": "https://github.com/NawzBlaze/Game/actions/runs/42175617339/artifacts/13483102904",
     "signing": "Debug/test signing only; clean test device, not production/update approval",
-    "sizeBytes": 1080149
+    "sizeBytes": 53039043
   },
-  "enginePayloadSha256": "cc68151fa7a4fad8562c0c079db5e4bd4a7d17ac71eabbe4955903906a7024af",
-  "engineChecksPassed": 18,
+  "enginePayloadSha256": "173d1c9ece5ec606c28d32118940a38f5c4dcc381ad0b4005d417cbd9e828c1c",
+  "engineChecksPassed": 25,
   "artifacts": [
     {
-      "id": 13397725009,
+      "id": 13483506304,
       "name": "android-unsigned-and-debug-candidates",
-      "sizeBytes": 4549248,
-      "archiveDigest": "sha256:80e11f7e00de5ed00658b861d3673ed76f39ff043ca8bcd966bbca29de537c28",
+      "sizeBytes": 158251557,
+      "archiveDigest": "sha256:0b6b90d03c870d82e0062c65c6b19f70d66c29776f84dd16c9dee4cc67d34e9e",
       "expired": false,
-      "expiresAt": "2026-11-19T07:42:57Z"
+      "expiresAt": "2026-11-20T06:39:03Z"
     },
     {
-      "id": 13397496721,
-      "name": "android-emulator-api-33-evidence",
-      "sizeBytes": 943666,
-      "archiveDigest": "sha256:c36d1703134575abdee7645bced67f30d80a5f34bd16e318f3228e423b8654f4",
-      "expired": false,
-      "expiresAt": "2026-11-19T07:46:45Z"
-    },
-    {
-      "id": 13397219246,
-      "name": "android-emulator-api-36-evidence",
-      "sizeBytes": 1189000,
-      "archiveDigest": "sha256:4166b1fb617094d0f6f502709e3548c81643b26c37c421c6e399b0e35e4342e1",
-      "expired": false,
-      "expiresAt": "2026-11-19T07:46:11Z"
-    },
-    {
-      "id": 13397058838,
-      "name": "mobile-apk-preview",
-      "sizeBytes": 980716,
-      "archiveDigest": "sha256:c6384012a8fce59c4d0edc30302207f5f0578dd7d17b991b6d7642ac6dc8e81f",
-      "expired": false,
-      "expiresAt": "2026-11-19T07:43:00Z"
-    },
-    {
-      "id": 13396944039,
+      "id": 13483108053,
       "name": "android-build-reports",
-      "sizeBytes": 41345,
-      "archiveDigest": "sha256:6edfae01e768a8cb0627254d490007bafcfa9c6c5067574d5bf1d2402bc1f4fb",
+      "sizeBytes": 41568,
+      "archiveDigest": "sha256:1cf66f1424dae20002536ba419c9905f0c917e25ddbd29b05918eae1fb7d0958",
       "expired": false,
-      "expiresAt": "2026-11-19T07:43:02Z"
+      "expiresAt": "2026-11-20T06:39:09Z"
+    },
+    {
+      "id": 13483102904,
+      "name": "mobile-apk-preview",
+      "sizeBytes": 52208470,
+      "archiveDigest": "sha256:647476d5dffe16aca78f4bc9c9ecc5eddcf0745da9fc1b871e9cb40e060b7604",
+      "expired": false,
+      "expiresAt": "2026-11-20T06:39:07Z"
+    },
+    {
+      "id": 13482819078,
+      "name": "android-emulator-api-36-evidence",
+      "sizeBytes": 1264678,
+      "archiveDigest": "sha256:0897ddba0859dbda62e597965abc41c3732a0bd3da1f4342a341d5c2d36a1629",
+      "expired": false,
+      "expiresAt": "2026-11-20T06:42:51Z"
+    },
+    {
+      "id": 13482644375,
+      "name": "android-emulator-api-33-evidence",
+      "sizeBytes": 1087024,
+      "archiveDigest": "sha256:df3db6c3aa88dd6b063efa4203b8a7a0367e4b6926b897d05b1073a451d3d81f",
+      "expired": false,
+      "expiresAt": "2026-11-20T06:42:41Z"
     }
   ],
   "verification": {
@@ -308,7 +307,7 @@
     ],
     "instrumentationTestsPerEmulator": 2,
     "tests": [
-      "Offline WebView startup, visible home/pause actions, real system touchscreen events and movement, settings/hardware Back, progress after Activity recreation",
+      "Offline WebView startup, visible home/pause actions, real system touchscreen events and movement, settings/hardware Back, progress after Activity recreation; native progress panel, capability availability and hardware Back close",
       "Deliberate WebView renderer crash, retry and retained storage origin"
     ],
     "screenshotsPerEmulator": [
@@ -322,7 +321,7 @@
     "physicalDeviceTested": false,
     "originalAndroid13CrashDiagnosed": false,
     "localArtifactCopy": "Not available: GitHub artifact blob storage is outside sandbox download access; use the artifact URL.",
-    "androidToolingHostTestsPassed": 13,
+    "androidToolingHostTestsPassed": 14,
     "finishedArtifactSizeGate": {
       "passed": true,
       "maximumBytesPerFile": 100000000,
@@ -330,7 +329,25 @@
       "gradleTasks": [
         "verifyDebugSize",
         "verifyReleaseSize"
-      ]
-    }
-  }
+      ],
+      "minimumBytesPerFile": 20000000
+    },
+    "expressCampaignScope": "All 24 three-star Express clears and record persistence verified through engine physics tests, not a claim of 24 full-route phone playthroughs.",
+    "nativeDocuments": {
+      "implemented": true,
+      "uiAndHardwareBackTestedOnEmulator": true,
+      "actualProviderRoundTripVerified": false,
+      "scope": "Browser bridge mocks, native JVM bounded-stream/intent tests, and real WebView backup UI smoke. Actual system-provider export/import and physical-phone review remain open."
+    },
+    "productionGateSafetyTestsPassed": 6,
+    "apkIdentityMockedHostTestsPassed": 4
+  },
+  "contentBudget": {
+    "requestedMinimumBytes": 20000000,
+    "preferredApproximateBytes": 50000000,
+    "maximumBytes": 100000000,
+    "minimumMet": true,
+    "status": "Verified rc.3 preview APK: 53,039,043 bytes; no production approval"
+  },
+  "workingTreeWarning": "Native evidence is exact-source-bound to run.headSha (286ecfe). Subsequent gate-test/documentation changes do not alter the packaged runtime, but must not be relabelled as a native rebuild."
 }

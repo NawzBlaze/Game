@@ -1,6 +1,13 @@
 package com.onestepdelivery.game;
 
 import android.app.Activity;
+import android.content.Intent;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.IOException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import org.json.JSONObject;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.Insets;
@@ -51,6 +58,11 @@ public class MainActivity extends Activity {
         try { operation.run(); }
         catch (IllegalStateException e) { Log.e(DIAG_TAG, "WebView unavailable during " + stage, e); }
     }
+    private static final int EXPORT_PROGRESS = 7201, IMPORT_PROGRESS = 7202;
+    private final ExecutorService progressIo = Executors.newSingleThreadExecutor();
+    private boolean progressBusy;
+    private String pendingExport;
+    private WebView progressOrigin;
     private FrameLayout root;
     private WebView webView;
     private int safeLeft, safeTop, safeRight, safeBottom;
@@ -73,6 +85,7 @@ public class MainActivity extends Activity {
 
     private void openGame() {
         logStage("openGame.begin");
+        progressBusy = false; pendingExport = null; progressOrigin = null;
         root.removeAllViews();
         try {
             WebView view = new WebView(this);
@@ -94,6 +107,7 @@ public class MainActivity extends Activity {
                 }
             });
             view.addJavascriptInterface(new OrientationBridge(), "NativeOrientation");
+            view.addJavascriptInterface(new ProgressBridge(), "NativeProgress");
             view.setWebViewClient(new WebViewClient() {
                 @Override public boolean shouldOverrideUrlLoading(WebView v, WebResourceRequest request) {
                     return !isLocalAsset(request.getUrl());
@@ -174,6 +188,123 @@ public class MainActivity extends Activity {
             if (!"classic".equals(mode) && !"adventure".equals(mode)) return;
             runOnUiThread(() -> setRequestedOrientation("classic".equals(mode)
                 ? ActivityInfo.SCREEN_ORIENTATION_PORTRAIT : ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE));
+        }
+    }
+
+    /** SAF grants access to one user-selected document, never broad storage access. */
+    private final class ProgressBridge {
+        @JavascriptInterface public void exportBackup(String text) {
+            // Reject huge bridge input before retaining it in an Activity/UI closure.
+            if (text == null || text.length() > ProgressFiles.MAX_BYTES) {
+                runOnUiThread(() -> notifyProgress(webView, "error", "Backup exceeds the 2 MB limit."));
+                return;
+            }
+            runOnUiThread(() -> requestProgressExport(text));
+        }
+        @JavascriptInterface public void importBackup() {
+            runOnUiThread(() -> requestProgressImport());
+        }
+    }
+
+    private boolean beginProgress() {
+        if (webView == null || !isLocalAsset(Uri.parse(webView.getUrl() == null ? "" : webView.getUrl()))) return false;
+        if (progressBusy) {
+            notifyProgress(webView, "error", "A document operation is already open. Finish or cancel it first.");
+            return false;
+        }
+        progressBusy = true;
+        progressOrigin = webView;
+        return true;
+    }
+
+    void requestProgressExport(String text) {
+        if (!beginProgress()) return;
+        try {
+            ProgressFiles.encode(text); // Check UTF-8 bytes, not just character count.
+            pendingExport = text;
+            Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            intent.setType("application/json");
+            intent.putExtra(Intent.EXTRA_TITLE, "little-parcel-crew-progress.json");
+            startActivityForResult(intent, EXPORT_PROGRESS);
+        } catch (IOException | RuntimeException error) {
+            finishProgress("error", "Could not open a backup destination. Existing progress is unchanged.");
+        }
+    }
+
+    void requestProgressImport() {
+        if (!beginProgress()) return;
+        try {
+            Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            intent.setType("*/*");
+            intent.putExtra(Intent.EXTRA_MIME_TYPES, new String[]{"application/json", "text/plain", "application/octet-stream"});
+            startActivityForResult(intent, IMPORT_PROGRESS);
+        } catch (RuntimeException error) {
+            finishProgress("error", "Could not open the document picker. Existing progress is unchanged.");
+        }
+    }
+
+    @Override protected void onActivityResult(int request, int result, Intent data) {
+        super.onActivityResult(request, result, data);
+        if (request != EXPORT_PROGRESS && request != IMPORT_PROGRESS) return;
+        // A recreated Activity deliberately discards an unfinished operation. No restore is automatic.
+        if (!progressBusy || progressOrigin != webView || isFinishing()) {
+            progressBusy = false; pendingExport = null; progressOrigin = null; return;
+        }
+        if (result != RESULT_OK || data == null || data.getData() == null) {
+            finishProgress("cancel", "File selection cancelled. Existing progress is unchanged.");
+            return;
+        }
+        Uri uri = data.getData();
+        if (!"content".equals(uri.getScheme())) {
+            finishProgress("error", "Choose a document from the system file picker.");
+            return;
+        }
+        final String exportText = pendingExport;
+        final WebView origin = progressOrigin;
+        progressIo.execute(() -> {
+            String kind, text;
+            try {
+                if (request == EXPORT_PROGRESS) {
+                    try (OutputStream output = getContentResolver().openOutputStream(uri, "wt")) {
+                        ProgressFiles.write(output, exportText);
+                    }
+                    kind = "export"; text = "Backup saved to your selected document. Keep it safe before changing devices.";
+                } else {
+                    try (InputStream input = getContentResolver().openInputStream(uri)) {
+                        text = ProgressFiles.read(input);
+                    }
+                    kind = "import";
+                }
+            } catch (IOException | RuntimeException error) {
+                kind = "error";
+                text = request == EXPORT_PROGRESS
+                    ? "Backup could not be written. Do not rely on that file. Existing progress is unchanged."
+                    : "Could not read this backup. Choose a UTF-8 JSON file smaller than 2 MB. Existing progress is unchanged.";
+            }
+            final String finalKind = kind, finalText = text;
+            runOnUiThread(() -> {
+                if (origin == webView && !isFinishing() && !isDestroyed()) finishProgress(finalKind, finalText);
+            });
+        });
+    }
+
+    private void finishProgress(String kind, String text) {
+        WebView origin = progressOrigin;
+        progressBusy = false; pendingExport = null; progressOrigin = null;
+        notifyProgress(origin, kind, text);
+    }
+
+    private void notifyProgress(WebView origin, String kind, String text) {
+        if (origin == null || origin != webView || isFinishing() || isDestroyed()) return;
+        try {
+            JSONObject detail = new JSONObject().put("kind", kind).put("text", text);
+            // JSON-encode file content: never interpolate it as executable JavaScript/HTML.
+            String script = "window.dispatchEvent(new CustomEvent('parcel-native-progress',{detail:" + detail + "}));";
+            safeWebViewOperation("progress document result", () -> origin.evaluateJavascript(script, null));
+        } catch (org.json.JSONException error) {
+            Log.w(DIAG_TAG, "Could not deliver document result"); // Never log backup content/URI.
         }
     }
 
@@ -261,6 +392,8 @@ public class MainActivity extends Activity {
     }
     @Override protected void onDestroy() {
         logStage("onDestroy");
+        progressIo.shutdownNow();
+        pendingExport = null; progressOrigin = null;
         WebView current=webView; webView=null;
         if(current != null) { root.removeView(current); current.destroy(); }
         super.onDestroy();

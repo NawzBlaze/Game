@@ -1,6 +1,7 @@
 /* Local-only save validation and recovery. Never silently discard damaged originals. */
 (() => {
   'use strict';
+  const owns = (value, key) => Object.prototype.hasOwnProperty.call(value, key);
   const keys = ['delivery-adventure-v1','one-step-delivery-v2'];
   const blocked = new Set();
   const notices = new Set();
@@ -21,11 +22,15 @@
     if (!keys.includes(key) || !object(value)) throw new Error('Invalid save object');
     const adventure = key === keys[0], out = {};
     out.unlocked = Number.isInteger(value.unlocked) ? Math.max(1, Math.min(adventure ? 24 : 48,value.unlocked)) : 1;
-    for (const name of adventure ? ['sound','seen','autoRun','effects'] : ['sound','introSeen','dogIntroSeen','motion','lookAhead']) {
+    for (const name of adventure ? ['sound','seen','autoRun','effects','districtMusic','fullSoundtrack','express'] : ['sound','introSeen','dogIntroSeen','motion','lookAhead']) {
       if (typeof value[name] === 'boolean') out[name] = value[name];
     }
     if (adventure) {
+      for(const name of ['musicVolume','effectsVolume']){if(Number.isFinite(value[name]))out[name]=Math.max(0,Math.min(100,Math.round(value[name])))}
+      if(['none','wind','fragile','bouncy'].includes(value.twist))out.twist=value.twist;
+      out.twistBest={};for(const twist of ['wind','fragile','bouncy'])out.twistBest[twist]=record(value.twistBest?.[twist],24,3);
       out.best = record(value.best,24,3);
+      out.expressBest = record(value.expressBest,24,3);
       out.bonus = record(value.bonus,5,3,false,true);
       out.clean = record(value.clean,5,1,true,true);
       out.secrets = record(value.secrets,5,1,true,true);
@@ -66,7 +71,7 @@
         if (raw.length>1000000) throw new Error('Oversized save');
         const parsed = JSON.parse(raw), clean = validate(key,parsed);
         // Unknown fields are ignored, but preserve the raw input if validation repairs it.
-        if (!object(parsed) || Object.keys(clean).some(k => Object.hasOwn(parsed,k) && JSON.stringify(clean[k])!==JSON.stringify(parsed[k]))) preserve(key,raw);
+        if (!object(parsed) || Object.keys(clean).some(k => owns(parsed,k) && JSON.stringify(clean[k])!==JSON.stringify(parsed[k]))) preserve(key,raw);
         return {...defaults,...clean};
       } catch { preserve(key,raw); return {...defaults}; }
     } catch {
@@ -93,7 +98,7 @@
     const backup=JSON.parse(text);
     if(!object(backup)||backup.format!=='little-parcel-crew-backup'||backup.version!==1||!object(backup.saves)) throw new Error('This is not a supported Little Parcel Crew backup.');
     const saves={};
-    for(const key of keys) if(Object.hasOwn(backup.saves,key)) saves[key]=validate(key,backup.saves[key]);
+    for(const key of keys) if(owns(backup.saves,key)) saves[key]=validate(key,backup.saves[key]);
     if(!Object.keys(saves).length)throw new Error('This backup contains no game progress.');
     return saves;
   }
@@ -101,7 +106,7 @@
     const old = {};
     // Validate every record before any write; preserve existing progress first.
     const clean = {};
-    for(const key of keys)if(Object.hasOwn(saves,key))clean[key]=validate(key,saves[key]);
+    for(const key of keys)if(owns(saves,key))clean[key]=validate(key,saves[key]);
     for(const key of Object.keys(clean))old[key]=localStorage.getItem(key);
     localStorage.setItem('lpc-before-restore',JSON.stringify(snapshot()));
     try { for(const key of Object.keys(clean))localStorage.setItem(key,JSON.stringify(clean[key])); }

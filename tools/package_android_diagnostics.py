@@ -14,6 +14,8 @@ files={
     'collect_android_evidence.py':(root/'tools/collect_android_evidence.py').read_bytes(),
     'Collect-LPC-Evidence.ps1':(root/'tools/Collect-LPC-Evidence.ps1').read_bytes(),
     'Windows-device-evidence-guide.md':(root/'docs/device-evidence/Windows-device-evidence-guide.md').read_bytes(),
+    'inspect_apk_identity.py':(root/'tools/inspect_apk_identity.py').read_bytes(),
+    'APK_IDENTITY.md':(root/'docs/device-evidence/APK_IDENTITY.md').read_bytes(),
     'SUMMARY-TO-SHARE.txt':collector.SHARE_TEMPLATE.encode('utf-8'),
 }
 files['CHECKSUMS.txt']=''.join(hashlib.sha256(data).hexdigest()+'  '+name+'\n' for name,data in sorted(files.items())).encode()
