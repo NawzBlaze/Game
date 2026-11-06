@@ -81,3 +81,7 @@ If there is no crash output, say so. Collection is not diagnosis, and a renderer
 ## Verification limits
 
 The Python collector has six host-only mocked safety/behaviour tests: explicit authorized-device selection, existing-log-first ordering, read-only ADB command scope, capture-error recording, interrupt cleanup and refusal to overwrite output. These passed in Linux, without a real ADB executable, Windows computer or phone. The PowerShell collector is inherited; its prior fake-ADB checks are described in its guide and were not rerun here. Neither result establishes Android reliability or a crash fix.
+
+## Optional local APK identity inspection (no phone needed)
+
+The kit also includes `inspect_apk_identity.py` and `APK_IDENTITY.md`. If you already have a local old/test APK, this separate helper uses official SDK `apksigner`/`aapt2` to report public package/version/certificate fingerprints without installing it or connecting to a phone. The original collector above is unchanged and still does not copy APKs or inspect certificates. Follow the identity guide; a preliminary match never proves update compatibility. Do not upload APKs, keys or whole diagnostic directories.

@@ -1,18 +1,18 @@
 {
   "scope": "Complete file inventory and listed machine checks, NOT complete manual code/visual/audio/phone review",
   "version": "1.0.0-rc.3",
-  "sourceHead": "286ecfe7d22d6df0e8a97ea715f957bef867c8f3",
+  "sourceHead": "01da90f1725029b28c28710f5b1e80912b476124",
   "roles": {
-    "documentation-or-project-config": 44,
+    "documentation-or-project-config": 46,
     "android-source-or-build-config": 11,
-    "test-or-test-evidence": 122,
-    "tooling-review-required": 41,
+    "test-or-test-evidence": 123,
+    "tooling-review-required": 42,
     "excluded-web-source": 3,
     "runtime-code": 18,
     "excluded-legacy-asset": 335,
     "shipped-asset": 161
   },
-  "fileCount": 735,
+  "fileCount": 739,
   "shippedAssetCount": 161,
   "shippedAssetBytes": 53012369,
   "excludedLegacyBytes": 19123328,
@@ -132,8 +132,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 9104,
-      "sha256": "ffdc507089e3b3197aec2da49d4bbb4b1a5d4240da2ce394999884ea3ff1811a",
+      "bytes": 10175,
+      "sha256": "48c4a3bcc152daa52fa6297f05fe10934943ae300416bddca3ec36e7349548fa",
       "coverage": "inventory/hash only; no blanket manual approval",
       "role": "documentation-or-project-config"
     },
@@ -286,8 +286,8 @@
     },
     {
       "path": "docs/ANDROID_BUILD_HANDOFF.md",
-      "bytes": 6543,
-      "sha256": "aa6aada34e8ee30287da113e8f337c2549a4522a7c6ce5fadb78c18ec66506c9",
+      "bytes": 3752,
+      "sha256": "f18b5ec80b8a732f40a09baa37053b5b46df4c1735b228a5110b0b582d0c4e53",
       "coverage": "inventory/hash only; no blanket manual approval",
       "role": "documentation-or-project-config"
     },
@@ -383,9 +383,16 @@
       "role": "documentation-or-project-config"
     },
     {
+      "path": "docs/device-evidence/APK_IDENTITY.md",
+      "bytes": 4016,
+      "sha256": "a369fc725968ccfd929eb4ab56c7079844cda7e710d55b1175e83b76c476840d",
+      "coverage": "inventory/hash only; no blanket manual approval",
+      "role": "documentation-or-project-config"
+    },
+    {
       "path": "docs/device-evidence/QUICK_START.md",
-      "bytes": 5335,
-      "sha256": "fecc1523d4a28af930c7db1682e55178e8e778e39908e0750236afcad76d21ba",
+      "bytes": 5911,
+      "sha256": "ceea85131a957dd34ac06fc200dca2c22d1cd84ca9f4d39f1735c2a7b264f2b5",
       "coverage": "inventory/hash only; no blanket manual approval",
       "role": "documentation-or-project-config"
     },
@@ -426,8 +433,8 @@
     },
     {
       "path": "docs/device-evidence/android-ci-run.json",
-      "bytes": 12071,
-      "sha256": "2813f966893190b7c8844bb1e6bfebd645f5311ffbea015f6fbc18e41b0824d5",
+      "bytes": 12114,
+      "sha256": "b2581efe19c55bb0d9e440bde97d6b12c8805e977b515bdb6cd5a1ab19f83e4b",
       "coverage": "inventory/hash only; no blanket manual approval",
       "role": "documentation-or-project-config"
     },
@@ -470,6 +477,13 @@
       "path": "docs/release-assets.json",
       "bytes": 73969,
       "sha256": "6d174116ad5741b3e6df66402eb187d88d4119ea040d2b7015f05b915b6fd247",
+      "coverage": "inventory/hash only; no blanket manual approval",
+      "role": "documentation-or-project-config"
+    },
+    {
+      "path": "docs/release-owner-status.json",
+      "bytes": 452,
+      "sha256": "cb89e48fbdb6785b34d57855b85d5a43fe148df94faa7b9b4619031a43dd6f1d",
       "coverage": "inventory/hash only; no blanket manual approval",
       "role": "documentation-or-project-config"
     },
@@ -1114,8 +1128,8 @@
     },
     {
       "path": "tests/release-gate.js",
-      "bytes": 470,
-      "sha256": "abd17d7622ce8dd6583f7fbae355bef0d1debdc2eaae59a2b8b1b9ea729b66dc",
+      "bytes": 675,
+      "sha256": "d562fc6ad0987ac3669050b95640cb8654e94d66f820d18e844a7d3bfd6abf81",
       "coverage": "inventory/hash only; no blanket manual approval",
       "role": "test-or-test-evidence"
     },
@@ -1291,6 +1305,14 @@
       "pythonSyntax": "valid"
     },
     {
+      "path": "tests/test_apk_identity.py",
+      "bytes": 3913,
+      "sha256": "54baf70fb737ac86db90b8624e7ee92ad29e107fe907777dff43e8880e0f382d",
+      "coverage": "inventory/hash only; no blanket manual approval",
+      "role": "test-or-test-evidence",
+      "pythonSyntax": "valid"
+    },
+    {
       "path": "tests/test_release_gate.py",
       "bytes": 6080,
       "sha256": "538ff6e03441e525e2cf764290de9c9eefbd43d18c4e7134b71e0f898d3ed0ea",
@@ -1435,6 +1457,14 @@
       "pythonSyntax": "valid"
     },
     {
+      "path": "tools/inspect_apk_identity.py",
+      "bytes": 4007,
+      "sha256": "958b264e9e42a2f4be55936914a98fa27149855e7b203a2aba9eafcda2b2d453",
+      "coverage": "inventory/hash only; no blanket manual approval",
+      "role": "tooling-review-required",
+      "pythonSyntax": "valid"
+    },
+    {
       "path": "tools/make_launcher.py",
       "bytes": 1167,
       "sha256": "c30d06cbf5bdc0237d4ff3898f4e0be296acb3e963f0ab77d8293cb620184269",
@@ -1452,8 +1482,8 @@
     },
     {
       "path": "tools/package_android_diagnostics.py",
-      "bytes": 1803,
-      "sha256": "7f55c471ab96a3672fcb67d18bfa7419fd510be3f391831fc2a0edabf26bdbbb",
+      "bytes": 1968,
+      "sha256": "95f5e69b5d6fdd06924882a783fcd66b58eea8b057e487c214174bb44ac0e74d",
       "coverage": "inventory/hash only; no blanket manual approval",
       "role": "tooling-review-required",
       "pythonSyntax": "valid"

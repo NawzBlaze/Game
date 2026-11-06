@@ -67,3 +67,11 @@ These are explicit release gates, not excuses to skip implementation. This pass 
 - Final QA captures: [small-landscape route book](rc3-screens/568-route-book.png), [landscape route book](rc3-screens/844-route-book.png), [backup panel](rc3-screens/568-progress.png). These are browser/native-bridge-mock captures, not physical-phone evidence.
 
 The remaining blockers need real owner/device input, especially first-release-versus-update signing identity. No public release, merge, production approval or store submission was performed.
+
+## Owner-input checkpoint and fourth safe follow-up
+
+The owner answered that signing history is uncertain (possibly only an old/test APK) and phone testing is **not available now**. This is recorded in `docs/release-owner-status.json`; no phone test or production approval is inferred. No old APK was present in this checkout and no GitHub Release records were listed. Neither observation proves that the app was never distributed elsewhere.
+
+Added `tools/inspect_apk_identity.py`: read-only official-SDK signature/badging inspection and optional preliminary old/candidate comparison. It does not connect to a phone, install an APK, access private keys or include local paths in its JSON receipt. Even a matching identity deliberately never claims a proven compatible upgrade. Four mocked host tests pass and are integrated into the existing release-gate verification suite. The public diagnostics kit now includes this helper and its guide; it never bundles private device output or APKs.
+
+Next safe owner action is described in [APK identity guide](../device-evidence/APK_IDENTITY.md). The lack of a test phone/signing history is an actual external blocker, not something another automated loop can mark passed. Existing art-direction/human-review findings also remain open; no new cosmetic replacement or public release is falsely claimed.

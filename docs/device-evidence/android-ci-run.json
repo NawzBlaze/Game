@@ -339,7 +339,8 @@
       "actualProviderRoundTripVerified": false,
       "scope": "Browser bridge mocks, native JVM bounded-stream/intent tests, and real WebView backup UI smoke. Actual system-provider export/import and physical-phone review remain open."
     },
-    "productionGateSafetyTestsPassed": 6
+    "productionGateSafetyTestsPassed": 6,
+    "apkIdentityMockedHostTestsPassed": 4
   },
   "contentBudget": {
     "requestedMinimumBytes": 20000000,
