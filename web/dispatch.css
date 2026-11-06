@@ -321,3 +321,33 @@ html,body{background:#edf7fb;color:var(--ink);overscroll-behavior:none}
 #advApp .chapter-presentation>img{width:112px;height:84px;object-fit:cover;object-position:50% 75%;flex:none}
 #advApp .chapter-presentation .chapter-story{margin:0}
 @media(max-width:400px){#advApp .chapter-presentation{flex-direction:column;align-items:stretch}#advApp .chapter-presentation>img{width:100%;height:88px}}
+
+/* Route controls and actual deliveries share the first landscape viewport.
+   Chapter prose remains available without pushing every route below the fold. */
+#advApp .route-book-controls>p{font-size:13px;line-height:1.5;color:var(--muted)}
+#advApp details.chapter-presentation{display:block;padding:0}
+#advApp .chapter-presentation>summary{min-height:44px;display:list-item;padding:12px 14px;cursor:pointer;font-size:13px;font-weight:900;color:var(--ink)}
+#advApp .chapter-presentation-content{display:flex;align-items:center;gap:14px;padding:0 14px 14px}
+#advApp .chapter-presentation-content>img{width:112px;height:84px;object-fit:cover;object-position:50% 75%;flex:none}
+#advApp .chapter-presentation-content .chapter-story{margin:0}
+@media(orientation:landscape) and (max-height:480px){
+ #advApp #advMap{display:grid;grid-template-columns:minmax(200px,30%) minmax(0,1fr);column-gap:18px;align-content:start}
+ #advApp #advMap>.adv-top{grid-column:1/-1;margin-bottom:10px}
+ #advApp #advMap .route-book-controls{min-width:0}
+ #advApp #advMap .route-book-controls h2{font-size:23px;margin-top:0}
+ #advApp #advMap .dispatch-goal{flex-wrap:wrap;margin:12px 0;padding:10px;gap:8px}
+ #advApp #advMap .dispatch-goal>img{width:30px;height:30px}
+ #advApp #advMap .dispatch-goal h3{font-size:16px}
+ #advApp #advMap .dispatch-goal p{font-size:12px}
+ #advApp #advMap .dispatch-goal button{width:100%}
+ #advApp #advMap .chapter-nav{margin:12px 0 8px;gap:6px}
+ #advApp #advMap .chapter-nav button{min-width:76px;min-height:44px}
+ #advApp #advMap .route-filters{gap:6px}
+ #advApp #advMap .route-filters button{flex:1;padding:4px;font-size:11px}
+ #advApp #advMap #advLevels{min-width:0}
+ #advApp #advMap .adv-district:first-child{margin-top:0}
+ #advApp #advMap .adv-map-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #advApp #advMap .chapter-presentation-content{flex-direction:column;align-items:stretch}
+ #advApp #advMap .chapter-presentation-content>img{width:100%;height:70px}
+}
+@media(max-width:400px){#advApp .chapter-presentation-content{flex-direction:column;align-items:stretch}#advApp .chapter-presentation-content>img{width:100%;height:84px}}

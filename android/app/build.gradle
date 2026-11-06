@@ -27,8 +27,8 @@ android {
         applicationId 'com.onestepdelivery.game'
         minSdk 23
         targetSdk 36
-        versionCode 101
-        versionName '1.0.0-rc.2'
+        versionCode 102
+        versionName '1.0.0-rc.3'
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     sourceSets { main { assets.srcDirs = ['../../dist/web'] } }

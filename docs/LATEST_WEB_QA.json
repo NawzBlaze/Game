@@ -1,76 +1,83 @@
 {
-  "version": "1.0.0-rc.2",
+  "version": "1.0.0-rc.3",
   "scope": "Automated web checks only; no device/signing/human approval",
-  "artifactSha256": "6cd72ed3a60dc8520e2e9760f2024b7b092e1e66f76e731a1e9b432567864e95",
+  "artifactSha256": "2ebb51c0084017bf1fe3d00c40d49c33a23de141301aba50fcb92923f3cd8166",
   "passed": true,
   "checks": [
     {
       "name": "Lint",
       "passed": true,
-      "durationMs": 1024,
+      "durationMs": 1009,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "Build allowlisted RC",
       "passed": true,
-      "durationMs": 2464,
+      "durationMs": 2426,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "save-store",
       "passed": true,
-      "durationMs": 42,
+      "durationMs": 39,
+      "exitCode": 0,
+      "error": null
+    },
+    {
+      "name": "native-progress",
+      "passed": true,
+      "durationMs": 3442,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "test",
       "passed": true,
-      "durationMs": 3004,
+      "durationMs": 2652,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "full_campaign",
       "passed": true,
-      "durationMs": 18469,
+      "durationMs": 17963,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "startup",
       "passed": true,
-      "durationMs": 1509,
+      "durationMs": 1111,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "adventure",
       "passed": true,
-      "durationMs": 6878,
+      "durationMs": 5548,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "all-stars",
       "passed": true,
-      "durationMs": 6071,
+      "durationMs": 4792,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "special-deliveries",
       "passed": true,
-      "durationMs": 3520,
+      "durationMs": 2810,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "parcel-mechanics",
       "passed": true,
-      "durationMs": 1062,
+      "durationMs": 785,
       "exitCode": 0,
       "error": null
     },
@@ -84,84 +91,84 @@
     {
       "name": "offline-storage",
       "passed": true,
-      "durationMs": 3381,
+      "durationMs": 2823,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "audio-lifecycle",
       "passed": true,
-      "durationMs": 1473,
+      "durationMs": 1431,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "audio-decode",
       "passed": true,
-      "durationMs": 1111,
+      "durationMs": 1016,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "route-experience",
       "passed": true,
-      "durationMs": 2125,
+      "durationMs": 1570,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "courier-mastery",
       "passed": true,
-      "durationMs": 2847,
+      "durationMs": 2130,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "campaign-edition",
       "passed": true,
-      "durationMs": 4568,
+      "durationMs": 2585,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "studio-soundtrack",
       "passed": true,
-      "durationMs": 2397,
+      "durationMs": 1853,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "express-campaign",
       "passed": true,
-      "durationMs": 6591,
+      "durationMs": 5711,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "landscape",
       "passed": true,
-      "durationMs": 6269,
+      "durationMs": 4417,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "presentation",
       "passed": true,
-      "durationMs": 6032,
+      "durationMs": 4977,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "mobile-ui",
       "passed": true,
-      "durationMs": 5598,
+      "durationMs": 4157,
       "exitCode": 0,
       "error": null
     },
     {
       "name": "release",
       "passed": true,
-      "durationMs": 43063,
+      "durationMs": 36790,
       "exitCode": 0,
       "error": null
     }
