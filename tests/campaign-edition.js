@@ -29,8 +29,9 @@ for(const asset of JSON.parse(fs.readFileSync('docs/v1-background-assets.json'))
    const c=document.createElement('canvas');c.width=720;c.height=400;const ctx=c.getContext('2d'),original=ctx.drawImage,seen=[];
    ctx.drawImage=function(image,...args){seen.push(image.src.split('/').pop());return original.call(this,image,...args)};
    const state={W:720,H:400,G:310,index:4,level:{...__ADV_TEST__.levels[4],springs:[100]},camera:0,p:{x:55,y:256,w:30,h:54,vx:0,ground:true,face:1},clock:.3,save:{effects:true,courier:'pip'},dogs:[],stamps:[],movers:[],bridgeActive:true,postGateOpen:true,checkpoint:200,hasParcel:false,midDelivered:false,parcelSpawnX:180,parcelBounce:0,ending:0,invulnerable:0,buddyMet:false,secretFound:false,reducedMotion:false,springPulse:{x:100,time:.2}};
-   ParcelRenderer.draw(ctx,state);const moving=seen.slice();seen.length=0;ParcelRenderer.draw(ctx,{...state,reducedMotion:true});return {moving,reduced:seen};
+   ParcelRenderer.draw(ctx,state);const moving=seen.slice();seen.length=0;ParcelRenderer.draw(ctx,{...state,reducedMotion:true});const reduced=seen.slice();seen.length=0;const walking={...state,p:{...state.p,vx:100},save:{...state.save,effects:false}};ParcelRenderer.draw(ctx,walking);const extrasOff=seen.slice();seen.length=0;ParcelRenderer.draw(ctx,{...walking,reducedMotion:true});return {moving,reduced,extrasOff,reducedWalk:seen};
   });
+  assert(animations.extrasOff.some(n=>/^character_green_walk_[ab]\.png$/.test(n)),'extra-effects off retains functional walking');assert(animations.reducedWalk.includes('character_green_idle.png'),'reduced motion suppresses decorative walk cycling');
   assert(animations.moving.includes('flag_green_b.png'));assert(animations.moving.includes('spring_out.png'));assert(animations.moving.includes('background_clouds.png'));
   assert(!animations.reduced.includes('flag_green_b.png'));assert(!animations.reduced.includes('spring_out.png'));
   await page.click('#advGame [data-action=pause]');await page.click('#advCard [data-action=settings]');await page.click('[data-action=express]');

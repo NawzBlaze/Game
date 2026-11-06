@@ -2,7 +2,7 @@
 (() => {
   'use strict';
   const districts=[['Garden District',1,4],['Market District',5,8],['Golden District',9,12],['Harbour District',13,18],['Hilltop District',19,24]];
-  const rating=(map,key)=>Number.isInteger(map?.[key])?Math.max(0,Math.min(3,map[key])):0;
+  const rating=(map,key)=>Number.isInteger(map?.[key])&&map[key]>=0&&map[key]<=3?map[key]:0;
   function summary(save={}) {
     const completed=Array.from({length:24},(_,i)=>rating(save.best,i+1)).filter(n=>n>0).length;
     const stars=Array.from({length:24},(_,i)=>rating(save.best,i+1)).reduce((a,b)=>a+b,0);

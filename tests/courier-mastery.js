@@ -2,6 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('nod
 const {chromium}=require('playwright');
 const context={window:{}};vm.runInNewContext(fs.readFileSync('web/courier-mastery.js','utf8'),context);const mastery=context.window.ParcelMastery;
 assert.equal(mastery.summary().earned,0);
+for(const invalid of [99,-1,3.5,'3',NaN,Infinity]){const bad=mastery.summary({best:{1:invalid},bonus:{0:invalid},clean:{0:true},secrets:{0:true}});assert.equal(bad.stars,0);assert.equal(bad.completed,0);assert.equal(bad.specials,0);assert.equal(bad.earned,0);}
 assert.equal(mastery.nextRoute().index,0);
 assert.notEqual(mastery.nextRoute({unlocked:1,best:{1:3}}).kind,'complete','partial unlocked progress is not a perfect campaign');
 assert.equal(mastery.summary({best:{1:3,99:3,2:NaN}}).stars,3,'only genuine bounded route ratings count');
@@ -21,11 +22,11 @@ assert.equal(mastery.nextRoute({unlocked:24,best:{...full.best,12:2}}).index,11)
    assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
    await p.evaluate(()=>gameBack());await p.click('#advHome [data-action=map]');assert.equal(await p.locator('#advDispatchGoal [data-level="4"]').count(),1);await p.click('#advDispatchGoal button');
    assert.equal(await p.evaluate(()=>__ADV_TEST__.get().index),4);
-   await p.click('#advGame [data-action=pause]');await p.click('#advCard [data-action=settings]');
+   await p.click('#advGame [data-action=pause]');await p.click('#advCard [data-action=settings]');assert.equal(await p.getByRole('dialog',{name:'Settings',exact:true}).count(),1);
    await p.evaluate(()=>{document.querySelector('#advCard').scrollTop=10000});
    const r=await p.locator('[data-action=dialog-back]').boundingBox();assert(r.y>=0&&r.y+r.height<=viewport.height,'sticky Back remains reachable after scrolling');
    await p.click('[data-action=dialog-back]');assert.equal(await p.locator('#advCard').getAttribute('data-dialog'),'pause');
-   await p.click('#advCard [data-action=help]');assert.equal(await p.locator('#advCard').evaluate(e=>e.scrollTop),0,'new content opens at the top, not stale settings scroll');
+   await p.click('#advCard [data-action=help]');assert.equal(await p.getByRole('dialog',{name:'How to play',exact:true}).count(),1);assert.equal(await p.locator('#advCard').evaluate(e=>e.scrollTop),0,'new content opens at the top, not stale settings scroll');
    await p.click('[data-action=dialog-back]');assert.equal(await p.locator('#advCard').getAttribute('data-dialog'),'pause');
    assert.deepEqual(errors,[]);await p.close();
   }

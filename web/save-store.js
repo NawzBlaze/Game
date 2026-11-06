@@ -1,6 +1,7 @@
 /* Local-only save validation and recovery. Never silently discard damaged originals. */
 (() => {
   'use strict';
+  const owns = (value, key) => Object.prototype.hasOwnProperty.call(value, key);
   const keys = ['delivery-adventure-v1','one-step-delivery-v2'];
   const blocked = new Set();
   const notices = new Set();
@@ -68,7 +69,7 @@
         if (raw.length>1000000) throw new Error('Oversized save');
         const parsed = JSON.parse(raw), clean = validate(key,parsed);
         // Unknown fields are ignored, but preserve the raw input if validation repairs it.
-        if (!object(parsed) || Object.keys(clean).some(k => Object.hasOwn(parsed,k) && JSON.stringify(clean[k])!==JSON.stringify(parsed[k]))) preserve(key,raw);
+        if (!object(parsed) || Object.keys(clean).some(k => owns(parsed,k) && JSON.stringify(clean[k])!==JSON.stringify(parsed[k]))) preserve(key,raw);
         return {...defaults,...clean};
       } catch { preserve(key,raw); return {...defaults}; }
     } catch {
@@ -95,7 +96,7 @@
     const backup=JSON.parse(text);
     if(!object(backup)||backup.format!=='little-parcel-crew-backup'||backup.version!==1||!object(backup.saves)) throw new Error('This is not a supported Little Parcel Crew backup.');
     const saves={};
-    for(const key of keys) if(Object.hasOwn(backup.saves,key)) saves[key]=validate(key,backup.saves[key]);
+    for(const key of keys) if(owns(backup.saves,key)) saves[key]=validate(key,backup.saves[key]);
     if(!Object.keys(saves).length)throw new Error('This backup contains no game progress.');
     return saves;
   }
@@ -103,7 +104,7 @@
     const old = {};
     // Validate every record before any write; preserve existing progress first.
     const clean = {};
-    for(const key of keys)if(Object.hasOwn(saves,key))clean[key]=validate(key,saves[key]);
+    for(const key of keys)if(owns(saves,key))clean[key]=validate(key,saves[key]);
     for(const key of Object.keys(clean))old[key]=localStorage.getItem(key);
     localStorage.setItem('lpc-before-restore',JSON.stringify(snapshot()));
     try { for(const key of Object.keys(clean))localStorage.setItem(key,JSON.stringify(clean[key])); }

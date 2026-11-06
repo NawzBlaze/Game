@@ -137,7 +137,7 @@
     if (level.kind === 'buddy') { sprite(ctx, 'mouse_rest', 269, G - 34, 56, 34); sprite(ctx, 'heart', 290, G - 58, 20, 20); if(buddyMet && !secretFound) sprite(ctx, 'heart', 635, G - 72, 28, 28); }
     if (!s.hideCourier && !(invulnerable > 0 && save.effects !== false && !reducedMotion && Math.floor(invulnerable * 10) % 2)) {
       character(ctx, save.courier, p.x - 11, p.y + p.h - 62, p.w + 22, 62,
-        motion && p.ground && Math.abs(p.vx) > 20 && ending <= 0, Math.floor(clock * 18), p.face < 0, !p.ground, save);
+        !reducedMotion && p.ground && Math.abs(p.vx) > 20 && ending <= 0, Math.floor(clock * 18), p.face < 0, !p.ground, save);
       if (hasParcel && ending <= 0) sprite(ctx, parcel.asset, p.x + (p.face > 0 ? 20 : -9), p.y + 28, 20, 20);
       if (ending > 0) {
         const raw=Math.max(0,Math.min(1,1-ending/1.15)),t=motion?raw*raw*(3-2*raw):raw;

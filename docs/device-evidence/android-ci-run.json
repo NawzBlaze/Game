@@ -1,20 +1,19 @@
 {
-  "recordedDate": "2026-11-05",
-  "version": "1.0.0-rc.1",
-  "versionCode": 100,
+  "recordedDate": "2026-11-06",
+  "version": "1.0.0-rc.2",
+  "versionCode": 101,
   "productTarget": "Android mobile APK; browser tools are internal engine/UI verification only",
   "scope": "CI build, simulated Android framework tests and disposable-emulator instrumentation; NOT physical-phone, original-crash, production-signing or store approval",
   "run": {
     "conclusion": "success",
-    "databaseId": 42054211954,
-    "headSha": "fd5fd912fc93e977df16321183984cb2b0e0d0d2",
+    "headSha": "3db86dcf2c7f1cfe107a398e7674671d88a55924",
     "jobs": [
       {
-        "completedAt": "2026-11-05T15:26:56Z",
+        "completedAt": "2026-11-06T04:52:54Z",
         "conclusion": "success",
-        "databaseId": 127338051329,
+        "databaseId": 127718070237,
         "name": "build",
-        "startedAt": "2026-11-05T15:21:54Z",
+        "startedAt": "2026-11-06T04:48:02Z",
         "status": "completed",
         "steps": [
           {
@@ -120,14 +119,14 @@
             "status": "completed"
           }
         ],
-        "url": "https://github.com/NawzBlaze/Game/actions/runs/42054211954/job/127338051329"
+        "url": "https://github.com/NawzBlaze/Game/actions/runs/42164619926/job/127718070237"
       },
       {
-        "completedAt": "2026-11-05T15:26:56Z",
+        "completedAt": "2026-11-06T04:52:54Z",
         "conclusion": "success",
-        "databaseId": 127339156104,
+        "databaseId": 127718594929,
         "name": "emulator (33)",
-        "startedAt": "2026-11-05T15:23:44Z",
+        "startedAt": "2026-11-06T04:49:46Z",
         "status": "completed",
         "steps": [
           {
@@ -179,14 +178,14 @@
             "status": "completed"
           }
         ],
-        "url": "https://github.com/NawzBlaze/Game/actions/runs/42054211954/job/127339156104"
+        "url": "https://github.com/NawzBlaze/Game/actions/runs/42164619926/job/127718594929"
       },
       {
-        "completedAt": "2026-11-05T15:26:56Z",
+        "completedAt": "2026-11-06T04:52:54Z",
         "conclusion": "success",
-        "databaseId": 127339156872,
+        "databaseId": 127718595066,
         "name": "emulator (36)",
-        "startedAt": "2026-11-05T15:23:44Z",
+        "startedAt": "2026-11-06T04:49:46Z",
         "status": "completed",
         "steps": [
           {
@@ -238,61 +237,60 @@
             "status": "completed"
           }
         ],
-        "url": "https://github.com/NawzBlaze/Game/actions/runs/42054211954/job/127339156872"
+        "url": "https://github.com/NawzBlaze/Game/actions/runs/42164619926/job/127718595066"
       }
     ],
-    "status": "completed",
-    "url": "https://github.com/NawzBlaze/Game/actions/runs/42054211954"
+    "url": "https://github.com/NawzBlaze/Game/actions/runs/42164619926"
   },
   "previewApk": {
-    "filename": "little-parcel-crew-1.0.0-rc.1-preview.apk",
-    "sha256": "31cbb4fcc3eee4f073e3c761d0445659550294e1d3303c07845fb3e68a084d68",
-    "artifactUrl": "https://github.com/NawzBlaze/Game/actions/runs/42054211954/artifacts/13428501323",
+    "filename": "little-parcel-crew-1.0.0-rc.2-preview.apk",
+    "sha256": "51c1a8118c20b85fb7e62292b4799b6e2053071e4a9b519f453c0cc2e7682022",
+    "artifactUrl": "https://github.com/NawzBlaze/Game/actions/runs/42164619926/artifacts/13478975457",
     "signing": "Debug/test signing only; clean test device, not production/update approval",
-    "sizeBytes": 2771465
+    "sizeBytes": 53032215
   },
-  "enginePayloadSha256": "12fa3cca2e8978426045949bd393951f204d3a0397fd7d07532623a0c8a2461e",
-  "engineChecksPassed": 22,
+  "enginePayloadSha256": "a92c0fbc7427221d91fd08340b4139ebf58e54ce88fea00efb606bae7f8cd1e8",
+  "engineChecksPassed": 23,
   "artifacts": [
     {
-      "id": 13429455041,
-      "name": "android-build-reports",
-      "sizeBytes": 40815,
-      "archiveDigest": "sha256:0f6e9cc5bf8e08e3523af29f454b6f760e69c9c11f8fa36b9a85e5dfd9fc2323",
-      "expired": false,
-      "expiresAt": "2026-11-19T15:23:38Z"
-    },
-    {
-      "id": 13429130852,
-      "name": "android-emulator-api-36-evidence",
-      "sizeBytes": 1334782,
-      "archiveDigest": "sha256:01f54a3b3ea506e47146304cc378076b458e42babd219b7e85a4f1e38c97a994",
-      "expired": false,
-      "expiresAt": "2026-11-19T15:26:53Z"
-    },
-    {
-      "id": 13428965502,
+      "id": 13478990374,
       "name": "android-unsigned-and-debug-candidates",
-      "sizeBytes": 9315144,
-      "archiveDigest": "sha256:f389fb6c099e0ffcc5878bbbae818bf85dc4132e400768080dcbeba8b6467ce3",
+      "sizeBytes": 158231073,
+      "archiveDigest": "sha256:e3667924c63060888a226c9fcf63c5586a17f526441dbaaf92a0158b052b3f10",
       "expired": false,
-      "expiresAt": "2026-11-19T15:23:34Z"
+      "expiresAt": "2026-11-20T04:49:32Z"
     },
     {
-      "id": 13428616744,
-      "name": "android-emulator-api-33-evidence",
-      "sizeBytes": 1029973,
-      "archiveDigest": "sha256:1dbaed9936199e167c8c9f7d98ace28fc9a43852f82968798ea60e6465bba8ce",
-      "expired": false,
-      "expiresAt": "2026-11-19T15:27:07Z"
-    },
-    {
-      "id": 13428501323,
+      "id": 13478975457,
       "name": "mobile-apk-preview",
-      "sizeBytes": 2569583,
-      "archiveDigest": "sha256:fc4cd9179e2251f0dd6da8e1d187146eddf38ff222a45f7a759e4550b06ea912",
+      "sizeBytes": 52199510,
+      "archiveDigest": "sha256:6d5e4803eb5aa8c01b5369cfb6b9e7f9b1ded205366bc63ead3bff2a5e25685a",
       "expired": false,
-      "expiresAt": "2026-11-19T15:23:37Z"
+      "expiresAt": "2026-11-20T04:49:37Z"
+    },
+    {
+      "id": 13478781093,
+      "name": "android-build-reports",
+      "sizeBytes": 40062,
+      "archiveDigest": "sha256:759b59bb084307cb28fcbd08a49e8829a97fea875ed3237757ee751b5b60d453",
+      "expired": false,
+      "expiresAt": "2026-11-20T04:49:40Z"
+    },
+    {
+      "id": 13478731804,
+      "name": "android-emulator-api-33-evidence",
+      "sizeBytes": 933616,
+      "archiveDigest": "sha256:1910ec552d4c275e82ae332820ea44c6a88ed561eba072d1a9e9b7af6fa38679",
+      "expired": false,
+      "expiresAt": "2026-11-20T04:53:10Z"
+    },
+    {
+      "id": 13478198964,
+      "name": "android-emulator-api-36-evidence",
+      "sizeBytes": 1360877,
+      "archiveDigest": "sha256:c265c2d711e4be433dab72fbee5dd9cfb27ed552e9b1e3f1161ba11ab9bb193c",
+      "expired": false,
+      "expiresAt": "2026-11-20T04:52:50Z"
     }
   ],
   "verification": {
@@ -322,7 +320,7 @@
     "physicalDeviceTested": false,
     "originalAndroid13CrashDiagnosed": false,
     "localArtifactCopy": "Not available: GitHub artifact blob storage is outside sandbox download access; use the artifact URL.",
-    "androidToolingHostTestsPassed": 13,
+    "androidToolingHostTestsPassed": 14,
     "finishedArtifactSizeGate": {
       "passed": true,
       "maximumBytesPerFile": 100000000,
@@ -330,7 +328,8 @@
       "gradleTasks": [
         "verifyDebugSize",
         "verifyReleaseSize"
-      ]
+      ],
+      "minimumBytesPerFile": 20000000
     },
     "expressCampaignScope": "All 24 three-star Express clears and record persistence verified through engine physics tests, not a claim of 24 full-route phone playthroughs."
   },
@@ -338,7 +337,8 @@
     "requestedMinimumBytes": 20000000,
     "preferredApproximateBytes": 50000000,
     "maximumBytes": 100000000,
-    "minimumMet": false,
-    "status": "1.0 campaign candidate; 20 MB minimum and production approval still outstanding"
-  }
+    "minimumMet": true,
+    "status": "Verified 53.03 MB baseline preview; production approval outstanding"
+  },
+  "workingTreeWarning": "Historical exact-source evidence for run.headSha only. Audit fixes made after 3db86dc require a new native build and must not inherit this result."
 }

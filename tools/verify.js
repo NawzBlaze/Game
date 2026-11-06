@@ -2,6 +2,7 @@
 const {spawn,spawnSync}=require('node:child_process');
 const fs=require('node:fs');
 const results=[],servers=[];
+const tests=['save-store','test','full_campaign','startup','adventure','all-stars','special-deliveries','parcel-mechanics','multitouch','offline-storage','audio-lifecycle','audio-decode','route-experience','courier-mastery','campaign-edition','studio-soundtrack','express-campaign','landscape','presentation','mobile-ui','release'];
 function run(name,command,args){
  console.log('\n=== '+name+' ===');
  const started=Date.now(),result=spawnSync(command,args,{encoding:'utf8',timeout:180000,env:process.env,maxBuffer:16*1024*1024});
@@ -26,14 +27,14 @@ async function ready(port){
    servers.push(spawn('python3',['tools/serve.py','--directory','dist/web','--port','4188'],{stdio:'ignore'}));
   }
   await ready(4187);await ready(4188);
-  const tests=['save-store','test','full_campaign','startup','adventure','all-stars','special-deliveries','parcel-mechanics','multitouch','offline-storage','audio-lifecycle','audio-decode','route-experience','courier-mastery','campaign-edition','studio-soundtrack','express-campaign','landscape','presentation','mobile-ui','release'];
+
   for(const test of tests)run(test,'node',['tests/'+test+'.js']);
   if(results.some(r=>!r.passed))process.exitCode=1;
  }catch(e){console.error(e.message);process.exitCode=1;}
  finally{
   for(const child of servers)child.kill('SIGTERM');
   fs.mkdirSync('dist',{recursive:true});
-  fs.writeFileSync('dist/qa-report.json',JSON.stringify({version:require('../package.json').version,scope:'Automated web checks only; no device/signing/human approval',artifactSha256:fs.existsSync('dist/SHA256SUMS.txt')?fs.readFileSync('dist/SHA256SUMS.txt','utf8').split(/\s+/)[0]:null,passed:results.length===23&&results.every(r=>r.passed),checks:results},null,2)+'\n');
+  fs.writeFileSync('dist/qa-report.json',JSON.stringify({version:require('../package.json').version,scope:'Automated web checks only; no device/signing/human approval',artifactSha256:fs.existsSync('dist/SHA256SUMS.txt')?fs.readFileSync('dist/SHA256SUMS.txt','utf8').split(/\s+/)[0]:null,passed:results.length===tests.length+2&&results.every(r=>r.passed),checks:results},null,2)+'\n');
   console.log('\n'+results.filter(r=>r.passed).length+'/'+results.length+' checks passed. Report: dist/qa-report.json');
  }
 })();
